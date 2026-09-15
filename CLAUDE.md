@@ -139,9 +139,8 @@ an automated check.
 
 ## Current status
 
-Phase 1 (MVP) is built: the foundational spine from logic through linear
-algebra. Phase 2 is in progress: rings/fields, metric spaces, and
-topological spaces are written; geometry (Euclidean geometry, coordinates,
-affine spaces, manifolds) is not started. See `ROADMAP.md` for the full
-decision log before assuming more chapters are expected in any particular
-area.
+Phase 1 (MVP) and Phase 2 (algebra, metric/topological spaces, geometry)
+are both built — 16 chapters, logic through Euclidean geometry. Phase 3
+(analysis, calculus, differential equations) has not started. See
+`ROADMAP.md` for the full decision log before assuming more chapters are
+expected in any particular area.

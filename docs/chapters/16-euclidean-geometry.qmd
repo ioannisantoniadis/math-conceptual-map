@@ -1,0 +1,105 @@
+---
+title: "Euclidean Geometry"
+---
+
+You compute in $\mathbb{R}^n$ effortlessly — distances, dot products,
+rotations. "Euclidean geometry" historically meant something structurally
+different: a system built from a handful of statements about points, lines,
+and circles, with no coordinates and no numbers anywhere in sight. This
+chapter is about both versions, and the surprisingly modern idea that makes
+them equivalent.
+
+## The axiomatic version, and the postulate that took two thousand years
+
+Euclid's *Elements* (Alexandria, roughly 300 BCE) builds geometry from five
+postulates: essentially, that a line can be drawn between any two points,
+that any line segment can be extended indefinitely, that a circle can be
+drawn with any center and radius, that all right angles are equal, and —
+the awkward one — that through a point not on a line, exactly one line can
+be drawn parallel to it. The first four are simple and uncontroversial; the
+fifth is noticeably more complicated to even state, and for roughly two
+thousand years mathematicians tried to *prove* it from the other four,
+convinced it had to be a consequence rather than an independent assumption.
+
+It doesn't. In the 1820s–30s, János Bolyai and Nikolai Lobachevsky
+(independently) showed that replacing the parallel postulate with its
+negation produces an entirely consistent geometry — **hyperbolic
+geometry** — where triangles' angles sum to *less* than 180°. (Elliptic
+geometries, where the postulate fails the other way, are the other option.)
+This is one of the sharpest illustrations on this whole site of [Axioms and
+Definitions](05-axioms-and-definitions.qmd)'s central claim: axioms are
+*chosen*, not discovered facts about a single true geometry. Euclidean
+geometry isn't "the" geometry — it's *a* geometry, the one you get by
+choosing all five postulates, no more privileged in principle than the
+alternative you get by choosing differently.
+
+## The coordinate version
+
+René Descartes (and, independently, Pierre de Fermat) introduced **analytic
+geometry** around 1637: represent points as tuples of numbers and geometric
+relationships as algebraic equations — a circle of radius $r$ becomes
+$x^2+y^2=r^2$, a line becomes a linear equation. This is the bridge between
+geometry and algebra you've used your entire computational life without
+necessarily seeing it named, and it lets Euclidean geometry be *redefined*
+entirely structurally, with no synthetic postulates at all: **Euclidean
+space** is an [affine space](15-affine-spaces.qmd) whose vector space of
+displacements carries an [inner product](14-inner-product-spaces.qmd). That
+one sentence packages points (affine space), distances and angles (the
+induced norm and the Cauchy–Schwarz-guaranteed angle), and everything else
+Euclid's postulates were reaching for — built entirely from structures this
+site has already defined.
+
+This isn't a computational shortcut standing in for "real" geometry; for
+the ordinary flat case, it's a fully rigorous alternative axiomatization,
+provably equivalent to Euclid's synthetic one. It's another instance of
+[the map](00-the-map.qmd)'s historical-versus-formal split: Euclid's
+postulates came roughly two thousand years before Descartes's coordinates,
+and Descartes's coordinates came roughly two hundred years before the
+vector-space and inner-product axioms modern geometry actually rests on
+today.
+
+## If you've done linear algebra or physics
+
+You already know:
+
+- The **dot product** $u \cdot v$ — the standard inner product on
+  $\mathbb{R}^n$.
+- The **distance formula** $\sqrt{\sum_i (x_i-y_i)^2}$ — the metric that
+  inner product induces, exactly as [Inner Product
+  Spaces](14-inner-product-spaces.qmd) derives it.
+- A **rotation matrix** — a linear map that happens to preserve that inner
+  product (an *orthogonal* transformation), which is precisely why rotating
+  a shape never changes distances or angles within it.
+
+None of these were arbitrary computational rules; each is a specific
+instance of a structure this site has now named.
+
+## A first pass at what comes after flat
+
+Once geometry is redefined structurally rather than synthetically, a
+natural question opens up: must a "geometric" space look like
+$\mathbb{R}^n$ *everywhere*, or only *nearby* each point? The surface of a
+sphere is curved globally — it's not an affine space, no single flat
+coordinate grid covers all of it — but zoom into any small patch and it
+looks just like a flat plane. A **manifold** is, informally, exactly this:
+a topological space that locally resembles $\mathbb{R}^n$ near every point,
+via a patchwork of coordinate charts, even when it doesn't globally.
+Non-Euclidean geometries turn out to be one important source of manifolds —
+spaces curved in the large that are still locally Euclidean. This is
+genuinely a first pass: manifolds, and the differential geometry built on
+them, are a later phase of this site, and the one-paragraph version above
+is meant only to attach a name and a mental picture to the idea, not to
+define it rigorously.
+
+## Where this leads
+
+This chapter closes the structural arc this site has built from [What Is a
+Mathematical Structure?](07-mathematical-structures.qmd) onward — sets,
+groups, rings and fields, vector spaces, inner product spaces, metric
+spaces, topological spaces, and affine spaces, assembled here into the
+geometry you already knew computationally. From here, a later phase of this
+site picks up real analysis (built directly on the continuity this site's
+topological spaces chapter already defined), differential geometry (making
+the manifold sketch above precise), and — already foreshadowed at the end
+of [Linear Algebra](10-linear-algebra.qmd) — the high-dimensional geometry
+that shows up constantly in machine learning.

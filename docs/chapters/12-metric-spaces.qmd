@@ -79,11 +79,12 @@ general.
 
 ## Connecting back to vector spaces, and what's still missing
 
-A vector space with a **norm** — informally, a length function $\|v\|$
-measuring a single vector's magnitude, which this site does not yet
-axiomatize in full — automatically becomes a metric space via $d(u,v) =
-\|u-v\|$; both the Euclidean and taxicab distances above arise exactly this
-way from two different norms on $\mathbb{R}^n$. But the discrete metric
+A vector space with a **norm** — a length function $\|v\|$ measuring a
+single vector's magnitude, which [Inner Product
+Spaces](14-inner-product-spaces.qmd) derives from an inner product —
+automatically becomes a metric space via $d(u,v) = \|u-v\|$; both the
+Euclidean and taxicab distances above arise exactly this way from two
+different norms on $\mathbb{R}^n$. But the discrete metric
 does not come from any norm on a vector space: it isn't compatible with
 scaling ($d(2x, 2y)$ should shrink or grow predictably under a norm-induced
 metric; the discrete metric ignores scaling entirely). That's the

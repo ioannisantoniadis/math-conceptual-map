@@ -92,10 +92,13 @@ Spaces](09-vector-spaces.qmd)'s answer for $\vec{x}$:
 
 Linear algebra is the theory this site's MVP has been building toward, and
 it's a genuine hub rather than an endpoint. $\mathbb{R}^n$ as a vector space
-is also, with a bit more structure added, a geometric object — later phases
-of this site develop inner-product spaces, metric spaces, and the geometry
-built on top of them, all sitting one layer above what's here. And the
-reason a machine learning practitioner encounters linear algebra
+is also, with a bit more structure added, a geometric object — this site's
+table of contents continues from here through
+[Inner Product Spaces](14-inner-product-spaces.qmd),
+[Affine Spaces](15-affine-spaces.qmd), and
+[Euclidean Geometry](16-euclidean-geometry.qmd), which assembles exactly
+that extra structure into the geometry you already use computationally.
+And the reason a machine learning practitioner encounters linear algebra
 constantly isn't incidental: a learned embedding is a vector in exactly the
 sense of [Vector Spaces](09-vector-spaces.qmd), a neural network layer's
 weight matrix is a linear map (composed with a nonlinearity) in exactly the

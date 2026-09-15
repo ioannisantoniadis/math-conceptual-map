@@ -44,9 +44,12 @@ NODES = {
     "G":   ("Groups", 2, False),
     "RNG": ("Rings &\nFields", 2, False),
     "VS":  ("Vector\nSpaces", 2, False),
+    "IPS": ("Inner Product\nSpaces", 2, False),
     "MET": ("Metric\nSpaces", 2, False),
     "TOP": ("Topological\nSpaces", 2, False),
+    "AFF": ("Affine\nSpaces", 2, False),
     "LA":  ("Linear\nAlgebra", 3, False),
+    "EG":  ("Euclidean\nGeometry", 3, False),
     "AN":  ("Analysis", 3, True),
     "ML":  ("Machine\nLearning", 4, True),
     "PHY": ("Physics", 4, True),
@@ -55,7 +58,8 @@ NODES = {
 EDGES = [
     ("L", "S"), ("S", "RF"), ("RF", "AD"), ("RF", "N"), ("N", "MS"),
     ("MS", "G"), ("MS", "RNG"), ("MS", "VS"), ("G", "RNG"),
-    ("VS", "LA"), ("VS", "MET"), ("MET", "TOP"),
+    ("VS", "LA"), ("VS", "IPS"), ("VS", "AFF"), ("IPS", "MET"), ("MET", "TOP"),
+    ("IPS", "EG"), ("AFF", "EG"),
     ("LA", "ML"), ("LA", "PHY"), ("AN", "RF"),
 ]
 

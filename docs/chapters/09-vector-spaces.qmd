@@ -99,15 +99,11 @@ Not $\mathbb{R}^n$ — $\mathbb{R}^n$ is one example among many, not the
 definition, as the four motivating examples above were built to show. Not
 inherently equipped with a length or an angle — nothing in the five axioms
 above mentions how "long" a vector is or what it means for two vectors to be
-"perpendicular." Those require *additional* structure layered on top (an
-inner product or a norm), which is exactly what an inner-product space or a
-normed space adds — structures a later phase of this site develops, though
-[Metric Spaces](12-metric-spaces.qmd) already shows how a norm turns into a
-notion of distance, and
-[What Is a Mathematical Structure?](07-mathematical-structures.qmd)
-previewed the rest in its comparison table. A bare vector space has addition and
-scaling and nothing else; it's easy to unconsciously import geometric
-intuition (angles, lengths) that the axioms haven't actually earned yet.
+"perpendicular." Those require *additional* structure layered on top, which
+is exactly what [Inner Product Spaces](14-inner-product-spaces.qmd) adds
+next. A bare vector space has addition and scaling and nothing else; it's
+easy to unconsciously import geometric intuition (angles, lengths) that the
+axioms haven't actually earned yet.
 
 ## If you've done linear algebra
 
@@ -128,6 +124,7 @@ A structure is only half the story without the maps between its instances.
 *and* the linear maps connecting them — including the fact, central to
 everything from computer graphics to machine learning, that a matrix is
 just what a linear map looks like once you've chosen coordinates. This
-site's table of contents takes a short detour first, through
-[Metric Spaces](12-metric-spaces.qmd), to pick up the notion of distance a
-bare vector space deliberately doesn't have.
+site's table of contents takes a short detour first, through [Inner Product
+Spaces](14-inner-product-spaces.qmd) and [Metric
+Spaces](12-metric-spaces.qmd), to pick up the notions of angle and distance
+a bare vector space deliberately doesn't have.

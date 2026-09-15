@@ -69,7 +69,7 @@ Each phase should leave the site in a complete, cross-linked, non-stub state
       uses a computed longest-path DAG layering instead — see
       `fig_landscape_network.py`'s docstring.
 
-## Phase 2 — Algebra, geometry, metric spaces, topology — in progress
+## Phase 2 — Algebra, geometry, metric spaces, topology — **done**
 
 - [x] Abstract algebra beyond groups: `11-rings-and-fields.qmd` — rings and
       fields with real axioms (formalizing "field," used informally by
@@ -79,27 +79,42 @@ Each phase should leave the site in a complete, cross-linked, non-stub state
       homomorphisms named but not developed in depth — full treatment (and
       any dedicated abstract-algebra theory chapter beyond this structure
       one) still open.
-- [ ] Geometry: Euclidean geometry's axiomatic history, coordinates,
-      affine spaces, a first pass at manifolds. Not started.
 - [x] Metric spaces and topological spaces — `12-metric-spaces.qmd` and
       `13-topological-spaces.qmd`, paying off the forward references from
       Phase 1's `07-mathematical-structures` comparison table and
       `09-vector-spaces`'s "what a vector space is NOT" section (both
       chapters' tables/links updated to point at real chapters instead of
-      "later"). Inner-product spaces and a fully axiomatized normed space
-      are still open — `12-metric-spaces.qmd` only defines "norm" informally
-      as a bridge concept, deliberately, to keep its own scope to metrics.
-- [x] `_quarto.yml` reordered: `11-rings-and-fields.qmd` between Groups and
-      Vector Spaces, `12-metric-spaces.qmd`/`13-topological-spaces.qmd`
-      between Vector Spaces and Linear Algebra — filenames stayed
+      "later").
+- [x] Inner product spaces — `14-inner-product-spaces.qmd`, formalizing the
+      norm `12-metric-spaces.qmd` originally left informal (that chapter's
+      own text updated to cite this one instead of the "not yet
+      axiomatized" caveat). Covers norm, Cauchy–Schwarz, orthogonality, and
+      the parallelogram-law test for whether a norm comes from an inner
+      product; treats "normed space" as the midpoint of that generalization
+      ladder rather than as its own chapter, deliberately.
+- [x] Geometry: `15-affine-spaces.qmd` (points vs. vectors, affine
+      combinations requiring weights to sum to 1, affine maps as "linear
+      map + translation") and `16-euclidean-geometry.qmd` (Euclid's
+      postulates and the two-thousand-year parallel-postulate history,
+      Descartes's coordinates, Euclidean space redefined as an affine space
+      whose displacements carry an inner product, a deliberately
+      one-paragraph "first pass" at manifolds per this bullet's original
+      scope). Both new chapters keep the object/structure/theory tag
+      discipline clean — affine spaces and inner product spaces are
+      *structures*, Euclidean geometry is a *theory* built from them, not
+      one chapter blurring both levels.
+- [x] `_quarto.yml` reordered: Structures part now reads
+      Groups → Rings and Fields → Vector Spaces → Inner Product Spaces →
+      Metric Spaces → Topological Spaces → Affine Spaces; Theories part
+      reads Linear Algebra → Euclidean Geometry. Filenames stayed
       sequential-by-creation-order rather than being renumbered to match, to
       avoid renaming already-published/cross-linked files; see `CLAUDE.md`.
-- [x] `fig_landscape_network.py`'s `NODES`/`EDGES` updated and regenerated:
-      Rings & Fields added (solid, fed by both Groups and What Is a
-      Structure?), Metric Spaces and Topological Spaces moved from
-      hollow/"planned" to solid. Abstract Algebra's old placeholder node was
-      removed rather than kept alongside Rings & Fields, since this chapter
-      *is* that node. Analysis, Machine Learning, and Physics remain hollow.
+- [x] `fig_landscape_network.py`'s `NODES`/`EDGES` updated and regenerated
+      each time a structure/theory above landed: Rings & Fields, Inner
+      Product Spaces, Affine Spaces, Metric Spaces, and Topological Spaces
+      are all solid now; Euclidean Geometry added as a solid Theories node
+      fed by both Affine Spaces and Inner Product Spaces. Analysis, Machine
+      Learning, and Physics remain hollow.
 
 ## Phase 3 — Analysis, calculus, differential equations — planned
 

@@ -1,0 +1,105 @@
+---
+title: "Inner Product Spaces"
+---
+
+[Vector Spaces](09-vector-spaces.qmd) was explicit about what its five
+axioms don't give you: no notion of how long a vector is, no notion of the
+angle between two of them. Both turn out to come from a single additional
+operation, and it's one you've been computing since before you'd have
+called it that.
+
+## The problem, before the definition
+
+You already know the **dot product** on $\mathbb{R}^n$: $u \cdot v =
+\sum_i u_i v_i$. You also already know two things it's used for that look
+unrelated — computing a vector's length ($\|v\| = \sqrt{v \cdot v}$) and
+computing the angle between two vectors ($\cos\theta = \frac{u \cdot
+v}{\|u\|\|v\|}$) — and it's worth pausing on the fact that *one* operation
+is doing both jobs. That's not a coincidence to be explained away; it's the
+whole reason this structure is worth naming.
+
+The same pattern shows up somewhere that doesn't look like $\mathbb{R}^n$ at
+all: on a space of functions, $\langle f, g \rangle = \int f(x)g(x)\,dx$
+plays exactly the dot product's role, giving a notion of a function's
+"length" and of the "angle" between two functions — machinery that later
+underlies Fourier series, though this site doesn't develop that yet. Same
+structure, wildly different-looking objects — the lesson [Vector
+Spaces](09-vector-spaces.qmd) already taught, one level up.
+
+## The abstraction
+
+An **inner product** on a real vector space $V$ is a function $\langle
+\cdot,\cdot\rangle: V \times V \to \mathbb{R}$ satisfying:
+
+1. **Symmetry**: $\langle u,v\rangle = \langle v,u\rangle$.
+2. **Linearity** (in the first argument, hence — combined with symmetry —
+   in both): $\langle au+bw, v\rangle = a\langle u,v\rangle + b\langle
+   w,v\rangle$.
+3. **Positive-definiteness**: $\langle v,v\rangle \geq 0$, with equality
+   only when $v = \vec{0}$.
+
+A vector space equipped with one is an **inner product space**. (The complex
+case needs one adjustment — symmetry becomes conjugate symmetry — that this
+site sets aside.)
+
+## Why these axioms
+
+Symmetry guarantees the angle between $u$ and $v$ doesn't depend on which
+one you call first — without it, "the angle between $u$ and $v$" wouldn't
+even be a well-defined question. Linearity is the same kind of cross-
+operation requirement [Rings and Fields](11-rings-and-fields.qmd)'s
+distributivity axiom was: it says the inner product interacts predictably
+with vector addition and scaling, which is exactly what's needed for
+projections and decompositions to behave sensibly rather than depending on
+how a vector happens to be written as a sum. Positive-definiteness is the
+one doing the most obviously necessary work: it guarantees $\langle
+v,v\rangle$ can serve as a squared length — a vector can't have negative
+length, and only the zero vector should have zero length. Drop it and
+$\langle v,v\rangle$ could vanish for some nonzero $v$, which would make
+"length" meaningless for that vector.
+
+## What follows
+
+The **norm** $\|v\| := \sqrt{\langle v,v\rangle}$ is now the formal version
+of the length function [Metric Spaces](12-metric-spaces.qmd) used
+informally. The **Cauchy–Schwarz inequality**, $|\langle u,v\rangle| \leq
+\|u\|\|v\|$ (stated here, not proved), is what guarantees $\frac{\langle
+u,v\rangle}{\|u\|\|v\|}$ always lands in $[-1,1]$ — without it, "the angle
+whose cosine is this ratio" wouldn't always exist. Two vectors are
+**orthogonal** when $\langle u,v\rangle = 0$ — the structural definition
+behind "perpendicular," and the property [Linear
+Algebra](10-linear-algebra.qmd)'s rotation matrices and reflections are
+built to preserve. And every inner product induces a metric via $d(u,v) =
+\|u-v\|$ — exactly the bridge [Metric Spaces](12-metric-spaces.qmd) already
+leaned on.
+
+## What's gained and lost, one step further out
+
+Not every norm comes from an inner product. The test is the
+**parallelogram law**, $\|u+v\|^2 + \|u-v\|^2 = 2\|u\|^2 + 2\|v\|^2$, which
+holds for every inner-product-induced norm but fails for, say, the taxicab
+norm from [Metric Spaces](12-metric-spaces.qmd). That gives a clean three-
+step generalization ladder, in the sense [the map](00-the-map.qmd) keeps
+returning to: inner-product space $\to$ normed space (magnitude, no
+guaranteed angle) $\to$ metric space (distance, no guaranteed magnitude or
+linear structure at all). Each step drops a guarantee and gains a larger
+family of eligible spaces; this site formalizes the first and last of those
+three and treats "normed space" informally, as the mid-point of a ladder
+rather than a chapter of its own.
+
+## What an inner product space is NOT
+
+A vector space doesn't come with *one* inner product built in — $\mathbb{R}^n$
+carries infinitely many valid choices, and the dot product is simply the
+standard one. Length and angle are not inherent to "being a vector" any
+more than they were in [Vector Spaces](09-vector-spaces.qmd)'s original
+warning; they're exactly the extra structure this chapter adds on top.
+
+## Where this leads
+
+[Metric Spaces](12-metric-spaces.qmd), already written, picks up precisely
+the induced distance this chapter derives. [Affine
+Spaces](15-affine-spaces.qmd) and [Euclidean
+Geometry](16-euclidean-geometry.qmd), next, combine this structure with a
+notion of *point* — something a vector space doesn't have either — to
+recover the geometry you already use computationally.

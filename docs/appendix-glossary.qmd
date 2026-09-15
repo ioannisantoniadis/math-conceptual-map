@@ -10,6 +10,19 @@ remember from two chapters ago, not a substitute for reading the chapter.
 ($a \ast b = b \ast a$ for all elements). Not required by the group axioms
 themselves. See [Groups](chapters/08-groups.qmd).
 
+**Affine combination** — a weighted sum of points whose weights sum to
+exactly $1$; unlike an arbitrary sum of points, this is always well-defined.
+See [Affine Spaces](chapters/15-affine-spaces.qmd).
+
+**Affine map** — a linear map plus a translation; generalizes a linear map
+to a setting with no origin to fix. See [Affine
+Spaces](chapters/15-affine-spaces.qmd).
+
+**Affine space** — a set of points, a vector space of displacements, and an
+action translating points by displacements, such that any two points
+determine a unique displacement. Formalizes "points don't add, but their
+difference is a vector." See [Affine Spaces](chapters/15-affine-spaces.qmd).
+
 **Axiom** — a starting statement accepted without proof, from which theorems
 are derived. Not "true" in isolation — true relative to the choice of
 axioms. See [Axioms and Definitions](chapters/05-axioms-and-definitions.qmd).
@@ -47,6 +60,11 @@ $\mathbb{Z}$ and $\mathbb{Q}$ from more primitive number systems. See
 [Relations and Functions](chapters/04-relations-and-functions.qmd) and
 [Number Systems](chapters/06-number-systems.qmd).
 
+**Euclidean space** — an affine space whose vector space of displacements
+carries an inner product; the modern, coordinate-based redefinition of the
+geometry Euclid built from postulates. See [Euclidean
+Geometry](chapters/16-euclidean-geometry.qmd).
+
 **Field** — a ring in which multiplication is commutative and every nonzero
 element has a multiplicative inverse; the scalars a vector space is defined
 "over." $\mathbb{Q}$, $\mathbb{R}$, $\mathbb{C}$ are fields, $\mathbb{Z}$ is
@@ -67,6 +85,11 @@ Mathematical Structure?](chapters/07-mathematical-structures.qmd).
 outputs ("one-to-one"). See [Relations and
 Functions](chapters/04-relations-and-functions.qmd).
 
+**Inner product** — a symmetric, linear, positive-definite function
+$\langle u,v\rangle$ on a vector space; induces a norm ($\|v\| =
+\sqrt{\langle v,v\rangle}$) and an angle between vectors. See [Inner
+Product Spaces](chapters/14-inner-product-spaces.qmd).
+
 **Isomorphism** — an invertible homomorphism; identifies two structures as
 "the same" up to relabeling their elements. See [What Is a Mathematical
 Structure?](chapters/07-mathematical-structures.qmd).
@@ -79,6 +102,12 @@ $T(u+v) = T(u)+T(v)$ and $T(cv) = cT(v)$. A matrix is what a linear map
 looks like once bases are fixed. See [Linear
 Algebra](chapters/10-linear-algebra.qmd).
 
+**Manifold** — informally, a topological space that locally resembles
+$\mathbb{R}^n$ near every point, even if it doesn't globally (a sphere's
+surface is the standard example). A first pass only — full treatment is a
+later phase of this site. See [Euclidean
+Geometry](chapters/16-euclidean-geometry.qmd).
+
 **Mathematical structure** — a set equipped with operations and/or relations
 satisfying a fixed list of axioms — e.g. group, vector space, metric space.
 See [What Is a Mathematical
@@ -89,11 +118,20 @@ points of a set, satisfying identity of indiscernibles, symmetry, and the
 triangle inequality; the set plus that function is a metric space. See
 [Metric Spaces](chapters/12-metric-spaces.qmd).
 
+**Norm** — a length function $\|v\|$ on a vector space; every inner product
+induces one, but not every norm comes from an inner product (test: the
+parallelogram law). See [Inner Product
+Spaces](chapters/14-inner-product-spaces.qmd).
+
 **Open set** — in a metric space, a set where every point has some room
 around it (an open ball) still inside the set; in a topological space, a
 member of the designated collection $\tau$ that defines the topology. See
 [Metric Spaces](chapters/12-metric-spaces.qmd) and [Topological
 Spaces](chapters/13-topological-spaces.qmd).
+
+**Orthogonal** — two vectors $u,v$ with $\langle u,v\rangle = 0$; the
+structural definition behind "perpendicular." See [Inner Product
+Spaces](chapters/14-inner-product-spaces.qmd).
 
 **Proof** — a finite chain of statements, each an axiom or a valid
 consequence of earlier statements, ending at the claim being established.

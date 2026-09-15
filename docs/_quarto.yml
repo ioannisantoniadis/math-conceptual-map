@@ -37,11 +37,14 @@ book:
         - chapters/08-groups.qmd
         - chapters/11-rings-and-fields.qmd
         - chapters/09-vector-spaces.qmd
+        - chapters/14-inner-product-spaces.qmd
         - chapters/12-metric-spaces.qmd
         - chapters/13-topological-spaces.qmd
+        - chapters/15-affine-spaces.qmd
     - part: "Theories"
       chapters:
         - chapters/10-linear-algebra.qmd
+        - chapters/16-euclidean-geometry.qmd
     - part: "Appendices"
       chapters:
         - appendix-glossary.qmd

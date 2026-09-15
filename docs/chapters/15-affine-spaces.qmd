@@ -1,0 +1,87 @@
+---
+title: "Affine Spaces"
+---
+
+$\mathbb{R}^n$ gets used for two different jobs that quietly get treated as
+one. Sometimes its elements are *points* — locations, with no privileged
+"zero location." Sometimes they're *vectors* — displacements, which very
+much have a privileged zero (no movement at all). This chapter names the
+structure that keeps the two apart, and the reason it's worth doing: points
+don't add, but the difference of two points is always a vector.
+
+## The problem, before the definition
+
+Consider the set of points on a page. Nothing about the page hands you a
+natural origin — "the zero point" is a choice you impose, not a fact about
+the page. And yet you can still say something precise and origin-independent:
+"walk from point $A$ to point $B$" describes a definite displacement, a
+vector, even before any origin has been chosen. Translate every point on
+the page 3 units right, and that translation is described by one vector,
+regardless of which point you use to anchor the description. [Vector
+Spaces](09-vector-spaces.qmd)'s $\vec{0}$ has no counterpart among points —
+there is no "zero point," only displacements between points.
+
+## The abstraction
+
+An **affine space** is a set $A$ (its elements called **points**), a vector
+space $V$ (its elements called **displacements**), and an action $+: A
+\times V \to A$ satisfying:
+
+1. $a + \vec{0} = a$ for every point $a$.
+2. $(a + v) + w = a + (v+w)$ for all points $a$ and displacements $v,w$.
+3. For any two points $a,b \in A$, there is a **unique** displacement $v$
+   with $a + v = b$ — written $v = b - a$.
+
+## Why these axioms
+
+The first two say translating is compatible with $V$'s own structure:
+translating by nothing changes nothing, and translating twice composes
+exactly the way adding the two displacements would. Without them,
+"displacement" wouldn't behave consistently with the vector space it's
+supposed to be drawn from. The third is the axiom doing the real work: it
+guarantees that "the displacement from $A$ to $B$" is always a well-defined,
+unique vector — which is precisely the formal content of "you can subtract
+two points to get a vector, but you cannot add two points." Without
+uniqueness, $b - a$ could be ambiguous, and the entire idea of "the
+displacement between two specific points" would fail to pick out one
+answer.
+
+## What follows
+
+An **affine combination** of points $a_1,\dots,a_k$ with weights
+$c_1,\dots,c_k$ summing to exactly $1$ — $c_1a_1 + \cdots + c_ka_k$, read as
+"start somewhere and combine displacements" — is a well-defined point, even
+though $a_1 + a_2$ alone is not. The midpoint of two points, $\frac{1}{2}a +
+\frac{1}{2}b$, is the simplest example, and the "weights sum to 1"
+requirement is not a technicality: it's exactly what makes the result a
+*point* rather than a *displacement* (an arbitrary weighted sum of points
+with weights summing to something else isn't meaningful in $A$ at all).
+Anyone who has used barycentric coordinates or linear interpolation between
+positions has relied on this constraint without necessarily having seen why
+it's required.
+
+An **affine map** $f: A \to A'$ has the form $f(a) = a_0' + T(a - a_0)$ for
+a linear map $T$ and fixed points $a_0, a_0'$ — informally, "a linear map,
+plus a translation." This is the direct generalization of [Linear
+Algebra](10-linear-algebra.qmd)'s linear maps to a setting with no origin:
+recall that a linear map is *required* to satisfy $T(\vec{0}) = \vec{0}$,
+fixing the origin — an affine map drops exactly that requirement, since an
+affine space has no origin to fix in the first place.
+
+## What an affine space is NOT
+
+Not a vector space — it has no distinguished zero point, and points cannot
+be added to each other, only translated by displacements. $\mathbb{R}^n$
+can be viewed as an affine space over itself once an origin is chosen, and
+that choice is exactly what makes the point/vector distinction invisible in
+ordinary computation: picking an origin silently identifies "the point
+$(3,4)$" with "the displacement $(3,4)$ from that origin," and it's easy to
+stop noticing they were ever conceptually different roles.
+
+## Where this leads
+
+[Euclidean Geometry](16-euclidean-geometry.qmd), next, combines this
+chapter's points-and-displacements structure with [Inner Product
+Spaces](14-inner-product-spaces.qmd)'s length-and-angle structure — an
+affine space whose displacement vector space carries an inner product is,
+formally, what "Euclidean space" now means.
