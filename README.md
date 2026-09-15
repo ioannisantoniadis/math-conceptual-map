@@ -1,5 +1,7 @@
 # Mathematics: From Computational Tools to Mathematical Structure
 
+![This site's chapter graph, from logic through optimization](docs/images/social-preview.png)
+
 A conceptual map of mathematics for people who already know how to use it —
 not a course, not a taxonomy, but a graph of *why* mathematical objects,
 structures, and theories were invented, what they generalize, and how a
@@ -24,12 +26,12 @@ graphs over the same ideas, and they don't always agree.
 
 ## Current scope
 
-The site currently covers its foundational spine — logic through linear
-algebra — as a deliberately small, complete arc rather than a sprawling
-stub-filled tree. See [`ROADMAP.md`](ROADMAP.md) for what's built, what's
-planned next (algebra beyond groups, geometry, topology, analysis,
-probability, optimization, and an explicit machine-learning bridge), and the
-phased order it'll arrive in.
+The site currently covers its entire core theory arc — logic through
+optimization, 23 chapters — as a deliberately complete path rather than a
+sprawling stub-filled tree. See [`ROADMAP.md`](ROADMAP.md) for what's next
+(the machine-learning bridge, and a lighter conceptual-coverage pass over
+functional analysis, measure theory, differential geometry, and category
+theory) and the full phase-by-phase decision log.
 
 ## Repository layout
 

@@ -33,6 +33,18 @@ Regenerate everything:
 for f in scripts/figures/fig_*.py; do python3 "$f"; done
 ```
 
+`fig_social_preview.py` is the odd one out: it renders the same graph as
+`fig_landscape_network.py`, reusing that script's `NODES`/`EDGES`/
+`compute_layers()` directly rather than duplicating the graph data, at a
+fixed 2560x1280px (2x GitHub's recommended 1280x640) for use as the
+README hero image and the repo's GitHub social-preview / link-preview
+thumbnail. The fixed canvas size gives a smaller inches-per-data-unit than
+`fig_landscape_network.py`'s data-derived figsize, so its node label font
+size had to be scaled down separately to avoid overflowing the (same-size)
+node circles — see that script's docstring and inline comment. GitHub's
+social preview image itself has no public API for uploading; it's set once
+by hand at Settings → General → Social preview, using this file.
+
 Every script imports `apply_theme()` and the shared palette from `_theme.py`
 so all figures across all chapters look like one system — new figure
 scripts should do the same rather than styling matplotlib ad hoc. The
