@@ -88,10 +88,10 @@ solution.
 
 ## Where this leads
 
-This closes this site's current core theory arc — [the
-map](00-the-map.qmd)'s master diagram, updated alongside this chapter,
-now reaches from logic through differential equations. See
+This site's table of contents continues from here into [Discrete
+Mathematics](21-discrete-mathematics.qmd), [Probability](22-probability.qmd),
+and [Optimization](23-optimization.qmd) — the last of which returns
+directly to the gradient flow just described. See
 [`ROADMAP.md`](https://github.com/ioannisantoniadis/math-conceptual-map/blob/main/ROADMAP.md)
-for what a later phase adds: discrete mathematics, probability, optimization,
-and the machine-learning bridge several chapters — including this one — have
-already been pointing toward.
+for what a later phase adds beyond that: the machine-learning bridge
+several chapters have already been pointing toward.

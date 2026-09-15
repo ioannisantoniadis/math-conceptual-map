@@ -61,10 +61,11 @@ $\varepsilon$–$\delta$-style construction said otherwise.
 Higher derivatives ($f''$, $f'''$, ...) are just this construction
 iterated. **Taylor approximation** — using more derivatives to build
 successively better polynomial approximations to $f$ near a point — is the
-single-variable ancestor of the loss-landscape and optimization machinery
-that shows up constantly in applied ML; this site doesn't develop it
-further here, but it's the same "best local approximation" idea this
-chapter is built around, carried one order further.
+single-variable ancestor of the loss-landscape and
+[optimization](23-optimization.qmd) machinery that shows up constantly in
+applied ML; this site develops that connection later, but it's the same
+"best local approximation" idea this chapter is built around, carried one
+order further.
 
 ## Where this leads
 

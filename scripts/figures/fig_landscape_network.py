@@ -54,6 +54,9 @@ NODES = {
     "DIFF": ("Differentiation", 3, False),
     "INT": ("Integration", 3, False),
     "DE":  ("Differential\nEquations", 3, False),
+    "DISC": ("Discrete\nMathematics", 3, False),
+    "PROB": ("Probability", 3, False),
+    "OPT": ("Optimization", 3, False),
     "ML":  ("Machine\nLearning", 4, True),
     "PHY": ("Physics", 4, True),
 }
@@ -66,6 +69,8 @@ EDGES = [
     ("TOP", "LC"), ("LC", "DIFF"), ("LA", "DIFF"), ("DIFF", "INT"),
     ("DIFF", "DE"), ("INT", "DE"), ("DE", "PHY"), ("DE", "ML"),
     ("LA", "ML"), ("LA", "PHY"),
+    ("N", "DISC"), ("TOP", "DISC"), ("INT", "PROB"), ("DISC", "PROB"),
+    ("DIFF", "OPT"), ("IPS", "OPT"), ("DE", "OPT"), ("PROB", "OPT"), ("OPT", "ML"),
 ]
 
 # Every edge here is a genuine forward dependency (no "built on" back-

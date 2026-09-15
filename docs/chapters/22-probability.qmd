@@ -1,0 +1,99 @@
+---
+title: "Probability"
+---
+
+You already compute probabilities, expectations, and conditional
+probabilities. What probability structurally *is* — and why it is best
+understood as measure theory wearing a specific interpretation, not as its
+own free-standing set of rules — is this chapter's subject.
+
+## A three-century gap, in the shape [the map](00-the-map.qmd) keeps finding
+
+Probability's origins are famously concrete: a 1654 correspondence between
+Blaise Pascal and Pierre de Fermat, triggered by a gambler's question about
+how to split the stakes of an interrupted dice game fairly. For roughly the
+next 280 years, probability developed as a collection of clever counting
+arguments about coins, dice, and cards — useful, and mathematically
+informal, in much the way pre-Cauchy calculus was. The rigorous foundation
+arrived only in 1933, when Andrey Kolmogorov built probability entirely on
+top of **measure theory** — the general theory of assigning consistent
+"sizes" to sets, of which [Integration](19-integration.qmd)'s later
+phase (Lebesgue's construction) is the other major instance. This is
+[the map](00-the-map.qmd)'s historical/formal gap again, in close to its
+purest form: a field used confidently for centuries before anyone stated
+precisely what it was reasoning about.
+
+## The abstraction
+
+A **probability space** is a triple $(\Omega, \mathcal{F}, P)$: a **sample
+space** $\Omega$ (the set of all possible outcomes), a collection
+$\mathcal{F}$ of subsets of $\Omega$ called **events** (technical
+conditions on $\mathcal{F}$, needed to make countably-infinite combinations
+of events well-behaved, are set aside here — the same kind of deliberate
+simplification [Sets](03-sets.qmd) made about ZFC), and a **probability
+measure** $P: \mathcal{F} \to [0,1]$ satisfying $P(\Omega) = 1$ and
+**countable additivity**: the probability of a countable union of disjoint
+events is the sum of their individual probabilities.
+
+$P$ is, precisely, a measure — the same structural role $d(x,y)$ played for
+distance in [Metric Spaces](12-metric-spaces.qmd) or "open set" played for
+neighborhoods in [Topological Spaces](13-topological-spaces.qmd): a
+function assigning a number to sets, required to interact sensibly with set
+operations. Countable additivity is the axiom doing the real work — without
+it, the probability of "either of these two impossible-to-happen-together
+events" wouldn't have to equal the sum of their separate probabilities,
+which would break the entire arithmetic of combining probabilities that
+every computation in this field leans on.
+
+## Random variables are functions, not "random numbers"
+
+A **random variable** is not a variable that happens to be random — it's a
+function $X: \Omega \to \mathbb{R}$, mapping outcomes to numbers, in
+exactly [Relations and Functions](04-relations-and-functions.qmd)'s sense.
+Rolling a die and looking at the result is the function that sends each
+outcome to its face value; nothing about $X$ itself is uncertain — $X$ is
+an entirely fixed, ordinary function, and the *randomness* lives entirely
+in which outcome $\omega \in \Omega$ actually occurs. This reframe matters:
+"the probability that $X \leq 3$" is shorthand for "the probability of the
+event $\{\omega \in \Omega : X(\omega) \leq 3\}$" — a specific subset of
+$\Omega$, run back through $P$.
+
+## Expectation is an integral
+
+$$\mathbb{E}[X] = \int_\Omega X \, dP$$
+
+The **expectation** of a random variable is literally an integral against
+the probability measure — the same construction [Integration](19-integration.qmd)
+built, here integrating against $P$ instead of against ordinary length on
+$\mathbb{R}$. The familiar formula $\mathbb{E}[X] = \sum_i x_i P(X = x_i)$
+from a first course is not a different idea; it's this integral specialized
+to a discrete sample space, where "integrating" collapses to "summing" —
+exactly the discrete/continuous split [Discrete Mathematics](21-discrete-mathematics.qmd)
+just named.
+
+## What probability is NOT
+
+Not simply a branch of analysis, despite borrowing its central tool
+wholesale. Measure theory supplies the machinery; probability asks
+questions measure theory alone never poses. **Independence** — events $A$
+and $B$ are independent when $P(A \cap B) = P(A)P(B)$ — has no counterpart
+in general measure theory; it's a genuinely probabilistic concept about how
+one piece of information does or doesn't affect another. **Conditional
+probability**, $P(A \mid B) = \frac{P(A \cap B)}{P(B)}$, and **Bayes' rule**
+— $P(A\mid B) = \frac{P(B\mid A)P(A)}{P(B)}$, obtained by equating the two
+ways of writing $P(A \cap B)$ — are how probability updates belief given new
+information, a question about *reasoning under uncertainty* that a bare
+measure space was never built to answer. Borrowing structure from a theory
+and then asking that theory's questions with it are two different things,
+and probability is a clean example of the second without the first.
+
+## Where this leads
+
+[Optimization](23-optimization.qmd), next, is where probability most often
+gets *used* rather than developed further on this site: fitting a model
+frequently means maximizing the probability (the **likelihood**) that the
+observed data came from it, turning a probability question into an
+optimization problem. A later phase of this site returns to measure theory
+in its own right and to statistics, which sits on top of probability the
+way [Linear Algebra](10-linear-algebra.qmd) sits on top of [Vector
+Spaces](09-vector-spaces.qmd).

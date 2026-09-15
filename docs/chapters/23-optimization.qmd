@@ -1,0 +1,89 @@
+---
+title: "Optimization"
+---
+
+Gradient descent, Lagrange multipliers, convex loss functions — you've used
+these, possibly without a course ever called "optimization." This chapter
+is about what makes an optimization problem tractable or not, and why
+"convex" is close to the single most important word in the entire field.
+
+## The problem, and the tool already built for it
+
+Optimization asks for the input that makes a function largest or smallest.
+[Differentiation](18-differentiation.qmd) already supplies the basic tool:
+at an unconstrained maximum or minimum of a differentiable $f$, the best
+local linear approximation to $f$ must be flat — $f'(a) = 0$. Such a point
+is a **critical point**, and whether it's a maximum, a minimum, or neither
+(a **saddle point**) is decided by the **Hessian** — [Differentiation](18-differentiation.qmd)'s
+"derivative of the gradient, one order up" — in exactly the way a single-
+variable second-derivative test generalizes once "positive" and "negative"
+become "positive definite" and "negative definite" for a matrix instead of
+a number.
+
+## Constrained optimization: a geometric picture
+
+Real problems usually come with constraints — maximize $f$ subject to
+$g(x) = 0$. At a constrained optimum, moving along the constraint surface
+in *any* direction can no longer increase $f$, which forces $f$'s gradient
+to point in the same direction as the constraint's — that alignment is
+exactly what **Lagrange multipliers** solve for. This is a genuinely
+geometric fact, not an algebraic trick: [Inner Product
+Spaces](14-inner-product-spaces.qmd) already established that a gradient
+points in the direction of steepest increase, and two gradients pointing
+the same direction is precisely what "no remaining direction along the
+constraint helps" requires.
+
+## Convexity: why some problems are fundamentally easier
+
+A set is **convex** if the line segment between any two of its points stays
+inside it; a function is convex if the region above its graph is a convex
+set — equivalently, if a straight line between any two points on the graph
+never dips below the graph itself. This single property is worth almost
+all the emphasis it gets in applied optimization, for one reason: **every
+local minimum of a convex function is a global minimum**. There's no
+possibility of a gradient-based method getting trapped somewhere that looks
+optimal but isn't — a fact that fails completely for non-convex functions,
+where a local minimum can be arbitrarily far from the true minimum.
+
+This is [the map](00-the-map.qmd)'s **local versus global** thread landing
+at its sharpest point yet. Every other structure this site has built —
+derivatives, critical points, gradients — is fundamentally *local*: a
+statement about the immediate neighborhood of a point. Convexity is the
+rare *global* property that reaches back down and gives a local
+computation (found a point where the gradient vanishes) a global guarantee
+(this is the best point, period) — which is exactly why so much of applied
+optimization amounts to asking "is this problem convex?" before asking
+anything else about it.
+
+## Gradient descent, assembled from three earlier chapters
+
+**Gradient descent** — repeatedly step in the direction opposite the
+gradient — is not a new idea at this point; it's three chapters' worth of
+machinery, assembled. The **gradient** is defined using an inner product
+([Inner Product Spaces](14-inner-product-spaces.qmd)): it's the vector
+$\nabla f$ satisfying $\langle \nabla f, v\rangle = Df(v)$ for every
+direction $v$, which is what makes "the direction of steepest increase" a
+well-posed question at all rather than a vague intuition — a well-posed
+question is exactly what [Differentiation](18-differentiation.qmd)'s
+"derivative as linear map" makes it, once a specific inner product picks
+out one vector to represent that linear map. And the *algorithm* — take
+small discrete steps against $\nabla f$ — is precisely the discretized
+gradient flow [Differential Equations](20-differential-equations.qmd)
+already named: a dynamical system whose continuous version always moves
+toward decreasing $f$, approximated step by step the same way Euler's
+method approximates any other differential equation's solution.
+
+## Where this connects, and where this site's core arc ends
+
+Fitting a model by minimizing a loss function and fitting one by maximizing
+a likelihood ([Probability](22-probability.qmd)'s closing paragraph) are, in
+an enormous number of practical cases, the exact same optimization problem
+looked at from two directions. This is the last chapter in this site's
+current core arc — logic through optimization, [the
+map](00-the-map.qmd)'s master diagram updated alongside it. See
+[`ROADMAP.md`](https://github.com/ioannisantoniadis/math-conceptual-map/blob/main/ROADMAP.md)
+for what a later phase adds: the machine-learning bridge several chapters
+have already been pointing toward, and a lighter, conceptual-coverage pass
+over the remaining advanced topics — functional analysis, measure theory,
+differential geometry, category theory — this site has flagged along the
+way without developing.

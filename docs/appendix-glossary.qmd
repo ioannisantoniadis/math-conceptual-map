@@ -31,9 +31,18 @@ axioms. See [Axioms and Definitions](chapters/05-axioms-and-definitions.qmd).
 every vector is then a unique linear combination of basis vectors. See
 [Vector Spaces](chapters/09-vector-spaces.qmd).
 
+**Bayes' rule** — $P(A\mid B) = \frac{P(B\mid A)P(A)}{P(B)}$; how
+probability updates belief given new information. See
+[Probability](chapters/22-probability.qmd).
+
 **Bijective** — both injective and surjective; pairs two sets up perfectly,
 element for element. See [Relations and
 Functions](chapters/04-relations-and-functions.qmd).
+
+**Combinatorics** — counting the elements of a set built from others via
+subsets, functions, or orderings; $\binom{n}{r}$ counts $r$-element subsets,
+$n!$ counts bijections of a set with itself. See [Discrete
+Mathematics](chapters/21-discrete-mathematics.qmd).
 
 **Completeness** — a metric space's property that every Cauchy sequence
 (one whose terms bunch arbitrarily close together) actually converges to a
@@ -44,6 +53,15 @@ Spaces](chapters/12-metric-spaces.qmd).
 topologically, a function whose preimage of every open set is open — the
 same idea, restated without needing a distance. See [Topological
 Spaces](chapters/13-topological-spaces.qmd).
+
+**Convex** — a set containing the line segment between any two of its
+points; a function is convex when the region above its graph is. Every
+local minimum of a convex function is a global minimum. See
+[Optimization](chapters/23-optimization.qmd).
+
+**Critical point** — a point where a differentiable function's derivative
+is zero; a candidate maximum, minimum, or saddle point, decided by the
+Hessian. See [Optimization](chapters/23-optimization.qmd).
 
 **Derivative** — $f'(a) = \lim_{h\to 0} \frac{f(a+h)-f(a)}{h}$; structurally,
 the linear map that best approximates $f$ near $a$. See
@@ -56,6 +74,10 @@ of its own derivatives; a solution is a function, not a number. See
 **Dimension** — the number of vectors in a basis of a vector space; the same
 for every basis of a given space. See [Vector
 Spaces](chapters/09-vector-spaces.qmd).
+
+**Discrete** — of objects with definite next/previous neighbors and nothing
+between (contrast: **dense**, as $\mathbb{Q}$ and $\mathbb{R}$ are). See
+[Discrete Mathematics](chapters/21-discrete-mathematics.qmd).
 
 **Dynamical system** — a differential equation studied for its long-run
 qualitative behavior (fixed points, stability, oscillation) rather than an
@@ -78,6 +100,10 @@ carries an inner product; the modern, coordinate-based redefinition of the
 geometry Euclid built from postulates. See [Euclidean
 Geometry](chapters/16-euclidean-geometry.qmd).
 
+**Expectation** — $\mathbb{E}[X] = \int_\Omega X\,dP$; a random variable's
+average value, literally an integral against the probability measure. See
+[Probability](chapters/22-probability.qmd).
+
 **Field** — a ring in which multiplication is commutative and every nonzero
 element has a multiplicative inverse; the scalars a vector space is defined
 "over." $\mathbb{Q}$, $\mathbb{R}$, $\mathbb{C}$ are fields, $\mathbb{Z}$ is
@@ -91,12 +117,21 @@ Functions](chapters/04-relations-and-functions.qmd).
 inverse operations: $\int_a^b f(x)\,dx = F(b)-F(a)$ for any antiderivative
 $F$ of $f$. See [Integration](chapters/19-integration.qmd).
 
+**Gradient descent** — repeatedly stepping opposite a function's gradient
+to minimize it; a discretized gradient flow, in the same sense Euler's
+method discretizes any differential equation. See
+[Optimization](chapters/23-optimization.qmd).
+
 **Group** — a set with one operation satisfying closure, associativity,
 identity, and inverses. See [Groups](chapters/08-groups.qmd).
 
 **Homomorphism** — a map between two structures of the same kind that
 respects their operations; need not be invertible. See [What Is a
 Mathematical Structure?](chapters/07-mathematical-structures.qmd).
+
+**Independence** — events $A$ and $B$ with $P(A\cap B) = P(A)P(B)$; a
+genuinely probabilistic notion with no counterpart in general measure
+theory. See [Probability](chapters/22-probability.qmd).
 
 **Injective** — a function under which distinct inputs always give distinct
 outputs ("one-to-one"). See [Relations and
@@ -130,6 +165,11 @@ surface is the standard example). A first pass only — full treatment is a
 later phase of this site. See [Euclidean
 Geometry](chapters/16-euclidean-geometry.qmd).
 
+**Mathematical induction** — a proof technique for statements about all
+natural numbers: prove a base case, prove $n$ implies $n+1$, conclude the
+statement holds for every $n$. See [Discrete
+Mathematics](chapters/21-discrete-mathematics.qmd).
+
 **Mathematical structure** — a set equipped with operations and/or relations
 satisfying a fixed list of axioms — e.g. group, vector space, metric space.
 See [What Is a Mathematical
@@ -160,12 +200,20 @@ Equations](chapters/20-differential-equations.qmd).
 structural definition behind "perpendicular." See [Inner Product
 Spaces](chapters/14-inner-product-spaces.qmd).
 
+**Probability space** — a triple $(\Omega, \mathcal{F}, P)$: outcomes,
+events, and a probability measure satisfying $P(\Omega)=1$ and countable
+additivity. See [Probability](chapters/22-probability.qmd).
+
 **Proof** — a finite chain of statements, each an axiom or a valid
 consequence of earlier statements, ending at the claim being established.
 See [Logic and Proof](chapters/02-logic-and-proof.qmd).
 
 **Proposition** — a statement that is unambiguously true or false. See
 [Logic and Proof](chapters/02-logic-and-proof.qmd).
+
+**Random variable** — a function $X:\Omega\to\mathbb{R}$ from a probability
+space's outcomes to numbers — not "a variable that is random." See
+[Probability](chapters/22-probability.qmd).
 
 **Real analysis** — the rigorous $\varepsilon$–$\delta$ foundation for
 calculus, built roughly two centuries after calculus itself. See [Limits

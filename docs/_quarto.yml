@@ -51,6 +51,11 @@ book:
         - chapters/18-differentiation.qmd
         - chapters/19-integration.qmd
         - chapters/20-differential-equations.qmd
+    - part: "Discrete Math, Probability & Optimization"
+      chapters:
+        - chapters/21-discrete-mathematics.qmd
+        - chapters/22-probability.qmd
+        - chapters/23-optimization.qmd
     - part: "Appendices"
       chapters:
         - appendix-glossary.qmd

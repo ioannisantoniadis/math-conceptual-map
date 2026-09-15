@@ -169,15 +169,55 @@ Each phase should leave the site in a complete, cross-linked, non-stub state
       chapter's forward references; `CLAUDE.md` gained a rule against ever
       hardcoding a chapter number in prose again.
 
-## Phase 4 — Discrete math, probability, optimization — planned
+## Phase 4 — Discrete math, probability, optimization — **done**
 
-- [ ] Discrete mathematics: combinatorics, graph theory, discrete vs.
-      continuous as its own named theme.
-- [ ] Probability as measure theory instantiated — probability space,
-      random variables, expectation — explicit about probability *not*
-      being simply a branch of analysis (`SPEC.md` §13).
-- [ ] Optimization: unconstrained/constrained, convexity, and the
-      calculus + linear algebra dependencies made explicit.
+- [x] `21-discrete-mathematics.qmd` — combinatorics reframed as counting
+      specific families of subsets/functions already defined in
+      `03-sets`/`04-relations-and-functions`; graph theory (a graph's edge
+      set *is* a relation) with Euler's 1736 Königsberg bridges problem as
+      shared ancestor of both graph theory and topology; recurrence
+      relations named as the discrete sibling of `20-differential-equations`;
+      mathematical induction introduced as a third proof technique alongside
+      `02-logic-and-proof`'s direct proof and contradiction, justified via
+      `06-number-systems`'s successor-based construction of $\mathbb{N}$;
+      discrete-vs-continuous collected explicitly as its own recurring
+      thread (discrete topology vs. standard, sums vs. integrals, recurrence
+      relations vs. differential equations).
+- [x] `22-probability.qmd` — probability space as measure theory
+      instantiated (Kolmogorov, 1933, three centuries after Pascal/Fermat's
+      gambling-motivated 1654 origins — another historical/formal gap for
+      `00-the-map.qmd`'s collection); random variables reframed as ordinary
+      functions $\Omega\to\mathbb{R}$, not "random numbers"; expectation
+      shown to be literally `19-integration`'s integral, against $P$ instead
+      of ordinary length; explicit about probability *not* being simply a
+      branch of analysis (`SPEC.md` §13) — independence and Bayes' rule
+      named as genuinely probabilistic questions measure theory alone
+      doesn't ask.
+- [x] `23-optimization.qmd` — critical points and the Hessian built directly
+      on `18-differentiation`; Lagrange multipliers given a geometric
+      reading via `14-inner-product-spaces`'s gradient-as-steepest-direction;
+      convexity tied explicitly to `00-the-map.qmd`'s local-vs-global
+      thread (every local min of a convex function is global); gradient
+      descent assembled, in one place, from exactly the three chapters that
+      built its pieces (inner product spaces, differentiation, differential
+      equations' gradient flow) rather than introduced as a standalone
+      algorithm.
+- [x] New `_quarto.yml` part, "Discrete Math, Probability & Optimization,"
+      added after "Analysis."
+- [x] `fig_landscape_network.py`: three new solid Theories nodes (Discrete
+      Mathematics, Probability, Optimization) with nine new edges reflecting
+      dependencies actually discussed in the chapters (e.g. Optimization fed
+      by Differentiation, Inner Product Spaces, Differential Equations, and
+      Probability all four, matching the "assembled from three earlier
+      chapters" framing above); Optimization also connects to Machine
+      Learning. Regenerated cleanly at 24 nodes/35 edges with no overlap,
+      confirming Phase 3's figsize-from-data-span fix holds as the graph
+      keeps growing.
+- [x] Forward references paid off in two already-published chapters:
+      `20-differential-equations.qmd`'s closing paragraph (previously
+      pointing at "a later phase" for all of Phase 4) now links the three
+      real chapters directly; `18-differentiation.qmd`'s Taylor-approximation
+      aside now links `23-optimization.qmd` instead of leaving it unlinked.
 
 ## Phase 5 — Mathematics of ML, advanced map, cross-connections — planned
 

@@ -147,7 +147,8 @@ an automated check.
 
 ## Current status
 
-Phases 1–3 are built — 20 chapters, logic through differential equations.
-Phase 4 (discrete math, probability, optimization) has not started. See
-`ROADMAP.md` for the full decision log before assuming more chapters are
-expected in any particular area.
+Phases 1–4 are built — 23 chapters, logic through optimization. Phase 5
+(the ML bridge, and a lighter conceptual-coverage pass over functional
+analysis/measure theory/differential geometry/category theory) has not
+started. See `ROADMAP.md` for the full decision log before assuming more
+chapters are expected in any particular area.

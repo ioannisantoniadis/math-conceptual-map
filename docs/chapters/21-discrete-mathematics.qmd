@@ -1,0 +1,107 @@
+---
+title: "Discrete Mathematics"
+---
+
+You can compute $\binom{n}{r}$, you've drawn graphs and trees, and you've
+written recursive code. None of that is this chapter's subject. What ties
+counting, graphs, and recursively-defined sequences into one named field —
+and what "discrete" structurally means, as opposed to "continuous" — is.
+
+## What "discrete" means
+
+[Topological Spaces](13-topological-spaces.qmd) already named the
+**discrete topology**: every subset declared open, every point isolated
+from every other with room to spare. That's not a throwaway example — it's
+close to a working definition of this whole field. Discrete mathematics
+studies objects for which the discrete topology (or no topology at all) is
+the natural fit: $\mathbb{N}$ and $\mathbb{Z}$, where every element has a
+definite next and previous neighbor with nothing between; finite sets;
+graphs; sequences defined term by term. [Number
+Systems](06-number-systems.qmd) already drew the contrast without naming
+it: $\mathbb{Q}$ and $\mathbb{R}$ are **dense** — between any two elements
+sits another — while $\mathbb{N}$ and $\mathbb{Z}$ are not. Discrete versus
+continuous is a genuine fork in mathematics, not a difference in difficulty,
+and it recurs constantly enough to deserve being named as its own thread
+here.
+
+## Combinatorics: counting functions and subsets
+
+You already compute $\binom{n}{r}$ and $n!$. What those formulas are
+*counting*, structurally, is worth seeing once. Choosing $r$ objects from
+$n$ without regard to order is counting the $r$-element **subsets** of an
+$n$-element set — [Sets](03-sets.qmd)'s power set, restricted to a fixed
+size. Choosing $r$ objects *with* order in mind is counting the
+**injective** functions from an $r$-element set into an $n$-element one —
+[Relations and Functions](04-relations-and-functions.qmd)'s injectivity,
+doing real work. A permutation of $n$ objects is a **bijective** function
+from a set to itself. Combinatorics, this much of it anyway, is not a
+separate bag of formulas — it's counting specific families of functions and
+subsets already defined elsewhere on this site, which is exactly why the
+formulas have the shapes they do.
+
+## Graph theory
+
+A **graph** is a set of **vertices** $V$ together with a set of **edges**
+$E$ — and an edge set is, structurally, a relation on $V$ in exactly
+[Relations and Functions](04-relations-and-functions.qmd)'s sense: a
+symmetric relation for an undirected graph, any relation at all for a
+directed one. A vertex's **degree** is how many edges touch it; a **path**
+is a sequence of edges linking one vertex to another; a **cycle** is a path
+that returns to where it started; a **tree** is a connected graph with no
+cycles. None of this is developed further here — it's named so that graphs
+you'll meet elsewhere (networks, dependency structures, later phases of
+this site's own machine-learning bridge) have vocabulary attached.
+
+The field's traditional origin point is Leonhard Euler's 1736 solution to
+the **Königsberg bridge problem** — could a walker cross each of the city's
+seven bridges exactly once? Euler answered by discarding every detail
+except which landmasses connected to which bridges, reducing the city to
+exactly the vertex-and-edge structure above, and showing the answer is no.
+That reduction — throw away everything except the connection structure — is
+also frequently cited as an early ancestor of topology, decades before
+[Topological Spaces](13-topological-spaces.qmd)'s subject had a name at
+all: a nice instance of one historical event seeding two fields this site
+treats separately.
+
+## Recurrence relations and induction
+
+A **recurrence relation** defines a sequence in terms of its own earlier
+terms — the Fibonacci sequence, $F(n) = F(n-1) + F(n-2)$, is the standard
+example. This is the discrete sibling of [Differential
+Equations](20-differential-equations.qmd): where a differential equation
+relates a function to its derivatives, a recurrence relation relates a
+sequence to its own prior values, and both are solved (when they're solved
+explicitly at all) by finding a formula the relation alone doesn't hand you.
+
+**Mathematical induction** is the proof technique built for exactly this
+kind of recursively-defined object, and it belongs alongside [Logic and
+Proof](02-logic-and-proof.qmd)'s direct proof and proof by contradiction as
+a third standard tool: prove a statement holds for a base case, prove that
+it holding for $n$ forces it to hold for $n+1$, and conclude it holds for
+every natural number. This isn't a leap of faith — it's a direct consequence
+of how [Number Systems](06-number-systems.qmd) noted $\mathbb{N}$ can be
+built from a successor operation: a set of naturals containing $0$ and
+closed under "add one" that is not all of $\mathbb{N}$ would contradict
+what "successor-generated" means in the first place.
+
+## Discrete versus continuous, named explicitly
+
+The thread running under this entire chapter, collected in one place:
+$\mathbb{N}$ and $\mathbb{Z}$ (discrete) against $\mathbb{Q}$ and
+$\mathbb{R}$ (dense) from [Number Systems](06-number-systems.qmd); the
+discrete topology against the standard one from [Topological
+Spaces](13-topological-spaces.qmd); a sum against an
+[integral](19-integration.qmd); a recurrence relation against a
+[differential equation](20-differential-equations.qmd). Each pair is the
+same underlying question — build up from isolated steps, or from a
+continuum — answered twice, in different settings, and it's worth
+recognizing the pattern on sight rather than meeting each instance as
+unrelated.
+
+## Where this leads
+
+[Probability](22-probability.qmd), next, needs this distinction directly: a
+probability space can be built on a countable, discrete sample space or an
+uncountable, continuous one, and that choice is exactly what decides
+whether an expectation is computed as a sum or as the integral [Integration](19-integration.qmd)
+already defined.
