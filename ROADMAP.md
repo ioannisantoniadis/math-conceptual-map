@@ -53,6 +53,21 @@ Each phase should leave the site in a complete, cross-linked, non-stub state
 - [x] Content voice decided as flowing narrative prose (matching sibling
       repos), not `SPEC.md` §6's literal numbered template — a deliberate
       departure, recorded in `CLAUDE.md` so it isn't silently reverted.
+- [x] GitHub repo created (public, `ioannisantoniadis/math-conceptual-map`),
+      pushed, GitHub Pages wired to the Actions workflow, topics added. Live
+      site and workflow run both confirmed, not just assumed from a
+      green-looking config.
+- [x] `00-the-map.qmd`'s three Mermaid diagrams replaced with computed
+      static figures (`scripts/figures/`) after the live page showed the
+      master map rendering with a near-black subgraph fill and edges routed
+      outside subgraph boxes — a real defect, caught by actually
+      screenshotting the deployed page, not by re-reading the source. This
+      pulls forward what was originally planned as a Phase 2 "maybe" (see
+      the removed bullet below); a generic force-directed layout was tried
+      first (`spring_layout`, then `kamada_kawai_layout`) and both collapsed
+      this graph's sparse chains into overlapping nodes, so the master map
+      uses a computed longest-path DAG layering instead — see
+      `fig_landscape_network.py`'s docstring.
 
 ## Phase 2 — Algebra, geometry, metric spaces, topology — planned
 
@@ -65,12 +80,9 @@ Each phase should leave the site in a complete, cross-linked, non-stub state
       `07-mathematical-structures` comparison table and referenced from
       `09-vector-spaces`'s "what a vector space is NOT" section; this is
       where those forward references get paid off.
-- [ ] Update `00-the-map.qmd`'s master diagram: move the Phase 2 nodes from
-      dashed/"later" to solid, add their real edges.
-- [ ] Consider starting a `scripts/figures/` computed-diagram pipeline
-      (matching `../modern-ai-systems-and-methods`'s pattern) once the map
-      has enough nodes for a force-directed layout to show real structure —
-      not worth it at Phase 1's node count.
+- [ ] Update `fig_landscape_network.py`'s `NODES`/`EDGES` and regenerate:
+      move the Phase 2 nodes from hollow/"planned" to solid, add their real
+      edges, per `CLAUDE.md`'s note on the figure pipeline.
 
 ## Phase 3 — Analysis, calculus, differential equations — planned
 

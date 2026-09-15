@@ -81,13 +81,33 @@ parts (Map / Foundations / Objects / Structures / Theories / Appendices) via
 `docs/_quarto.yml` — **not** the nested per-discipline folder tree
 `SPEC.md` §4 originally suggested; that got superseded when this repo was
 deliberately restructured to match `../optimization-lab` and
-`../modern-ai-systems-and-methods`'s Quarto-book conventions. Mermaid
-diagrams (native to Quarto, `` ```{mermaid} `` fenced blocks — not plain
-` ```mermaid `, which Quarto won't render as a diagram) are used for the
-labeled dependency/map diagrams; unlike the sibling repos, there is
-currently no `scripts/figures/` computed-diagram pipeline — deferred until
-the map has enough nodes (~20+) for a force-directed layout to be worth
-generating, see `ROADMAP.md`.
+`../modern-ai-systems-and-methods`'s Quarto-book conventions.
+
+**Diagrams are computed static figures, not Mermaid.** Mermaid was tried
+first for `00-the-map.qmd` and dropped after its `flowchart TD` with
+subgraphs rendered with a near-black subgraph fill that clashed against the
+site's light theme, plus edges routed outside their subgraph boxes — a real
+rendering defect, confirmed by screenshotting the live page, not a taste
+call. `scripts/figures/*.py` (matching `../modern-ai-systems-and-methods`'s
+pattern) now generates every diagram in `00-the-map.qmd` as a static PNG in
+`docs/images/`, using `scripts/figures/_theme.py` for shared styling
+(palette is the validated categorical instance from the `dataviz` skill's
+reference palette — same source `../optimization-lab`'s `viz/theme.py`
+cites — checked with `validate_palette.js` in adjacent-pairs mode, which is
+the right mode here since every node carries a direct label plus a legend,
+not bare unlabeled marks). The master map
+(`fig_landscape_network.py`) specifically uses a **computed longest-path DAG
+layering** (topological sort), not `networkx.spring_layout` or
+`kamada_kawai_layout` — both were tried and both collapsed this graph's long
+sparse chains into overlapping node clusters, since neither accounts for
+node size and neither suits a small, nearly-tree-shaped graph. Regenerate
+after editing a figure script:
+```bash
+python3 scripts/figures/fig_landscape_network.py   # or whichever script changed
+```
+then `quarto render docs` and look at the actual output — this project's one
+prior visualization bug (the Mermaid map) was caught exactly by looking at
+the rendered page, not by the source looking plausible.
 
 ## Dev workflow
 

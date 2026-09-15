@@ -22,16 +22,7 @@ book hangs off of.
 whatever form. Approximate, contested in places, and simplified below; treat
 every date as "roughly."
 
-```{mermaid}
-flowchart LR
-    A["Arithmetic & geometry<br/>(antiquity)"] --> B["Algebra<br/>al-Khwārizmī, 9th c.;<br/>symbolic algebra, 16th–17th c."]
-    B --> C["Calculus<br/>Newton/Leibniz, 1660s–80s<br/>(informal infinitesimals)"]
-    C --> D["Rigorous analysis<br/>Cauchy 1820s, Weierstrass 1870s<br/>(ε–δ limits)"]
-    D --> E["Set theory<br/>Cantor, 1870s–80s"]
-    E --> F["Formal axiomatic foundations<br/>Frege, Peano, Zermelo–Fraenkel<br/>~1889–1922"]
-    F --> G["Abstract algebra<br/>formal group axioms:<br/>Cayley 1854, Weber 1893"]
-    G --> H["Topology as a formal object<br/>Hausdorff, 1914"]
-```
+![Roughly when each idea first appeared, wrapped into two rows so eight entries stay readable at page width. Dates are approximate throughout — see the caveats above and in `appendix-references.qmd`.](../images/historical-timeline.png){#fig-historical-timeline}
 
 The gap between C and D is the one worth sitting with: calculus is roughly
 two centuries *older* than the rigorous theory of limits it's now formally
@@ -42,16 +33,7 @@ infinitesimals nobody could yet justify.
 **Formal/logical foundations** — how mathematics is built up today, if you
 start from axiomatic set theory and add machinery one layer at a time.
 
-```{mermaid}
-flowchart LR
-    L["Logic"] --> S["Set theory<br/>(axioms)"]
-    S --> R["Relations"]
-    R --> Fn["Functions"]
-    Fn --> N["Numbers<br/>(constructed as sets)"]
-    N --> AS["Algebraic structures<br/>(set + operations + axioms)"]
-    AS --> MT["Order / metric / topological<br/>structures"]
-    MT --> AN["Limits, continuity,<br/>analysis"]
-```
+![How mathematics is rebuilt today starting from axiomatic set theory — each stage adds one layer of machinery on top of the last.](../images/formal-foundations.png){#fig-formal-foundations}
 
 **Conceptual dependency** — what you need to *understand*, not formally
 construct, before an idea makes sense. Much sparser than the formal graph:
@@ -82,66 +64,24 @@ the table above is the implicit question: before in *which* sense?
 ## The master map
 
 The diagram below is this site's actual spine — the chapters that exist
-today, plus a few later ones sketched in lighter, dashed nodes so the shape
-of the whole graph is visible even where the content isn't written yet. Read
-the edge labels literally: `prerequisite` means *conceptual* prerequisite
-(third row of the table above), not formal construction; `generalizes` and
-`instantiates` describe the abstraction relationships from
-[What Is a Mathematical Structure?](07-mathematical-structures.qmd);
-`used in` points toward an application pulling the idea in from outside pure
-mathematics. This is a map, not a dependency proof — some edges could
-legitimately be drawn elsewhere, and that's a feature of a graph, not a bug
-to fix by turning it into a tree.
+today, plus a few later ones drawn hollow so the shape of the whole graph is
+visible even where the content isn't written yet. Fourteen edges is too many
+to individually label on a diagram this size without recreating the exact
+clutter this figure is replacing, so read edge *direction* as pointing
+toward the more-built-up idea, with one exception drawn as a dashed backward
+arc: Analysis reuses Relations & Functions ("built on") rather than
+depending forward on it the way the solid arrows do. Where an arrow crosses
+between colors it is doing one of three things: carrying a *conceptual
+prerequisite* (third row of the table above — e.g. Number Systems into
+[What Is a Structure?](07-mathematical-structures.qmd)), an *abstraction*
+relationship in the sense of that same chapter (What Is a Structure? into
+Groups and Vector Spaces; Groups into Abstract Algebra), or an *application*
+pulling an idea in from outside pure mathematics (Linear Algebra into
+Machine Learning and Physics). This is a map, not a dependency proof — some
+edges could legitimately be drawn elsewhere, and that's a feature of a
+graph, not a bug to fix by turning it into a tree.
 
-```{mermaid}
-flowchart TD
-    classDef later stroke-dasharray: 4 3,opacity:0.75;
-
-    subgraph FOUND["Foundations"]
-        L["Logic & Proof"]
-        S["Sets"]
-        RF["Relations & Functions"]
-        AD["Axioms & Definitions"]
-    end
-
-    subgraph OBJ["Objects"]
-        N["Number Systems"]
-    end
-
-    subgraph STR["Structures"]
-        MS["What Is a Structure?"]
-        G["Groups"]
-        VS["Vector Spaces"]
-        MET["Metric Spaces (later)"]:::later
-        TOP["Topological Spaces (later)"]:::later
-    end
-
-    subgraph THY["Theories"]
-        LA["Linear Algebra"]
-        AA["Abstract Algebra (later)"]:::later
-        AN["Analysis (later)"]:::later
-    end
-
-    subgraph APP["Applications"]
-        ML["Machine Learning (later)"]:::later
-        PHY["Physics (later)"]:::later
-    end
-
-    L -->|prerequisite| S
-    S -->|prerequisite| RF
-    RF -->|prerequisite| AD
-    RF -->|prerequisite| N
-    N -->|prerequisite| MS
-    MS -->|instantiated by| G
-    MS -->|instantiated by| VS
-    G -->|generalizes to| AA
-    VS -->|studied by| LA
-    VS -->|generalizes to| MET
-    MET -->|generalizes to| TOP
-    LA -->|used in| ML
-    LA -->|used in| PHY
-    AN -.->|built on| RF
-```
+![This site's chapter graph, positioned by a computed longest-path layering (topological sort, not a force simulation or hand-placed boxes — see `scripts/figures/fig_landscape_network.py`) rather than the Mermaid version this replaced, whose dark subgraph fill and edge routing broke against this site's light theme. Solid, filled, white-labeled nodes are chapters that exist; hollow, dashed-outline nodes are planned. The dashed arc from Analysis back to Relations & Functions is the one "built on" edge — every other arrow is a forward conceptual-prerequisite, abstraction, or application relationship, per the paragraph above.](../images/landscape-network.png){#fig-landscape-network}
 
 ## Two ways in
 
