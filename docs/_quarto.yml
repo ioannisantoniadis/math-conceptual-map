@@ -56,6 +56,12 @@ book:
         - chapters/21-discrete-mathematics.qmd
         - chapters/22-probability.qmd
         - chapters/23-optimization.qmd
+    - part: "Applications"
+      chapters:
+        - chapters/24-machine-learning.qmd
+    - part: "Advanced Topics"
+      chapters:
+        - chapters/25-advanced-topics.qmd
     - part: "Appendices"
       chapters:
         - appendix-glossary.qmd

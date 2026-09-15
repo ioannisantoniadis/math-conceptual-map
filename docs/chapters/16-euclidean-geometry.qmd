@@ -87,9 +87,10 @@ via a patchwork of coordinate charts, even when it doesn't globally.
 Non-Euclidean geometries turn out to be one important source of manifolds —
 spaces curved in the large that are still locally Euclidean. This is
 genuinely a first pass: manifolds, and the differential geometry built on
-them, are a later phase of this site, and the one-paragraph version above
-is meant only to attach a name and a mental picture to the idea, not to
-define it rigorously.
+them, get only a preview later in this site — see [Advanced
+Topics](25-advanced-topics.qmd) — and the one-paragraph version above is
+meant only to attach a name and a mental picture to the idea, not to define
+it rigorously.
 
 ## Where this leads
 
@@ -101,7 +102,8 @@ geometry you already knew computationally. From here, this site's table of
 contents continues into [Limits and
 Continuity](17-limits-and-continuity.qmd) — real analysis, built directly
 on the continuity [Topological Spaces](13-topological-spaces.qmd) already
-defined — and a later phase picks up differential geometry (making the
-manifold sketch above precise) and — already foreshadowed at the end of
-[Linear Algebra](10-linear-algebra.qmd) — the high-dimensional geometry
-that shows up constantly in machine learning.
+defined. [Advanced Topics](25-advanced-topics.qmd) previews differential
+geometry (making the manifold sketch above precise), and — already
+foreshadowed at the end of [Linear Algebra](10-linear-algebra.qmd) —
+[Machine Learning](24-machine-learning.qmd) picks up the high-dimensional
+geometry that shows up constantly there.

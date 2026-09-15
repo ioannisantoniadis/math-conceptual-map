@@ -112,8 +112,10 @@ what $\vec{x}$ *is*: an element of a vector space, nothing more specific
 required. When $\vec{x}$ happens to be a tuple in $\mathbb{R}^n$, that's a
 choice of *representation*, not a fact forced by the definition — the same
 underlying idea works with $\vec{x}$ ranging over polynomials or functions,
-which is exactly the setting differential equations and functional analysis
-live in. [Linear Algebra](10-linear-algebra.qmd) makes precise what $A$ is
+which is exactly the setting [Differential
+Equations](20-differential-equations.qmd) and the [functional
+analysis](25-advanced-topics.qmd) this site previews live in. [Linear
+Algebra](10-linear-algebra.qmd) makes precise what $A$ is
 doing to $\vec{x}$ — spoiler: not "a grid of numbers," but a *transformation*
 that a grid of numbers happens to represent once a basis is fixed.
 

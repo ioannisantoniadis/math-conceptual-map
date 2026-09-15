@@ -103,8 +103,7 @@ constantly isn't incidental: a learned embedding is a vector in exactly the
 sense of [Vector Spaces](09-vector-spaces.qmd), a neural network layer's
 weight matrix is a linear map (composed with a nonlinearity) in exactly the
 sense of this chapter, and techniques like PCA are, mechanically, nothing
-more than finding a data set's dominant eigenvectors. That bridge —
-[the mathematics of ML](00-the-map.qmd), full treatment planned for a later
-phase — is where this site's MVP arc ends and the next one picks up; see
-[`ROADMAP.md`](https://github.com/ioannisantoniadis/math-conceptual-map/blob/main/ROADMAP.md)
-for what's next.
+more than finding a data set's dominant eigenvectors. That bridge is the
+subject of [Machine Learning](24-machine-learning.qmd), later in this
+site's table of contents, once the rest of the structures and theories it
+draws on are in place.

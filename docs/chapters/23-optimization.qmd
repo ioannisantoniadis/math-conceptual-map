@@ -78,12 +78,11 @@ method approximates any other differential equation's solution.
 Fitting a model by minimizing a loss function and fitting one by maximizing
 a likelihood ([Probability](22-probability.qmd)'s closing paragraph) are, in
 an enormous number of practical cases, the exact same optimization problem
-looked at from two directions. This is the last chapter in this site's
-current core arc — logic through optimization, [the
-map](00-the-map.qmd)'s master diagram updated alongside it. See
-[`ROADMAP.md`](https://github.com/ioannisantoniadis/math-conceptual-map/blob/main/ROADMAP.md)
-for what a later phase adds: the machine-learning bridge several chapters
-have already been pointing toward, and a lighter, conceptual-coverage pass
-over the remaining advanced topics — functional analysis, measure theory,
-differential geometry, category theory — this site has flagged along the
-way without developing.
+looked at from two directions. This is the last chapter in this site's core
+theory arc — logic through optimization, [the map](00-the-map.qmd)'s master
+diagram updated alongside it. [Machine Learning](24-machine-learning.qmd),
+next, is the bridge several chapters have already been pointing toward;
+[Advanced Topics](25-advanced-topics.qmd) closes this site with a lighter,
+conceptual-coverage preview of what's flagged but not developed —
+functional analysis, measure theory, differential geometry, category
+theory.

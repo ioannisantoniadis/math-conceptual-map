@@ -93,7 +93,7 @@ and probability is a clean example of the second without the first.
 gets *used* rather than developed further on this site: fitting a model
 frequently means maximizing the probability (the **likelihood**) that the
 observed data came from it, turning a probability question into an
-optimization problem. A later phase of this site returns to measure theory
-in its own right and to statistics, which sits on top of probability the
-way [Linear Algebra](10-linear-algebra.qmd) sits on top of [Vector
-Spaces](09-vector-spaces.qmd).
+optimization problem. [Advanced Topics](25-advanced-topics.qmd) previews
+measure theory in its own right; statistics, which sits on top of
+probability the way [Linear Algebra](10-linear-algebra.qmd) sits on top of
+[Vector Spaces](09-vector-spaces.qmd), stays genuinely open on this site.

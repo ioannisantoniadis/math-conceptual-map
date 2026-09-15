@@ -27,6 +27,11 @@ difference is a vector." See [Affine Spaces](chapters/15-affine-spaces.qmd).
 are derived. Not "true" in isolation — true relative to the choice of
 axioms. See [Axioms and Definitions](chapters/05-axioms-and-definitions.qmd).
 
+**Backpropagation** — the chain rule, applied systematically back-to-front
+through a composition of maps to compute a neural network's gradient
+efficiently; not a distinct piece of mathematics from differentiation. See
+[Machine Learning](chapters/24-machine-learning.qmd).
+
 **Basis** — a linearly independent set of vectors that spans a vector space;
 every vector is then a unique linear combination of basis vectors. See
 [Vector Spaces](chapters/09-vector-spaces.qmd).
@@ -38,6 +43,11 @@ probability updates belief given new information. See
 **Bijective** — both injective and surjective; pairs two sets up perfectly,
 element for element. See [Relations and
 Functions](chapters/04-relations-and-functions.qmd).
+
+**Category** — a collection of objects and structure-preserving morphisms
+between them satisfying composition and identity axioms; the maximal
+abstraction of the homomorphism pattern this site uses repeatedly. See
+[Advanced Topics](chapters/25-advanced-topics.qmd).
 
 **Combinatorics** — counting the elements of a set built from others via
 subsets, functions, or orderings; $\binom{n}{r}$ counts $r$-element subsets,
@@ -89,6 +99,10 @@ only stretches or shrinks ($T(v) = \lambda v$), never redirects, and the
 scalar $\lambda$ by which it does so. See [Linear
 Algebra](chapters/10-linear-algebra.qmd).
 
+**Embedding** — a learned vector representation of data (a word, an image,
+an item) — an element of a vector space, not a metaphor. See [Machine
+Learning](chapters/24-machine-learning.qmd).
+
 **Equivalence relation** — a relation that is reflexive, symmetric, and
 transitive; partitions a set into equivalence classes. Used to construct
 $\mathbb{Z}$ and $\mathbb{Q}$ from more primitive number systems. See
@@ -113,6 +127,9 @@ not. See [Rings and Fields](chapters/11-rings-and-fields.qmd).
 $A$ appears as the first coordinate of exactly one pair. See [Relations and
 Functions](chapters/04-relations-and-functions.qmd).
 
+**Functor** — a structure-preserving map between categories; a
+homomorphism of homomorphisms. See [Advanced Topics](chapters/25-advanced-topics.qmd).
+
 **Fundamental theorem of calculus** — differentiation and integration are
 inverse operations: $\int_a^b f(x)\,dx = F(b)-F(a)$ for any antiderivative
 $F$ of $f$. See [Integration](chapters/19-integration.qmd).
@@ -124,6 +141,10 @@ method discretizes any differential equation. See
 
 **Group** — a set with one operation satisfying closure, associativity,
 identity, and inverses. See [Groups](chapters/08-groups.qmd).
+
+**Hilbert space** — a complete inner-product space, typically
+infinite-dimensional; the setting Fourier series and quantum-mechanical
+states actually live in. See [Advanced Topics](chapters/25-advanced-topics.qmd).
 
 **Homomorphism** — a map between two structures of the same kind that
 respects their operations; need not be invertible. See [What Is a
@@ -161,9 +182,15 @@ Algebra](chapters/10-linear-algebra.qmd).
 
 **Manifold** — informally, a topological space that locally resembles
 $\mathbb{R}^n$ near every point, even if it doesn't globally (a sphere's
-surface is the standard example). A first pass only — full treatment is a
-later phase of this site. See [Euclidean
-Geometry](chapters/16-euclidean-geometry.qmd).
+surface is the standard example). A first pass only — see [Euclidean
+Geometry](chapters/16-euclidean-geometry.qmd) for the sketch and [Advanced
+Topics](chapters/25-advanced-topics.qmd) for the preview of making it
+rigorous.
+
+**Manifold hypothesis** — the idea that real high-dimensional data
+concentrates near a much lower-dimensional manifold embedded in that space;
+what dimensionality reduction looks for. See [Machine
+Learning](chapters/24-machine-learning.qmd).
 
 **Mathematical induction** — a proof technique for statements about all
 natural numbers: prove a base case, prove $n$ implies $n+1$, conclude the

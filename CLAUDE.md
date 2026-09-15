@@ -38,7 +38,12 @@ accident:
    theory (ML). Defined in
    [`docs/chapters/07-mathematical-structures.qmd`](docs/chapters/07-mathematical-structures.qmd).
    The most common way a chapter goes wrong is blurring two of these levels
-   without noticing.
+   without noticing. `docs/chapters/25-advanced-topics.qmd` is the one
+   deliberate, documented exception — it surveys four different theories
+   (functional analysis, measure theory, differential geometry, category
+   theory) rather than building one, says so in its own opening paragraph,
+   and carries no single tag. Don't treat that chapter as license to blur
+   levels elsewhere; it's an exception because it says it is one.
 
 ## Content conventions
 
@@ -147,8 +152,11 @@ an automated check.
 
 ## Current status
 
-Phases 1–4 are built — 23 chapters, logic through optimization. Phase 5
-(the ML bridge, and a lighter conceptual-coverage pass over functional
-analysis/measure theory/differential geometry/category theory) has not
-started. See `ROADMAP.md` for the full decision log before assuming more
-chapters are expected in any particular area.
+All 5 planned phases are built — 25 chapters, logic through a conceptual-
+coverage preview of functional analysis/measure theory/differential
+geometry/category theory. There is no in-flight "next phase" recorded as of
+this writing — before starting new work, check `ROADMAP.md`'s "Non-goals"
+section and the git log for anything more recent than what's summarized
+there, and check with the owner what's actually wanted next (new
+disciplines, more depth on an existing chapter, or something else) rather
+than assuming more chapters are expected in a particular area.

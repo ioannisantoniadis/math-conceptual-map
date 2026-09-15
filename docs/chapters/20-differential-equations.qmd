@@ -91,7 +91,6 @@ solution.
 This site's table of contents continues from here into [Discrete
 Mathematics](21-discrete-mathematics.qmd), [Probability](22-probability.qmd),
 and [Optimization](23-optimization.qmd) — the last of which returns
-directly to the gradient flow just described. See
-[`ROADMAP.md`](https://github.com/ioannisantoniadis/math-conceptual-map/blob/main/ROADMAP.md)
-for what a later phase adds beyond that: the machine-learning bridge
-several chapters have already been pointing toward.
+directly to the gradient flow just described — and from there into
+[Machine Learning](24-machine-learning.qmd), the bridge several chapters
+have already been pointing toward.

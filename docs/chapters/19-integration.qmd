@@ -28,9 +28,10 @@ Not every bounded function has this limit exist — a function wild enough
 (discontinuous on a large enough set of points) can fail to be Riemann
 integrable at all. Fixing exactly which functions are integrable, by
 building the integral on measure theory instead of on Riemann sums, is
-Henri Lebesgue's contribution (1902) and a later phase of this site; the
-Riemann integral above is what this chapter develops, and it's sufficient
-for everything the rest of this site currently needs.
+Henri Lebesgue's contribution (1902) — previewed in [Advanced
+Topics](25-advanced-topics.qmd); the Riemann integral above is what this
+chapter develops, and it's sufficient for everything the rest of this
+site currently needs.
 
 ## The theorem that unifies the two problems
 
@@ -70,8 +71,8 @@ unbounded functions, as a limit of ordinary integrals over growing finite
 regions — another instance of the same "define the hard case as a limit of
 easier cases" move this entire chapter has been making. The deeper fix for
 which functions are integrable at all — **Lebesgue integration**, built on
-measure theory — is a later phase of this site, flagged here rather than
-developed.
+measure theory — is previewed in [Advanced Topics](25-advanced-topics.qmd)
+rather than developed here.
 
 ## Where this leads
 

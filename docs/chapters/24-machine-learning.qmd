@@ -1,0 +1,103 @@
+---
+title: "Machine Learning"
+---
+
+[The map](00-the-map.qmd) opened with an ML practitioner writing
+`embedding_matrix @ x` and wanting to know what mathematical world that
+equation actually lives in. This chapter is the answer — not a new theory,
+but an index: every piece of machinery a working ML practitioner touches
+traced back to the structure or theory that already defines it elsewhere on
+this site. Nothing here is taught for the first time.
+
+## Data is vectors, and "similar" is an angle
+
+A learned **embedding** is an element of a vector space, in exactly [Vector
+Spaces](09-vector-spaces.qmd)'s sense — not a metaphor, a literal instance.
+"Similarity" between two embeddings is almost always computed as **cosine
+similarity**, $\frac{\langle u,v\rangle}{\|u\|\|v\|}$ — [Inner Product
+Spaces](14-inner-product-spaces.qmd)'s angle, applied to word vectors,
+document vectors, or image embeddings instead of geometric arrows. Nothing
+about the formula changes; only what's plugged into it does, which is the
+entire lesson [Vector Spaces](09-vector-spaces.qmd) opened this site's
+structural arc with.
+
+## A model is a composition of maps
+
+$Wx + b$ — a weight matrix times an input, plus a bias — is an **affine
+map** in precisely [Affine Spaces](15-affine-spaces.qmd)'s sense: a linear
+map ($Wx$, [Linear Algebra](10-linear-algebra.qmd)'s subject) plus a
+translation ($+b$). A neural network layer composes one of these with a
+fixed nonlinearity (an **activation function**); a full network is a long
+composition of such layers, exactly the kind of function composition
+[Linear Algebra](10-linear-algebra.qmd) built matrix multiplication to
+represent, with a nonlinearity inserted between each composition to keep
+the whole stack from collapsing into a single linear map (a composition of
+purely linear maps is always just another linear map — the nonlinearities
+are what let depth add expressive power at all). **PCA**, mentioned but not
+derived in [Linear Algebra](10-linear-algebra.qmd), is mechanically nothing
+more than finding a data set's dominant eigenvectors — a direct application
+of that chapter's eigenvalue machinery, not a separate technique.
+
+## Training is optimization, and backpropagation is the chain rule
+
+Fitting a model means minimizing a **loss function** over its parameters —
+[Optimization](23-optimization.qmd)'s subject, directly. The **gradient**
+that gradient descent follows is defined exactly as [Inner Product
+Spaces](14-inner-product-spaces.qmd) and [Optimization](23-optimization.qmd)
+already derived it. **Backpropagation**, the algorithm that computes that
+gradient efficiently through a deep network, is not a distinct piece of
+mathematics — it's [Differentiation](18-differentiation.qmd)'s chain rule,
+applied systematically to a long composition of maps, computed back to
+front so each layer's contribution is reused rather than recomputed. The
+"derivative of a composition is a composition of derivatives" fact
+[Differentiation](18-differentiation.qmd) built on linear maps is the
+entire algorithm; a computational-graph diagram is a bookkeeping device for
+applying it in the right order, not new mathematics.
+
+## Outputs are distributions, and loss is often a likelihood
+
+A classifier's output is standardly interpreted as a probability
+distribution over classes, making its prediction a [random
+variable](22-probability.qmd) in the technical sense — a function from
+possible model states to outcomes, not a single guaranteed answer. Training
+by minimizing **cross-entropy loss** is, mechanically, maximizing the
+[likelihood](22-probability.qmd) of the observed labels under the model —
+the same "fit by maximizing probability of the data" idea [Probability](22-probability.qmd)
+closed with, wearing a different name.
+
+## Why high dimensions feel unintuitive
+
+Data in ML typically lives in spaces with hundreds or thousands of
+dimensions, and geometric intuition built in $\mathbb{R}^2$ or
+$\mathbb{R}^3$ stops transferring reliably: volume concentrates near a
+high-dimensional sphere's surface rather than its center, and most pairs of
+random points end up roughly equidistant. None of this contradicts
+[Euclidean Geometry](16-euclidean-geometry.qmd) — it's the same inner-
+product-space structure, just in a regime where low-dimensional intuition
+was never a proof of anything to begin with. The **manifold hypothesis** —
+that real high-dimensional data actually concentrates near a much lower-
+dimensional surface embedded in that space — is exactly [Euclidean
+Geometry](16-euclidean-geometry.qmd)'s one-paragraph manifold sketch, now
+doing real explanatory work: dimensionality-reduction techniques are, at
+bottom, attempts to find that lower-dimensional surface.
+
+## Where structure and relationships matter
+
+Data with an explicit relational structure — social networks, molecules,
+citation graphs — is modeled with [Discrete Mathematics](21-discrete-mathematics.qmd)'s
+graphs directly, with a learned function applied at each vertex that
+depends on its neighbors. This isn't a special case bolted onto the rest of
+ML; it's the same map-composition idea from earlier in this chapter, with
+the graph's edge structure deciding which vertices' values get combined at
+each step instead of a fixed grid or sequence.
+
+## Where this leads
+
+This closes the loop [the map](00-the-map.qmd) opened this entire site
+with. What's left, deliberately kept light rather than developed in full —
+[Advanced Topics](25-advanced-topics.qmd), next — is the machinery behind
+the parts of ML this chapter only gestured at: infinite-dimensional
+function spaces behind kernel methods and Gaussian processes, the measure
+theory behind fully rigorous continuous probability, the differential
+geometry behind manifold learning done properly, and the increasingly
+common categorical language for describing how all of it composes.

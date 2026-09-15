@@ -219,17 +219,58 @@ Each phase should leave the site in a complete, cross-linked, non-stub state
       real chapters directly; `18-differentiation.qmd`'s Taylor-approximation
       aside now links `23-optimization.qmd` instead of leaving it unlinked.
 
-## Phase 5 — Mathematics of ML, advanced map, cross-connections — planned
+## Phase 5 — Mathematics of ML, advanced map, cross-connections — **done**
 
-- [ ] The ML bridge chapter promised at the end of `10-linear-algebra.qmd`:
-      embeddings, gradients/Jacobians/Hessians, optimization, probability,
-      and high-dimensional geometry, each traced back to the theory chapter
-      it actually lives in.
-- [ ] Advanced-topics overview pass: functional analysis, measure theory,
-      differential geometry, category theory — conceptual coverage only
-      (`SPEC.md` §21), not full treatments.
-- [ ] A cross-disciplinary consistency and link-integrity pass across the
-      whole site.
+- [x] `24-machine-learning.qmd` — the ML bridge chapter promised at the end
+      of `10-linear-algebra.qmd`, framed explicitly as an index rather than
+      a new theory: embeddings ([Vector Spaces](docs/chapters/09-vector-spaces.qmd)),
+      cosine similarity ([Inner Product Spaces](docs/chapters/14-inner-product-spaces.qmd)),
+      a layer's $Wx+b$ as a literal affine map ([Affine
+      Spaces](docs/chapters/15-affine-spaces.qmd) — a forward reference this
+      structure chapter never actually had until now), backpropagation as
+      the chain rule applied systematically
+      ([Differentiation](docs/chapters/18-differentiation.qmd)), loss as
+      negative log-likelihood ([Probability](docs/chapters/22-probability.qmd)),
+      the manifold hypothesis paying off [Euclidean
+      Geometry](docs/chapters/16-euclidean-geometry.qmd)'s one-paragraph
+      manifold sketch, graph-structured data closing the loop to [Discrete
+      Mathematics](docs/chapters/21-discrete-mathematics.qmd). Closes the
+      exact `embedding_matrix @ x` example `00-the-map.qmd` opened this
+      entire site with — that chapter's bottom-up reading path now starts
+      from this one.
+- [x] `25-advanced-topics.qmd` — functional analysis, measure theory,
+      differential geometry, category theory, each given `SPEC.md` §21's
+      prescribed treatment (problem, fundamental objects/structures, what
+      it connects to, where to go next) rather than this site's usual
+      depth — stated explicitly in the chapter's own opening, including
+      that it's the one chapter that doesn't carry a single
+      object/structure/theory tag, since it surveys four theories rather
+      than building one. This is a deliberate, documented exception to
+      the "non-negotiable discipline" in `CLAUDE.md`, not an oversight.
+- [x] Cross-disciplinary consistency and link-integrity pass: every
+      remaining "a later phase of this site" placeholder that Phase 5
+      actually resolved was found (`grep -n "later phase"`) and repointed
+      to a real chapter — in `09-vector-spaces`, `10-linear-algebra`,
+      `16-euclidean-geometry` (twice), `19-integration` (twice),
+      `20-differential-equations`, `21-discrete-mathematics`,
+      `22-probability`, and `23-optimization`'s closing paragraph, which
+      had been the single explicit list of everything this phase needed to
+      cover. Two placeholders were deliberately left alone because Phase 5
+      never covered them (topology's connectedness/compactness in
+      `13-topological-spaces`; PDEs in `20-differential-equations`) — both
+      genuinely still open, not missed. Full-site link-integrity, stale-
+      chapter-number, and orphan-chapter (no inbound links) checks all
+      passed clean at 25 chapters / 51 cross-reference targets.
+- [x] New `_quarto.yml` parts, "Applications" and "Advanced Topics," added
+      after "Discrete Math, Probability & Optimization."
+- [x] `fig_landscape_network.py`: Machine Learning moved from hollow to
+      solid; a new solid Advanced Topics node added, fed by What Is a
+      Structure? (category theory generalizes its homomorphism pattern),
+      Inner Product Spaces (functional analysis), Probability (measure
+      theory), Euclidean Geometry (differential geometry), and Machine
+      Learning. Physics is now the map's only remaining hollow node.
+      `fig_social_preview.py` regenerated automatically from the same data
+      (no code changes needed — it imports `NODES`/`EDGES` directly).
 
 ## Non-goals
 

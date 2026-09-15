@@ -97,6 +97,7 @@ graph, not a bug to fix by turning it into a tree.
 **Bottom-up, from something you already use** — the mirror image. An ML
 practitioner who writes `embedding_matrix @ x` and wants to know what world
 that equation actually lives in reads
+[Machine Learning](24-machine-learning.qmd) →
 [Linear Algebra](10-linear-algebra.qmd) →
 [Vector Spaces](09-vector-spaces.qmd) →
 [What Is a Structure?](07-mathematical-structures.qmd) and stops once the

@@ -49,8 +49,9 @@ directed one. A vertex's **degree** is how many edges touch it; a **path**
 is a sequence of edges linking one vertex to another; a **cycle** is a path
 that returns to where it started; a **tree** is a connected graph with no
 cycles. None of this is developed further here — it's named so that graphs
-you'll meet elsewhere (networks, dependency structures, later phases of
-this site's own machine-learning bridge) have vocabulary attached.
+you'll meet elsewhere (networks, dependency structures, the graph-structured
+data [Machine Learning](24-machine-learning.qmd) closes with) have
+vocabulary attached.
 
 The field's traditional origin point is Leonhard Euler's 1736 solution to
 the **Königsberg bridge problem** — could a walker cross each of the city's

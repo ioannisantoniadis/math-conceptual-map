@@ -1,0 +1,136 @@
+---
+title: "Advanced Topics"
+---
+
+Every other chapter on this site picked one object, structure, or theory
+and developed it: a problem, an abstraction, what follows, what connects.
+This chapter deliberately doesn't — it's a preview, not a treatment, of four
+fields this site has been pointing toward without developing: what problem
+each addresses, its fundamental objects, and what it connects to, in the
+conceptual-coverage spirit `SPEC.md` asks for advanced areas rather than
+this site's usual depth. It's also the one chapter that doesn't carry a
+single object/structure/theory tag, because it surveys four different
+theories rather than building one.
+
+## Functional analysis
+
+**The problem**: [Vector Spaces](09-vector-spaces.qmd) already named
+function spaces as an example — but ordinary linear algebra assumes finite
+dimensions, and a space of *all* functions on an interval is
+infinite-dimensional. Do bases, linear maps, and inner products still
+behave the way [Linear Algebra](10-linear-algebra.qmd) and [Inner Product
+Spaces](14-inner-product-spaces.qmd) describe once "dimension" stops being
+a finite number?
+
+**Fundamental objects and structures**: function spaces; **Banach spaces**
+(complete normed vector spaces — [Metric Spaces](12-metric-spaces.qmd)'s
+completeness, required of the norm [Inner Product
+Spaces](14-inner-product-spaces.qmd) built); **Hilbert spaces** (complete
+inner-product spaces — the infinite-dimensional generalization the Fourier
+series mentioned in [Inner Product Spaces](14-inner-product-spaces.qmd)
+actually lives in); **operators**, the infinite-dimensional analogue of
+[Linear Algebra](10-linear-algebra.qmd)'s linear maps.
+
+**Connects to**: Fourier analysis, quantum mechanics (where states are
+vectors in a Hilbert space), the kernel methods and Gaussian processes
+[Machine Learning](24-machine-learning.qmd) named but didn't develop, and
+differential equations, whose solutions are naturally elements of a
+function space.
+
+**Where to go next**: a standard first course is built around Hilbert and
+Banach spaces and bounded operators — see `appendix-references.qmd`'s
+general reading for where this site would point next.
+
+## Measure theory
+
+**The problem**: [Integration](19-integration.qmd) already flagged its own
+limitation — not every bounded function is Riemann integrable — and
+[Probability](22-probability.qmd) already used a **measure** without fully
+justifying it. Measure theory is the common rigorous foundation both
+chapters were borrowing from.
+
+**Fundamental objects and structures**: measurable sets; a **measure**
+(a consistent way of assigning "size" to sets, of which [Probability](22-probability.qmd)'s
+$P$ is one instance and ordinary length is another); the **Lebesgue
+integral**, which integrates a strictly larger class of functions than
+[Integration](19-integration.qmd)'s Riemann integral by building up from
+measurable sets instead of interval partitions.
+
+**Connects to**: probability (directly — [Probability](22-probability.qmd)'s
+entire foundation), real analysis, and functional analysis's $L^p$ function
+spaces.
+
+**Where to go next**: Lebesgue's own 1902 construction is the standard
+starting point conceptually, before a modern real-analysis text's formal
+treatment.
+
+## Differential geometry
+
+**The problem**: [Euclidean Geometry](16-euclidean-geometry.qmd) sketched
+a manifold in one paragraph — a space that only locally resembles
+$\mathbb{R}^n$ — and explicitly deferred making that precise. Differential
+geometry is that precision: how do you do calculus ([Limits and
+Continuity](17-limits-and-continuity.qmd) through [Differential
+Equations](20-differential-equations.qmd)) on a space that's curved
+globally?
+
+**Fundamental objects and structures**: **manifolds**, now rigorous rather
+than sketched; the **tangent space** at a point (the vector space, in
+[Vector Spaces](09-vector-spaces.qmd)'s exact sense, of directions you
+could move from that point); a **Riemannian metric** (an [inner
+product](14-inner-product-spaces.qmd), varying smoothly from point to
+point, generalizing [Euclidean Geometry](16-euclidean-geometry.qmd)'s
+single global inner product to a curved setting); **curvature**, measuring
+how far a manifold deviates from being flat.
+
+**Connects to**: general relativity, where spacetime itself is a curved
+manifold; and — made rigorous rather than hypothesized — [Machine
+Learning](24-machine-learning.qmd)'s manifold hypothesis and manifold
+learning.
+
+**Where to go next**: a first course typically starts from curves and
+surfaces in $\mathbb{R}^3$ before generalizing to abstract manifolds.
+
+## Category theory
+
+**The problem**: this one is a different shape from the other three. It
+doesn't generalize one structure — it notices that [What Is a Mathematical
+Structure?](07-mathematical-structures.qmd)'s recurring pattern (objects,
+plus structure-preserving maps between them: group homomorphisms, linear
+maps, continuous maps) repeats across *every* structure this site has
+built, and asks whether that pattern itself can be studied directly,
+independent of which specific structure it's instantiated in.
+
+**Fundamental objects and structures**: a **category** — a collection of
+objects and **morphisms** (arrows) between them, with composition and
+identity morphisms satisfying the same associativity and identity
+requirements [Groups](08-groups.qmd) first introduced — is the direct,
+maximal abstraction of [What Is a Mathematical Structure?](07-mathematical-structures.qmd)'s
+homomorphism idea. A **functor** is a structure-preserving map *between*
+categories — a homomorphism of homomorphisms, one level of abstraction
+higher still.
+
+**Connects to**: functional programming, where categorical structures show
+up directly in type systems, and an increasing amount of theoretical work
+in machine learning that uses categorical language to describe how model
+components compose.
+
+**Where to go next**: category theory rewards seeing the same three or four
+examples (sets and functions, groups and homomorphisms, vector spaces and
+linear maps) reframed categorically before generalizing further.
+
+## Where this leaves the map
+
+[The map](00-the-map.qmd) opened this site with a claim: mathematics is a
+graph of ideas, not a syllabus, and understanding a new concept means
+asking what structure it is, what it generalizes, what problem it solves,
+and what it connects to. That question now has a real answer for the
+structures and theories this site actually built — logic through
+optimization, plus this chapter's four-part preview of what's next. What's
+still genuinely open (topology's connectedness and compactness, partial
+differential equations, statistics, and exhaustive treatment of any of this
+chapter's four fields) stays open by design — `SPEC.md` §21 asked for
+conceptual coverage, not an encyclopedia, and a reader who's worked through
+this site's arc now has the actual skill that scope control was aiming at:
+given an unfamiliar piece of mathematics, ask what it is, what it
+generalizes, and what it connects to, and go find out.

@@ -1,6 +1,6 @@
 # Mathematics: From Computational Tools to Mathematical Structure
 
-![This site's chapter graph, from logic through optimization](docs/images/social-preview.png)
+![This site's chapter graph, from logic through machine learning and a preview of what's beyond it](docs/images/social-preview.png)
 
 A conceptual map of mathematics for people who already know how to use it —
 not a course, not a taxonomy, but a graph of *why* mathematical objects,
@@ -26,12 +26,13 @@ graphs over the same ideas, and they don't always agree.
 
 ## Current scope
 
-The site currently covers its entire core theory arc — logic through
-optimization, 23 chapters — as a deliberately complete path rather than a
-sprawling stub-filled tree. See [`ROADMAP.md`](ROADMAP.md) for what's next
-(the machine-learning bridge, and a lighter conceptual-coverage pass over
-functional analysis, measure theory, differential geometry, and category
-theory) and the full phase-by-phase decision log.
+All 5 originally planned phases are built — 25 chapters, logic through a
+machine-learning bridge and a conceptual-coverage preview of functional
+analysis, measure theory, differential geometry, and category theory.
+There's no in-flight "next phase" — see [`ROADMAP.md`](ROADMAP.md)'s
+"Non-goals" section for what's deliberately still open (topology's
+connectedness and compactness, PDEs, statistics, full treatments of any of
+the four preview topics) and the full phase-by-phase decision log.
 
 ## Repository layout
 
