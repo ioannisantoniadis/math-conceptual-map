@@ -1,0 +1,142 @@
+---
+title: "Concepts by Type"
+---
+
+[The map](chapters/00-the-map.qmd)'s master diagram has one node per
+*chapter*, colored by which of five parts that chapter belongs to —
+Foundations, Objects, Structures, Theories, Applications. That's why it can
+look sparse in a category like Objects: most objects (a vector, a matrix, a
+random variable) are discussed *inside* a structure or theory chapter
+rather than getting a page of their own, so they never became their own
+node. This page is the finer-grained companion: every concept in the
+[glossary](appendix-glossary.qmd), classified individually, whether or not
+it has a chapter to itself.
+
+A caveat worth stating rather than hiding: not everything below is cleanly
+an object, a structure, a theory, or an application — some entries are
+*properties* a structure can have (convex, bijective), *maps* between
+structures (homomorphism, linear map), or *theorems* about a theory (Bayes'
+rule). Forcing those into one of the four boxes would be exactly the kind
+of false precision `SPEC.md`'s terminology discipline (§11) warns against,
+so the **Notes** column says so explicitly instead. The five
+section headings below match the map's legend exactly; the notes carry the
+nuance the legend can't.
+
+## Foundations
+
+The substrate the object/structure/theory/application distinction is
+itself built on top of — logic, sets, functions, proof. Deliberately
+outside that four-way split, not a missing fifth box.
+
+| Concept | Notes | Chapter |
+|---|---|---|
+| Axiom | a starting statement, not a claim needing proof | [Axioms and Definitions](chapters/05-axioms-and-definitions.qmd) |
+| Bijective / injective / surjective | properties of a function | [Relations and Functions](chapters/04-relations-and-functions.qmd) |
+| Equivalence relation | a relation with three specific properties | [Relations and Functions](chapters/04-relations-and-functions.qmd) |
+| Function | a map — see [What Is a Mathematical Structure?](chapters/07-mathematical-structures.qmd) for why maps matter as much as objects | [Relations and Functions](chapters/04-relations-and-functions.qmd) |
+| Logic (proposition, proof) | the inference rules everything else is checked against | [Logic and Proof](chapters/02-logic-and-proof.qmd) |
+| Mathematical induction | a proof technique, introduced alongside its first real use | [Discrete Mathematics](chapters/21-discrete-mathematics.qmd) |
+| Relation | the general notion underlying equality, order, and functions alike | [Relations and Functions](chapters/04-relations-and-functions.qmd) |
+| Set | the most primitive collection — almost everything else is built from it | [Sets](chapters/03-sets.qmd) |
+| Theorem | a statement derived from a theory's axioms | [Axioms and Definitions](chapters/05-axioms-and-definitions.qmd) |
+
+## Objects
+
+Specific instances — the level [What Is a Mathematical
+Structure?](chapters/07-mathematical-structures.qmd) uses "the matrix
+$\begin{pmatrix}1&2\\0&1\end{pmatrix}$" to illustrate. A general vector, a
+general matrix, and a general polynomial don't get their own rows below —
+they're the motivating *examples* inside [Vector
+Spaces](chapters/09-vector-spaces.qmd), not separate named concepts.
+
+| Concept | Notes | Chapter |
+|---|---|---|
+| Basis | a specific spanning, linearly independent set of vectors | [Vector Spaces](chapters/09-vector-spaces.qmd) |
+| Derivative | a specific linear map (the best local approximation to $f$) | [Differentiation](chapters/18-differentiation.qmd) |
+| Dimension | a number attached to a vector space | [Vector Spaces](chapters/09-vector-spaces.qmd) |
+| Eigenvalue / eigenvector | a specific vector-and-scalar pair a linear map leaves undirected | [Linear Algebra](chapters/10-linear-algebra.qmd) |
+| Embedding | a specific learned vector | [Machine Learning](chapters/24-machine-learning.qmd) |
+| Entropy / KL divergence / mutual information | numbers computed from a distribution | [Machine Learning](chapters/24-machine-learning.qmd) |
+| Expectation | a number computed from a random variable | [Probability](chapters/22-probability.qmd) |
+| Number systems ($\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{R},\mathbb{C}$) | the site's one dedicated Objects chapter | [Number Systems](chapters/06-number-systems.qmd) |
+| Random variable | a specific function $\Omega \to \mathbb{R}$ | [Probability](chapters/22-probability.qmd) |
+| Span | a specific set — all linear combinations of a given collection | [Vector Spaces](chapters/09-vector-spaces.qmd) |
+| Zero divisor | a specific ring element | [Rings and Fields](chapters/11-rings-and-fields.qmd) |
+
+## Structures
+
+Sets equipped with operations or relations satisfying a fixed axiom list —
+[What Is a Mathematical Structure?](chapters/07-mathematical-structures.qmd)'s
+own subject, plus the *maps between* structures of the same kind
+(homomorphism, linear map, functor), grouped here rather than given a sixth
+category of their own.
+
+| Concept | Notes | Chapter |
+|---|---|---|
+| Abelian group | a group with one extra property (commutativity) | [Groups](chapters/08-groups.qmd) |
+| Affine map | a map between affine spaces (linear map + translation) | [Affine Spaces](chapters/15-affine-spaces.qmd) |
+| Affine space | points and displacements, kept structurally apart | [Affine Spaces](chapters/15-affine-spaces.qmd) |
+| Category | the maximal abstraction of the homomorphism pattern | [Advanced Topics](chapters/25-advanced-topics.qmd) |
+| Euclidean space | affine space + inner product | [Euclidean Geometry](chapters/16-euclidean-geometry.qmd) |
+| Field | a ring where every nonzero element has a multiplicative inverse | [Rings and Fields](chapters/11-rings-and-fields.qmd) |
+| Functor | a map between categories | [Advanced Topics](chapters/25-advanced-topics.qmd) |
+| Group | one operation, four axioms | [Groups](chapters/08-groups.qmd) |
+| Hilbert space | a complete inner-product space | [Advanced Topics](chapters/25-advanced-topics.qmd) |
+| Homomorphism / isomorphism | maps between structures of the same kind | [What Is a Mathematical Structure?](chapters/07-mathematical-structures.qmd) |
+| Inner product / norm | angle/orthogonality, and the length it induces | [Inner Product Spaces](chapters/14-inner-product-spaces.qmd) |
+| Linear map | a map between vector spaces; a matrix once bases are fixed | [Linear Algebra](chapters/10-linear-algebra.qmd) |
+| Mathematical structure | the general pattern this whole section instantiates | [What Is a Mathematical Structure?](chapters/07-mathematical-structures.qmd) |
+| Metric space | a set with a distance function | [Metric Spaces](chapters/12-metric-spaces.qmd) |
+| Open set | the basic building block a topology is made of | [Topological Spaces](chapters/13-topological-spaces.qmd) |
+| Probability space | outcomes, events, and a probability measure | [Probability](chapters/22-probability.qmd) |
+| Ring | two operations, related by distributivity | [Rings and Fields](chapters/11-rings-and-fields.qmd) |
+| Topological space | a set with a designated collection of open sets | [Topological Spaces](chapters/13-topological-spaces.qmd) |
+| Vector space | addition and scaling | [Vector Spaces](chapters/09-vector-spaces.qmd) |
+| *Properties a structure can have:* completeness, orthogonal, discrete/dense, convex, continuous | not structures themselves — see each one's own chapter | — |
+
+## Theories
+
+The body of results about a structure or family of problems — plus the
+named theorems and techniques that body of results actually produces.
+
+| Concept | Notes | Chapter |
+|---|---|---|
+| Bayes' rule | a theorem, not a structure | [Probability](chapters/22-probability.qmd) |
+| Combinatorics | counting subsets/functions of finite sets | [Discrete Mathematics](chapters/21-discrete-mathematics.qmd) |
+| Continuous | classically $\varepsilon$–$\delta$; topologically, preimages of opens | [Limits and Continuity](chapters/17-limits-and-continuity.qmd) |
+| Convex / critical point | properties/objects [Optimization](chapters/23-optimization.qmd) is built around | [Optimization](chapters/23-optimization.qmd) |
+| Differential Equations (ODE / PDE, dynamical system) | equations relating a function to its own derivatives | [Differential Equations](chapters/20-differential-equations.qmd) |
+| Differentiation | the theory built on the derivative | [Differentiation](chapters/18-differentiation.qmd) |
+| Discrete / dense | properties distinguishing $\mathbb{N},\mathbb{Z}$ from $\mathbb{Q},\mathbb{R}$ | [Discrete Mathematics](chapters/21-discrete-mathematics.qmd) |
+| Euclidean Geometry | affine + inner-product structure, assembled into geometry | [Euclidean Geometry](chapters/16-euclidean-geometry.qmd) |
+| Functional analysis, measure theory, differential geometry, category theory | preview-depth only, per `SPEC.md` §21 | [Advanced Topics](chapters/25-advanced-topics.qmd) |
+| Fundamental theorem of calculus | a theorem, not a structure | [Integration](chapters/19-integration.qmd) |
+| Gradient descent | an algorithm, not a structure | [Optimization](chapters/23-optimization.qmd) |
+| Independence | a property/relation between random variables | [Probability](chapters/22-probability.qmd) |
+| Integration (Riemann sum) | the theory built on the integral | [Integration](chapters/19-integration.qmd) |
+| Linear Algebra | the theory of vector spaces and the linear maps between them | [Linear Algebra](chapters/10-linear-algebra.qmd) |
+| Probability | measure theory, wearing a specific interpretation | [Probability](chapters/22-probability.qmd) |
+| Real analysis | the rigorous foundation under [Limits and Continuity](chapters/17-limits-and-continuity.qmd) | [Limits and Continuity](chapters/17-limits-and-continuity.qmd) |
+
+## Applications
+
+Domains that borrow a theory to solve a problem that isn't, itself,
+mathematics.
+
+| Concept | Notes | Chapter |
+|---|---|---|
+| Backpropagation | the chain rule, not separate mathematics | [Machine Learning](chapters/24-machine-learning.qmd) |
+| Machine Learning | the site's one written Applications chapter | [Machine Learning](chapters/24-machine-learning.qmd) |
+| Manifold hypothesis | [Euclidean Geometry](chapters/16-euclidean-geometry.qmd)'s manifold sketch, doing real work | [Machine Learning](chapters/24-machine-learning.qmd) |
+| Physics | named throughout (Newton's laws as ODEs, symmetry and invariance) but not yet its own chapter | — *(planned)* |
+
+## Reading this table against the map
+
+Where a row's category surprised you, that's usually the point: a
+derivative is an *object* (a specific linear map), not a theory, even
+though [Differentiation](chapters/18-differentiation.qmd) — the *theory*
+about derivatives in general — is a whole chapter. That gap between "the
+theory" and "an instance the theory produces" is exactly what [What Is a
+Mathematical Structure?](chapters/07-mathematical-structures.qmd) spends a
+full chapter making explicit, and it's the same distinction the map's
+five-color legend is tracking at chapter granularity.

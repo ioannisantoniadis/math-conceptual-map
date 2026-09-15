@@ -5,6 +5,9 @@ title: "Glossary"
 Short, precise definitions for terms used across chapters. Each chapter
 explains its own core concepts in depth — this page is for the term you half
 remember from two chapters ago, not a substitute for reading the chapter.
+Sorted alphabetically for lookup; see [Concepts by
+Type](appendix-classification.qmd) for the same terms grouped by object,
+structure, theory, or application instead.
 
 **Abelian group** — a group whose operation is commutative
 ($a \ast b = b \ast a$ for all elements). Not required by the group axioms

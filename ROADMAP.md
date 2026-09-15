@@ -313,6 +313,26 @@ compact one-line-plus-link format rather than the spec's 5-part
 matching sibling-repo convention; §4's `CONTRIBUTING.md` was never created,
 also matching that neither sibling repo has one.
 
+## `appendix-classification.qmd` — **done**
+
+User feedback after reviewing the master map: it only shows one node in
+the Objects category (Number Systems), which read as the map being
+incomplete rather than as the deliberate one-node-per-*chapter* convention
+it actually is — most objects (a vector, a matrix, a random variable) are
+discussed inside a structure or theory chapter rather than getting a page
+of their own, so they never became their own node. A second graph at
+concept granularity was considered and rejected: at ~65-70 glossary-level
+concepts, the edges would reproduce the exact illegible-clutter problem the
+Mermaid replacement (see the Phase 1 entry above) was built to avoid. Built
+a table instead — every glossary term reclassified into the map's own five
+categories (Foundations/Objects/Structures/Theories/Applications), with a
+**Notes** column carrying the terms that don't cleanly fit one of the four
+non-Foundations boxes (properties like convex/bijective, maps like
+homomorphism/linear map, theorems like Bayes' rule) rather than forcing a
+bad fit. Reuses existing glossary content entirely — no new mathematical
+exposition, per the user's explicit "don't add more content" steer.
+Cross-linked from the glossary and from `07-mathematical-structures.qmd`.
+
 ## Non-goals
 
 Not a textbook substitute, not proof-heavy, not attempting exhaustive

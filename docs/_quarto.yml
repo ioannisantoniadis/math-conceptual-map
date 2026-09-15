@@ -65,6 +65,7 @@ book:
     - part: "Appendices"
       chapters:
         - appendix-glossary.qmd
+        - appendix-classification.qmd
         - appendix-references.qmd
   navbar:
     background: light

@@ -166,9 +166,12 @@ an automated check.
 
 All 5 planned phases are built — 25 chapters, logic through a conceptual-
 coverage preview of functional analysis/measure theory/differential
-geometry/category theory. There is no in-flight "next phase" recorded as of
-this writing — before starting new work, check `ROADMAP.md`'s "Non-goals"
-section and the git log for anything more recent than what's summarized
+geometry/category theory — plus a third appendix,
+`appendix-classification.qmd`, reclassifying every glossary term by object/
+structure/theory/application (companion to the alphabetical glossary).
+There is no in-flight "next phase" recorded as of this writing — before
+starting new work, check `ROADMAP.md`'s "Non-goals" section and the git log
+for anything more recent than what's summarized
 there, and check with the owner what's actually wanted next (new
 disciplines, more depth on an existing chapter, or something else) rather
 than assuming more chapters are expected in a particular area.

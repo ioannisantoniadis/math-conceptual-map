@@ -106,4 +106,7 @@ one particular *object*, or vice versa.
 Two structures, worked through in full: [Groups](08-groups.qmd) first,
 because it has the fewest moving parts of any structure worth naming, then
 [Vector Spaces](09-vector-spaces.qmd), which is the one this entire site has
-been building toward as its first genuinely rich example.
+been building toward as its first genuinely rich example. [Concepts by
+Type](../appendix-classification.qmd) applies this chapter's object/
+structure/theory/application distinction to every concept this site
+names, not just the two worked here.
