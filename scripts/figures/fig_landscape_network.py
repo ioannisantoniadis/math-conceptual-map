@@ -50,7 +50,10 @@ NODES = {
     "AFF": ("Affine\nSpaces", 2, False),
     "LA":  ("Linear\nAlgebra", 3, False),
     "EG":  ("Euclidean\nGeometry", 3, False),
-    "AN":  ("Analysis", 3, True),
+    "LC":  ("Limits &\nContinuity", 3, False),
+    "DIFF": ("Differentiation", 3, False),
+    "INT": ("Integration", 3, False),
+    "DE":  ("Differential\nEquations", 3, False),
     "ML":  ("Machine\nLearning", 4, True),
     "PHY": ("Physics", 4, True),
 }
@@ -60,14 +63,14 @@ EDGES = [
     ("MS", "G"), ("MS", "RNG"), ("MS", "VS"), ("G", "RNG"),
     ("VS", "LA"), ("VS", "IPS"), ("VS", "AFF"), ("IPS", "MET"), ("MET", "TOP"),
     ("IPS", "EG"), ("AFF", "EG"),
-    ("LA", "ML"), ("LA", "PHY"), ("AN", "RF"),
+    ("TOP", "LC"), ("LC", "DIFF"), ("LA", "DIFF"), ("DIFF", "INT"),
+    ("DIFF", "DE"), ("INT", "DE"), ("DE", "PHY"), ("DE", "ML"),
+    ("LA", "ML"), ("LA", "PHY"),
 ]
 
-# AN -> RF is a deliberate "built on" back-reference (Analysis reuses
-# Relations & Functions), not a forward dependency — for *layering only* it
-# is treated as RF -> AN so Analysis is placed after RF, then drawn with its
-# real (reversed, dashed) arrow direction below.
-LAYERING_EDGES = [(u, v) if (u, v) != ("AN", "RF") else ("RF", "AN") for u, v in EDGES]
+# Every edge here is a genuine forward dependency (no "built on" back-
+# references at present), so layering uses EDGES directly.
+LAYERING_EDGES = EDGES
 
 PART_NAMES = ["Foundations", "Objects", "Structures", "Theories", "Applications"]
 
@@ -103,13 +106,32 @@ def main() -> None:
     g.add_nodes_from(NODES)
     g.add_edges_from(EDGES)
 
-    fig, ax = plt.subplots(figsize=(13, 6.5))
-    fig.subplots_adjust(top=0.86, bottom=0.14, left=0.02, right=0.98)
-
     xs = [p[0] for p in pos.values()]
     ys = [p[1] for p in pos.values()]
-    ax.set_xlim(min(xs) - 1.1, max(xs) + 1.1)
-    ax.set_ylim(min(ys) - 1.0, max(ys) + 1.0)
+    x_lo, x_hi = min(xs) - 1.1, max(xs) + 1.1
+    y_lo, y_hi = min(ys) - 1.0, max(ys) + 1.0
+
+    # figsize is derived from the actual data span (fixed inches-per-data-unit,
+    # matching aspect="equal" below) rather than a constant — this graph has
+    # grown from 8 to 14 layers across three rounds of edits, and a *fixed*
+    # figsize at a wider graph is exactly what caused nodes to overlap and
+    # clip each other's labels the first time this ran after Phase 3 added
+    # four more layers: same physical width stretched over more data units
+    # shrinks every node's effective on-page size. Scaling both figure
+    # dimensions off the data span keeps node size and spacing constant
+    # regardless of how many chapters the map grows to.
+    scale = 0.62  # inches per data unit
+    fig_w = (x_hi - x_lo) * scale
+    fig_h = (y_hi - y_lo) * scale + 2.0  # +2in flat, for title + legend
+
+    fig, ax = plt.subplots(figsize=(fig_w, fig_h))
+    top_in, bottom_in = 0.9, 1.1
+    fig.subplots_adjust(
+        top=1 - top_in / fig_h, bottom=bottom_in / fig_h, left=0.02, right=0.98,
+    )
+
+    ax.set_xlim(x_lo, x_hi)
+    ax.set_ylim(y_lo, y_hi)
 
     radius = 0.62
 
@@ -117,10 +139,8 @@ def main() -> None:
     for u, v in g.edges():
         pu, pv = pos[u], pos[v]
         later_edge = NODES[u][2] or NODES[v][2]
-        back_edge = (u, v) == ("AN", "RF")
-        rad = -0.25 if back_edge else 0.08
         arrow = FancyArrowPatch(
-            pu, pv, connectionstyle=f"arc3,rad={rad}",
+            pu, pv, connectionstyle="arc3,rad=0.08",
             arrowstyle="-|>", mutation_scale=14,
             linewidth=1.1, color=MUTED,
             alpha=0.85 if not later_edge else 0.55,

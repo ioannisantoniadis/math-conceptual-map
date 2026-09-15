@@ -1,0 +1,97 @@
+---
+title: "Differential Equations"
+---
+
+You've solved differential equations — separable ones, linear first-order
+ones, maybe a few classic second-order ones with constant coefficients. The
+solving techniques aren't this chapter's subject. What a differential
+equation structurally *is*, and why "solving" one is a fundamentally
+different kind of problem than solving an algebraic equation, is.
+
+## The problem, before the definition
+
+Many of the most important laws in science don't directly specify a
+quantity — they specify how it *changes*. A population grows at a rate
+proportional to its current size. A radioactive sample decays at a rate
+proportional to how much is left. Newton's second law says force equals
+mass times acceleration — and acceleration is a *second derivative* of
+position. None of these are statements about a number; all three are
+statements about a function's relationship to its own derivatives.
+
+## The abstraction
+
+A **differential equation** is an equation relating a function to one or
+more of its derivatives: schematically, $F(x, y, y', y'', \dots,
+y^{(n)}) = 0$. A **solution** is not a number — it's an entire *function*
+$y(x)$ satisfying the equation. This is the central structural fact this
+chapter exists to make explicit: solving a differential equation is a
+different *kind* of problem than solving $x^2 - 4 = 0$, because the unknown
+being searched for is a function, drawn from an infinite-dimensional space
+of candidates, not a single number drawn from $\mathbb{R}$ or
+$\mathbb{C}$.
+
+## Vocabulary worth having precisely
+
+An **ordinary differential equation** (ODE) involves derivatives with
+respect to one variable ($y'(t)$); a **partial differential equation**
+(PDE) involves derivatives with respect to several, as partial derivatives
+— the heat equation $\frac{\partial u}{\partial t} = \frac{\partial^2
+u}{\partial x^2}$ is the standard example. This site develops ODEs;
+PDEs are a later phase. The **order** of a differential equation is the
+highest derivative appearing in it; it's **linear** if $y$ and its
+derivatives appear only to the first power, with no products of $y$ with
+itself or its derivatives — the same word, and largely the same reason for
+mattering, as [Linear Algebra](10-linear-algebra.qmd)'s linear maps: linear
+differential equations are the tractable case, with solutions that
+superpose the way linear maps' outputs do.
+
+## Why explicit solutions are the exception
+
+Every differential equation you were assigned in a course was, by
+construction, one of the specific families that admit a closed-form
+solution — separable, linear, exact, a handful of named substitution
+tricks. That selection is not representative: most differential equations,
+including simple-looking nonlinear ones, have no elementary closed-form
+solution at all. This is easy to miss if a course's problem sets are always
+solvable by design. What actually happens with a differential equation that
+resists an explicit formula is one of two things: **numerical methods**
+(Euler's method, Runge–Kutta — named here, not developed) approximate the
+solution step by step, or the equation is studied **qualitatively** instead
+of solved explicitly at all.
+
+## Dynamical systems: studying the shape, not the formula
+
+A **dynamical system** is a differential equation studied for its long-run,
+qualitative behavior rather than an explicit formula: does a solution
+settle toward a fixed value, oscillate forever, or diverge? A **fixed
+point** is a state where the rate of change is zero — the system, once
+there, stays there — and a fixed point's **stability** (do nearby solutions
+drift toward it or away from it?) is often answerable without ever writing
+down $y(x)$ explicitly. A **phase portrait** sketches this behavior
+geometrically rather than algebraically. This is the "structure over
+identity" theme from [the map](00-the-map.qmd) in one of its clearest
+forms: the question shifts from "what is the formula" to "what is the
+shape of the set of all possible solutions," which is frequently both more
+tractable and more useful.
+
+## Where this connects
+
+Newton's laws are, literally, ODEs — physics is this chapter's oldest and
+most direct application. Less obviously, **gradient descent**, the
+workhorse of ML optimization, is a discretized version of a *gradient
+flow* — a dynamical system that continuously moves in the direction that
+decreases a function fastest, using exactly the derivative [Differentiation](18-differentiation.qmd)
+already defined; the discrete update rule you may already know from
+training a model is a step-by-step approximation to that continuous
+process, in the same sense Euler's method above approximates any ODE's
+solution.
+
+## Where this leads
+
+This closes this site's current core theory arc — [the
+map](00-the-map.qmd)'s master diagram, updated alongside this chapter,
+now reaches from logic through differential equations. See
+[`ROADMAP.md`](https://github.com/ioannisantoniadis/math-conceptual-map/blob/main/ROADMAP.md)
+for what a later phase adds: discrete mathematics, probability, optimization,
+and the machine-learning bridge several chapters — including this one — have
+already been pointing toward.

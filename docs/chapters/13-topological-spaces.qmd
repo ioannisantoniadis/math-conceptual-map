@@ -109,7 +109,8 @@ questions no single open set can answer alone.
 Structures now run from bare sets through groups, rings and fields, vector
 spaces, metric spaces, to topological spaces — the arc [What Is a
 Mathematical Structure?](07-mathematical-structures.qmd) opened. [Linear
-Algebra](10-linear-algebra.qmd), already written, is this site's first full
-*theory*; a later phase of this site returns to topology's own theory
-(connectedness, compactness, and the rest) and to analysis, which is built
-directly on exactly the continuity definition above.
+Algebra](10-linear-algebra.qmd) is this site's first full *theory*; [Limits
+and Continuity](17-limits-and-continuity.qmd) is where the continuity
+definition above gets put to direct use, specialized to $\mathbb{R}$. A
+later phase of this site returns to topology's own further theory —
+connectedness, compactness, and the rest.

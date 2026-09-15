@@ -50,10 +50,10 @@ A few concepts, placed on all four at once, make the gaps concrete:
 
 | Concept | Historical origin | Formal foundation | Conceptual prerequisite | Where this site teaches it |
 |---|---|---|---|---|
-| Sets | Cantor, 1870s–80s | Axioms of ZFC | Almost none — "a collection of things" | [Sets](03-sets.qmd), chapter 3 |
-| Groups | Implicit in Galois's work on equations, 1830s; axioms formalized by Cayley (1854)/Weber (1893) | A set with one operation satisfying four axioms | Set + binary operation | [Groups](08-groups.qmd), chapter 8 |
-| Vector spaces | Peano's axioms, 1888 — after $\mathbb{R}^n$, matrices, and polynomials were all already in wide use | A set over a field with two operations satisfying eight axioms | Group (for addition) + a notion of scaling | [Vector Spaces](09-vector-spaces.qmd), chapter 9 |
-| Limits / calculus | Newton & Leibniz, 1660s–80s, informally | Built from the topology of $\mathbb{R}$ | Function + a notion of "arbitrarily close" | *(a later phase of this site)* |
+| Sets | Cantor, 1870s–80s | Axioms of ZFC | Almost none — "a collection of things" | [Sets](03-sets.qmd) |
+| Groups | Implicit in Galois's work on equations, 1830s; axioms formalized by Cayley (1854)/Weber (1893) | A set with one operation satisfying four axioms | Set + binary operation | [Groups](08-groups.qmd) |
+| Vector spaces | Peano's axioms, 1888 — after $\mathbb{R}^n$, matrices, and polynomials were all already in wide use | A set over a field with two operations satisfying eight axioms | Group (for addition) + a notion of scaling | [Vector Spaces](09-vector-spaces.qmd) |
+| Limits / calculus | Newton & Leibniz, 1660s–80s, informally | Built from the topology of $\mathbb{R}$ | Function + a notion of "arbitrarily close" | [Limits and Continuity](17-limits-and-continuity.qmd) |
 
 Notice the direction of the gap is not always the same: sets are historically
 recent but conceptually nearly free; calculus is historically ancient (by
@@ -65,23 +65,23 @@ the table above is the implicit question: before in *which* sense?
 
 The diagram below is this site's actual spine — the chapters that exist
 today, plus a few later ones drawn hollow so the shape of the whole graph is
-visible even where the content isn't written yet. Fourteen edges is too many
-to individually label on a diagram this size without recreating the exact
-clutter this figure is replacing, so read edge *direction* as pointing
-toward the more-built-up idea, with one exception drawn as a dashed backward
-arc: Analysis reuses Relations & Functions ("built on") rather than
-depending forward on it the way the solid arrows do. Where an arrow crosses
-between colors it is doing one of three things: carrying a *conceptual
-prerequisite* (third row of the table above — e.g. Number Systems into
-[What Is a Structure?](07-mathematical-structures.qmd)), an *abstraction*
-relationship in the sense of that same chapter (What Is a Structure? into
-Groups and Vector Spaces; Groups into Abstract Algebra), or an *application*
-pulling an idea in from outside pure mathematics (Linear Algebra into
-Machine Learning and Physics). This is a map, not a dependency proof — some
+visible even where the content isn't written yet. Two dozen-plus edges is
+too many to individually label on a diagram this size without recreating
+the exact clutter this figure is replacing, so read edge *direction* as
+pointing toward the more-built-up idea — every edge in the current graph
+is a forward relationship. Where an arrow crosses between colors it is
+doing one of three things: carrying a *conceptual prerequisite* (third row
+of the table above — e.g. Number Systems into [What Is a
+Structure?](07-mathematical-structures.qmd)), an *abstraction* relationship
+in the sense of that same chapter (What Is a Structure? into Groups, Rings
+and Fields, and Vector Spaces; Vector Spaces into Inner Product Spaces and
+Affine Spaces), or an *application* pulling an idea in from outside pure
+mathematics (Linear Algebra and Differential Equations into Machine
+Learning and Physics). This is a map, not a dependency proof — some
 edges could legitimately be drawn elsewhere, and that's a feature of a
 graph, not a bug to fix by turning it into a tree.
 
-![This site's chapter graph, positioned by a computed longest-path layering (topological sort, not a force simulation or hand-placed boxes — see `scripts/figures/fig_landscape_network.py`) rather than the Mermaid version this replaced, whose dark subgraph fill and edge routing broke against this site's light theme. Solid, filled, white-labeled nodes are chapters that exist; hollow, dashed-outline nodes are planned. The dashed arc from Analysis back to Relations & Functions is the one "built on" edge — every other arrow is a forward conceptual-prerequisite, abstraction, or application relationship, per the paragraph above.](../images/landscape-network.png){#fig-landscape-network}
+![This site's chapter graph, positioned by a computed longest-path layering (topological sort, not a force simulation or hand-placed boxes — see `scripts/figures/fig_landscape_network.py`) rather than the Mermaid version this replaced, whose dark subgraph fill and edge routing broke against this site's light theme. Solid, filled, white-labeled nodes are chapters that exist; hollow, dashed-outline nodes (Machine Learning, Physics) are planned — dashed *edges* mark a connection into one of those planned nodes, not a different kind of relationship. Every edge is a forward conceptual-prerequisite, abstraction, or application relationship, per the paragraph above.](../images/landscape-network.png){#fig-landscape-network}
 
 ## Two ways in
 
@@ -120,14 +120,19 @@ Naming them once here means later chapters can just point back:
   polynomial, a matrix, and a function can all be vectors; see
   [What Is a Mathematical Structure?](07-mathematical-structures.qmd)
 - **Invariance** — what stays true under a transformation. This is the
-  thread connecting symmetry, group theory, linear algebra, geometry, and
-  (later) physics.
-- **Transformation** — functions, then linear maps, then differentiable
-  maps, then continuous maps: successively looser notions of "structure
-  preserving."
-- **Local vs. global** — a derivative is a local fact about a function; a
-  basis is a global fact about a vector space. The distinction resurfaces in
-  every branch this site eventually reaches.
+  thread connecting symmetry, [group theory](08-groups.qmd), [linear
+  algebra](10-linear-algebra.qmd), [geometry](16-euclidean-geometry.qmd),
+  and (later) physics.
+- **Transformation** — [functions](04-relations-and-functions.qmd), then
+  [linear maps](10-linear-algebra.qmd), then [differentiable
+  maps](18-differentiation.qmd), then [continuous
+  maps](17-limits-and-continuity.qmd): successively looser notions of
+  "structure preserving."
+- **Local vs. global** — a [derivative](18-differentiation.qmd) is a local
+  fact about a function; a [basis](09-vector-spaces.qmd) is a global fact
+  about a vector space. The distinction resurfaces in every branch this
+  site eventually reaches.
 
-Chapter 1 picks up the thread from here with the question underneath all of
-this: [what is mathematics, actually, if not a pile of courses?](01-what-is-mathematics.qmd)
+[What Is Mathematics?](01-what-is-mathematics.qmd), next, picks up the
+thread from here with the question underneath all of this: what is
+mathematics, actually, if not a pile of courses?

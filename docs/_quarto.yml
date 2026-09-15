@@ -45,6 +45,12 @@ book:
       chapters:
         - chapters/10-linear-algebra.qmd
         - chapters/16-euclidean-geometry.qmd
+    - part: "Analysis"
+      chapters:
+        - chapters/17-limits-and-continuity.qmd
+        - chapters/18-differentiation.qmd
+        - chapters/19-integration.qmd
+        - chapters/20-differential-equations.qmd
     - part: "Appendices"
       chapters:
         - appendix-glossary.qmd

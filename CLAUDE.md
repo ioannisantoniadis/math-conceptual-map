@@ -73,6 +73,14 @@ accident:
   for a mechanical "Connections" footer, done inline instead.
 - New citations: add the BibTeX entry to `docs/references.bib` and cite with
   `@key` in prose; remove the `placeholder` entry once a real one exists.
+- **Never hardcode a chapter number in prose** ("chapter 8", "Chapter 1
+  picks up..."). Quarto numbers chapters by their position in
+  `_quarto.yml`'s `chapters:` list, which has already shifted twice as
+  Phase 2 inserted chapters mid-sequence — a hardcoded number silently goes
+  stale the next time a chapter is inserted before it. `00-the-map.qmd`'s
+  concept-comparison table and "five threads" closing paragraph both had
+  this bug (caught and fixed when Phase 3 shifted numbering again); link by
+  title (`[Groups](08-groups.qmd)`) instead, never by ordinal.
 
 ## Structure
 
@@ -139,8 +147,7 @@ an automated check.
 
 ## Current status
 
-Phase 1 (MVP) and Phase 2 (algebra, metric/topological spaces, geometry)
-are both built — 16 chapters, logic through Euclidean geometry. Phase 3
-(analysis, calculus, differential equations) has not started. See
+Phases 1–3 are built — 20 chapters, logic through differential equations.
+Phase 4 (discrete math, probability, optimization) has not started. See
 `ROADMAP.md` for the full decision log before assuming more chapters are
 expected in any particular area.

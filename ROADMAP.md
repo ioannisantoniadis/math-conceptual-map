@@ -116,17 +116,58 @@ Each phase should leave the site in a complete, cross-linked, non-stub state
       fed by both Affine Spaces and Inner Product Spaces. Analysis, Machine
       Learning, and Physics remain hollow.
 
-## Phase 3 — Analysis, calculus, differential equations — planned
+## Phase 3 — Analysis, calculus, differential equations — **done**
 
-- [ ] Limits, continuity, differentiation, integration named as *theory*,
-      not recomputed — explicitly building on Phase 1's numbers/functions
-      chapters and Phase 2's topology.
-- [ ] Real analysis as the rigorous foundation calculus was historically
-      invented two centuries before, closing the loop `00-the-map.qmd`
-      opened with that exact example.
-- [ ] Differential equations: what one *is* mathematically (a statement
-      about a function via its derivatives), ODEs vs. PDEs, dynamical
-      systems.
+- [x] `17-limits-and-continuity.qmd` — limits and continuity named as
+      *theory*, not recomputed, built explicitly on Phase 2's
+      `12-metric-spaces`/`13-topological-spaces` (the $\varepsilon$–$\delta$
+      definition shown to be the metric-space convergence definition
+      specialized to $\mathbb{R}$, not new machinery). Real analysis framed
+      as the rigorous foundation calculus was historically invented ~150
+      years before (Newton/Leibniz 1660s–80s vs. Cauchy/Weierstrass
+      1820s–70s), closing the loop `00-the-map.qmd` opened with that exact
+      example in its historical-timeline figure; a brief, explicitly
+      simplified aside on Robinson's 1960s nonstandard analysis notes the
+      original infinitesimal intuition was eventually vindicated on
+      different foundations.
+- [x] `18-differentiation.qmd` — the derivative reframed as the best local
+      linear approximation, an explicit $1\times1$ instance of
+      `10-linear-algebra`'s linear maps, so that Jacobians/gradients/
+      Hessians read as the same construction at higher order rather than as
+      separate ad hoc rules. Weierstrass's continuous-nowhere-differentiable
+      function (1872) as the historical shock underlining
+      differentiability's a strictly stronger demand than continuity.
+- [x] `19-integration.qmd` — Riemann sums, the fundamental theorem of
+      calculus emphasized as a genuinely non-obvious unification (not a
+      restated definition) of two unrelated-looking constructions, standard
+      integration techniques reframed as differentiation rules run
+      backwards. Lebesgue integration and improper integrals flagged and
+      deferred, not developed.
+- [x] `20-differential-equations.qmd` — what a differential equation *is*
+      mathematically (an equation whose unknown is a function, not a
+      number), ODEs vs. PDEs, order and linearity, why closed-form solutions
+      are the exception rather than the rule, dynamical systems as
+      "study the shape, not the formula." Closes with gradient descent as a
+      discretized gradient flow, tying directly back to
+      `10-linear-algebra`'s ML closing paragraph.
+- [x] New `_quarto.yml` part, "Analysis," added after "Theories" for these
+      four chapters.
+- [x] `fig_landscape_network.py`: the old hollow "Analysis" placeholder node
+      (and its one back-reference edge) removed entirely, replaced by four
+      real solid nodes (Limits & Continuity, Differentiation, Integration,
+      Differential Equations) with real forward edges, including
+      Differentiation citing Linear Algebra as a direct prerequisite.
+      Regenerating after this edit **overlapped every node's label** — figsize
+      had been a fixed constant since Phase 1, and the graph had grown from
+      8 to 14 layers across three rounds of edits without anyone revisiting
+      that constant; fixed by deriving figsize from the actual data span
+      (see the script's docstring) so this doesn't recur as the map keeps
+      growing. Caught by actually rendering and looking, per this project's
+      own stated norm — not assumed correct from the diff.
+- [x] Three stale hardcoded "chapter N" references in `00-the-map.qmd` (from
+      before Phase 2 reordered the TOC) caught and fixed while updating that
+      chapter's forward references; `CLAUDE.md` gained a rule against ever
+      hardcoding a chapter number in prose again.
 
 ## Phase 4 — Discrete math, probability, optimization — planned
 

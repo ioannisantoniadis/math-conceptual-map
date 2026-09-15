@@ -1,0 +1,90 @@
+---
+title: "Limits and Continuity"
+---
+
+You've computed limits since first-year calculus — plug in, factor, cancel,
+apply L'Hôpital's rule when things get stuck at $\frac{0}{0}$. This chapter
+isn't about any of that. It's about what a limit structurally *is*, and it
+closes a gap [the map](00-the-map.qmd) flagged in its very first pages:
+calculus is roughly two centuries older than the theory that makes it
+rigorous.
+
+## The problem that took 150 years to fix
+
+Newton and Leibniz built calculus (1660s–80s) on **infinitesimals** —
+quantities smaller than every positive number, yet not zero. The intuition
+worked; the foundation didn't hold up to scrutiny. Bishop George Berkeley's
+1734 critique, calling these quantities "ghosts of departed quantities,"
+was a fair objection: nobody could say precisely what an infinitesimal
+*was*, only that calculus kept producing correct answers when you used
+them. For roughly 150 years, calculus was a spectacularly successful
+computational practice standing on a foundation nobody could fully defend.
+
+Augustin-Louis Cauchy (1820s) and Karl Weierstrass (1870s) replaced
+infinitesimals with something that needed no mysterious infinitely-small
+numbers at all: the $\varepsilon$–$\delta$ definition. $\lim_{x \to a}
+f(x) = L$ means: for every $\varepsilon > 0$, there exists a $\delta > 0$
+such that $0 < |x-a| < \delta$ implies $|f(x)-L| < \varepsilon$. No
+infinitesimals — just ordinary real numbers, made as small as needed, with
+an explicit accounting of how small "needed" has to be. This is the
+rigorous foundation now called **real analysis**, and the field's whole
+reason for existing is closing exactly the gap this section opened with.
+
+## This is a definition you've already built
+
+Here's the payoff of [Metric Spaces](12-metric-spaces.qmd) and
+[Topological Spaces](13-topological-spaces.qmd): the $\varepsilon$–$\delta$
+definition above is not new machinery. It is the general metric-space
+notion of convergence — $y_n \to y$ when $d(y_n, y) \to 0$ — specialized to
+$\mathbb{R}$ with its ordinary distance $d(x,y) = |x-y|$. Continuity at a
+point, $\lim_{x\to a} f(x) = f(a)$, is exactly [Topological
+Spaces](13-topological-spaces.qmd)'s "preimage of every open set is open,"
+worked out concretely for open intervals on $\mathbb{R}$. Nothing in this
+chapter is conceptually new; it's the general theory from two chapters ago,
+now doing the specific job it was generalized from in the first place.
+
+## The infinitesimals weren't wrong, just early
+
+One more twist worth knowing, briefly: in the 1960s, Abraham Robinson
+showed that infinitesimals *can* be made fully rigorous after all, using a
+different foundation (nonstandard models of the real numbers) than Cauchy
+and Weierstrass's. Newton and Leibniz's original intuition wasn't
+mathematically unsound — it just needed roughly 300 years, and a foundation
+nobody in the 17th century had access to, to be justified on its own terms.
+This site doesn't develop nonstandard analysis further; it's mentioned here
+as one more instance of [the map](00-the-map.qmd)'s historical/formal
+split cutting in an unexpected direction.
+
+## What follows
+
+Two consequences worth naming, both leaning directly on completeness —
+[Number Systems](06-number-systems.qmd) already flagged this dependency
+before either theorem existed on this site. The **intermediate value
+theorem**: a continuous function on $[a,b]$ hits every value between
+$f(a)$ and $f(b)$. The **extreme value theorem**: a continuous function on
+a closed interval $[a,b]$ attains an actual maximum and minimum. Both fail
+over $\mathbb{Q}$ for the same reason $\mathbb{Q}$ failed to contain
+$\sqrt{2}$: completeness is doing the work, not continuity alone.
+
+Discontinuities come in different flavors worth having names for, even
+without full development here: **removable** (the limit exists but doesn't
+match $f(a)$, or $f(a)$ is undefined), **jump** (the limit from the left and
+right both exist but disagree), and **essential** (no limit exists at all,
+however you approach the point).
+
+## If you've computed limits and used continuity
+
+You already know how to evaluate $\lim_{x\to 2} \frac{x^2-4}{x-2}$ by
+factoring, and you already reach for continuity implicitly every time you
+evaluate a function "by just plugging in." What you now have that you may
+not have had explicitly is the actual content behind "plugging in works
+because $f$ is continuous there": it's a promise, provable from the
+$\varepsilon$–$\delta$ definition, that $f$ near $a$ behaves the way $f(a)$
+suggests it should — a promise that fails, precisely, at the discontinuities
+named above.
+
+## Where this leads
+
+[Differentiation](18-differentiation.qmd), next, is a specific limit — the
+limit of a difference quotient — built directly on everything in this
+chapter.

@@ -1,0 +1,74 @@
+---
+title: "Differentiation"
+---
+
+You know the power rule, the product rule, the chain rule — the mechanics
+of differentiation are not this chapter's subject. What a derivative
+structurally *is* — and why it's the same idea in one variable, ten
+variables, and eventually in the machine learning gradients [Linear
+Algebra](10-linear-algebra.qmd) already promised — is.
+
+## The definition, built on the last chapter
+
+$$f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}$$
+
+a limit of a **difference quotient**, in exactly the sense [Limits and
+Continuity](17-limits-and-continuity.qmd) just made precise. Nothing new is
+being assumed here beyond what that chapter already built.
+
+## The structural reframe: a derivative is a linear map
+
+This is the point of the chapter. $f'(a)$ is the slope of the **best linear
+approximation** to $f$ near $a$: $f(a+h) \approx f(a) + f'(a)\cdot h$, and
+the error in that approximation shrinks faster than $h$ itself as $h \to
+0$. That single fact — "differentiable" means "locally well-approximated by
+a linear map" — is not a metaphor. $f'(a)$, viewed as "multiply by this
+number," is literally a $1\times 1$ instance of [Linear
+Algebra](10-linear-algebra.qmd)'s linear maps, satisfying $T(h) = f'(a)h$
+exactly as that chapter's definition requires.
+
+This reframing is what makes multivariable calculus stop looking like an ad
+hoc pile of extra rules. The derivative of $f: \mathbb{R}^n \to
+\mathbb{R}^m$ at a point is not "a grid of partial derivatives" bolted
+together by convention — it *is* a linear map $\mathbb{R}^n \to
+\mathbb{R}^m$, the best linear approximation to $f$ near that point, and
+the **Jacobian matrix** is simply what that linear map looks like once
+coordinates are chosen — the exact same relationship [Linear
+Algebra](10-linear-algebra.qmd) established between "linear map" and
+"matrix" in general. A gradient is the Jacobian of a scalar-valued
+function; a Hessian is the derivative of the gradient, one order up. None
+of these are separate ideas — they're the same construction, applied to
+functions whose outputs get progressively richer.
+
+## Why differentiability is a stronger demand than continuity
+
+Every differentiable function is continuous — approximable by a linear map
+near $a$ forces $f$ to not jump at $a$. The converse is false, and it's
+worth having the standard counterexamples on hand. $f(x) = |x|$ is
+continuous everywhere but has a corner at $0$: the difference quotient
+approaches $-1$ from the left and $+1$ from the right, so no single limit
+exists. More strikingly, Weierstrass exhibited (1872) a function that is
+continuous *everywhere* and differentiable *nowhere* — a genuine shock to
+mathematicians of the time, who had generally assumed continuous functions
+were differentiable except at isolated bad points. This is the same
+rigor-versus-intuition tension [Limits and
+Continuity](17-limits-and-continuity.qmd) opened with, one level up:
+intuition said "continuous curves are basically smooth"; a rigorous
+$\varepsilon$–$\delta$-style construction said otherwise.
+
+## What follows, briefly
+
+Higher derivatives ($f''$, $f'''$, ...) are just this construction
+iterated. **Taylor approximation** — using more derivatives to build
+successively better polynomial approximations to $f$ near a point — is the
+single-variable ancestor of the loss-landscape and optimization machinery
+that shows up constantly in applied ML; this site doesn't develop it
+further here, but it's the same "best local approximation" idea this
+chapter is built around, carried one order further.
+
+## Where this leads
+
+[Integration](19-integration.qmd) looks, at first, like an entirely
+unrelated problem — area, not slope. The fact that it isn't unrelated at
+all is one of the most important theorems in this site's entire arc, and
+it's the next chapter's subject.

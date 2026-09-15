@@ -75,10 +75,11 @@ matters is the property they're built to guarantee: **completeness** —
 every bounded set of reals has a *least upper bound* in $\mathbb{R}$ itself,
 which $\mathbb{Q}$ conspicuously lacks (the set $\{q \in \mathbb{Q} : q^2 <
 2\}$ is bounded above but has no rational least upper bound). Completeness
-is the property that makes calculus work at all: limits, continuity, and the
-intermediate value theorem all lean on it directly, which is why real
-analysis — not calculus over $\mathbb{Q}$ — is the theory that makes
-calculus rigorous. **Gained**: no more gaps. **Lost**: countability —
+is the property that makes calculus work at all: [limits, continuity, and
+the intermediate value
+theorem](17-limits-and-continuity.qmd) all lean on it directly, which is
+why real analysis — not calculus over $\mathbb{Q}$ — is the theory that
+makes calculus rigorous. **Gained**: no more gaps. **Lost**: countability —
 $\mathbb{R}$ is provably "bigger than" $\mathbb{N}$, $\mathbb{Z}$, or
 $\mathbb{Q}$ (all countably infinite; $\mathbb{R}$ is not), a fact Cantor
 proved with his diagonal argument in the same period.

@@ -45,9 +45,22 @@ topologically, a function whose preimage of every open set is open — the
 same idea, restated without needing a distance. See [Topological
 Spaces](chapters/13-topological-spaces.qmd).
 
+**Derivative** — $f'(a) = \lim_{h\to 0} \frac{f(a+h)-f(a)}{h}$; structurally,
+the linear map that best approximates $f$ near $a$. See
+[Differentiation](chapters/18-differentiation.qmd).
+
+**Differential equation** — an equation relating a function to one or more
+of its own derivatives; a solution is a function, not a number. See
+[Differential Equations](chapters/20-differential-equations.qmd).
+
 **Dimension** — the number of vectors in a basis of a vector space; the same
 for every basis of a given space. See [Vector
 Spaces](chapters/09-vector-spaces.qmd).
+
+**Dynamical system** — a differential equation studied for its long-run
+qualitative behavior (fixed points, stability, oscillation) rather than an
+explicit formula. See [Differential
+Equations](chapters/20-differential-equations.qmd).
 
 **Eigenvalue / eigenvector** — a nonzero vector $v$ that a linear map $T$
 only stretches or shrinks ($T(v) = \lambda v$), never redirects, and the
@@ -74,6 +87,10 @@ not. See [Rings and Fields](chapters/11-rings-and-fields.qmd).
 $A$ appears as the first coordinate of exactly one pair. See [Relations and
 Functions](chapters/04-relations-and-functions.qmd).
 
+**Fundamental theorem of calculus** — differentiation and integration are
+inverse operations: $\int_a^b f(x)\,dx = F(b)-F(a)$ for any antiderivative
+$F$ of $f$. See [Integration](chapters/19-integration.qmd).
+
 **Group** — a set with one operation satisfying closure, associativity,
 identity, and inverses. See [Groups](chapters/08-groups.qmd).
 
@@ -93,6 +110,11 @@ Product Spaces](chapters/14-inner-product-spaces.qmd).
 **Isomorphism** — an invertible homomorphism; identifies two structures as
 "the same" up to relabeling their elements. See [What Is a Mathematical
 Structure?](chapters/07-mathematical-structures.qmd).
+
+**Limit** — $\lim_{x\to a} f(x) = L$: for every $\varepsilon>0$ there is a
+$\delta>0$ such that $0<|x-a|<\delta$ implies $|f(x)-L|<\varepsilon$ — the
+metric-space definition of convergence, specialized to $\mathbb{R}$. See
+[Limits and Continuity](chapters/17-limits-and-continuity.qmd).
 
 **Linear combination** — $c_1 v_1 + \cdots + c_k v_k$, for scalars $c_i$ and
 vectors $v_i$. See [Vector Spaces](chapters/09-vector-spaces.qmd).
@@ -129,6 +151,11 @@ member of the designated collection $\tau$ that defines the topology. See
 [Metric Spaces](chapters/12-metric-spaces.qmd) and [Topological
 Spaces](chapters/13-topological-spaces.qmd).
 
+**Ordinary / partial differential equation (ODE / PDE)** — an ODE involves
+derivatives with respect to one variable; a PDE involves partial
+derivatives with respect to several. See [Differential
+Equations](chapters/20-differential-equations.qmd).
+
 **Orthogonal** — two vectors $u,v$ with $\langle u,v\rangle = 0$; the
 structural definition behind "perpendicular." See [Inner Product
 Spaces](chapters/14-inner-product-spaces.qmd).
@@ -140,9 +167,17 @@ See [Logic and Proof](chapters/02-logic-and-proof.qmd).
 **Proposition** — a statement that is unambiguously true or false. See
 [Logic and Proof](chapters/02-logic-and-proof.qmd).
 
+**Real analysis** — the rigorous $\varepsilon$–$\delta$ foundation for
+calculus, built roughly two centuries after calculus itself. See [Limits
+and Continuity](chapters/17-limits-and-continuity.qmd).
+
 **Relation** — a subset of a Cartesian product $A \times B$; the general
 notion underlying equality, order, divisibility, and functions alike. See
 [Relations and Functions](chapters/04-relations-and-functions.qmd).
+
+**Riemann sum** — an approximation to $\int_a^b f(x)\,dx$ built from
+rectangles over a partition of $[a,b]$; the integral is the limit as the
+partition gets arbitrarily fine. See [Integration](chapters/19-integration.qmd).
 
 **Ring** — a set with two operations, $+$ and $\times$, where $(R,+)$ is an
 abelian group, $\times$ is associative, and $\times$ distributes over $+$.

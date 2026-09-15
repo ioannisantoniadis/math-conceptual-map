@@ -97,9 +97,11 @@ This chapter closes the structural arc this site has built from [What Is a
 Mathematical Structure?](07-mathematical-structures.qmd) onward — sets,
 groups, rings and fields, vector spaces, inner product spaces, metric
 spaces, topological spaces, and affine spaces, assembled here into the
-geometry you already knew computationally. From here, a later phase of this
-site picks up real analysis (built directly on the continuity this site's
-topological spaces chapter already defined), differential geometry (making
-the manifold sketch above precise), and — already foreshadowed at the end
-of [Linear Algebra](10-linear-algebra.qmd) — the high-dimensional geometry
+geometry you already knew computationally. From here, this site's table of
+contents continues into [Limits and
+Continuity](17-limits-and-continuity.qmd) — real analysis, built directly
+on the continuity [Topological Spaces](13-topological-spaces.qmd) already
+defined — and a later phase picks up differential geometry (making the
+manifold sketch above precise) and — already foreshadowed at the end of
+[Linear Algebra](10-linear-algebra.qmd) — the high-dimensional geometry
 that shows up constantly in machine learning.

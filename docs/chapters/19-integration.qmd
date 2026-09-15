@@ -1,0 +1,81 @@
+---
+title: "Integration"
+---
+
+Substitution, integration by parts, partial fractions — the techniques
+aren't this chapter's subject; you already have them. What integration
+structurally *is*, and why it turns out to be the *inverse* of
+[Differentiation](18-differentiation.qmd) — a fact that is not remotely
+obvious from the two problems' descriptions — is.
+
+## A completely different-looking problem
+
+Differentiation asks about instantaneous rate of change. Integration, on
+its face, asks something unrelated: how much area sits under a curve? Slice
+the interval $[a,b]$ into $n$ pieces, build a rectangle over each piece
+using the function's height there, sum the rectangles' areas, and take the
+limit as the slices get arbitrarily fine. That's a **Riemann sum**, and the
+integral
+
+$$\int_a^b f(x)\,dx = \lim_{n\to\infty} \sum_{i=1}^n f(x_i)\,\Delta x$$
+
+is defined as its limit — another limit, in exactly [Limits and
+Continuity](17-limits-and-continuity.qmd)'s sense, this time of a sequence
+of increasingly fine approximating sums rather than of a difference
+quotient.
+
+Not every bounded function has this limit exist — a function wild enough
+(discontinuous on a large enough set of points) can fail to be Riemann
+integrable at all. Fixing exactly which functions are integrable, by
+building the integral on measure theory instead of on Riemann sums, is
+Henri Lebesgue's contribution (1902) and a later phase of this site; the
+Riemann integral above is what this chapter develops, and it's sufficient
+for everything the rest of this site currently needs.
+
+## The theorem that unifies the two problems
+
+The **fundamental theorem of calculus** says that if $F$ is any
+antiderivative of $f$ (meaning $F' = f$), then
+
+$$\int_a^b f(x)\,dx = F(b) - F(a).$$
+
+Sit with how strange this is before it becomes routine: one construction
+(area, built from sums of rectangles) and another (rate of change, built
+from difference quotients) turn out to be exact inverses of each other.
+Nothing in either definition — Riemann sums on one side, difference
+quotients on the other — makes that obviously true. This theorem is what
+makes "calculus" one subject rather than two, and establishing it,
+independently, is the achievement usually credited jointly to Newton and
+Leibniz in the 1660s–70s (and the source of a famously bitter priority
+dispute between them and their respective camps) — another two centuries
+before Riemann's 1850s definition of the integral this chapter actually
+used to state the theorem rigorously. The historical-versus-formal gap [the
+map](00-the-map.qmd) keeps returning to shows up here in an unusually
+direct form: the *result* is 17th-century; the *definition it's stated
+with* is 19th-century.
+
+## Why the standard techniques work, restated
+
+Every integration technique you already know is the fundamental theorem
+read backwards. Substitution is the chain rule, reversed. Integration by
+parts is the product rule, reversed. This isn't a new set of facts to
+learn — it's the same rules from [Differentiation](18-differentiation.qmd),
+run in the other direction, which is exactly what "integration undoes
+differentiation" predicts they'd have to be.
+
+## What follows, briefly
+
+**Improper integrals** extend the definition to infinite intervals or
+unbounded functions, as a limit of ordinary integrals over growing finite
+regions — another instance of the same "define the hard case as a limit of
+easier cases" move this entire chapter has been making. The deeper fix for
+which functions are integrable at all — **Lebesgue integration**, built on
+measure theory — is a later phase of this site, flagged here rather than
+developed.
+
+## Where this leads
+
+[Differential Equations](20-differential-equations.qmd), next, is where
+integration reappears as a tool: an equation relating a function to its own
+derivative, solved — when it can be solved explicitly at all — by
+integrating your way back from the derivative to the function.
