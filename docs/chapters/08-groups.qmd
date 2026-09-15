@@ -1,0 +1,122 @@
+---
+title: "Groups"
+---
+
+Groups are the simplest structure on this site worth calling a structure at
+all — one set, one operation, four axioms — and they're worth taking
+seriously precisely because of that simplicity: nearly every axiom-based
+argument you'll meet later is a more elaborate version of the argument this
+chapter makes in full.
+
+## The problem, before the definition
+
+Four situations, deliberately unlike each other:
+
+- The integers, under addition.
+- The nonzero rational numbers, under multiplication.
+- The four rotations of a square (by 0°, 90°, 180°, 270°) that map it onto
+  itself, under "do one, then the other."
+- The **permutations** of $\{1, 2, 3\}$ — the six ways to reorder three
+  labeled objects — under composition.
+
+Each of these lets you *combine* two things to get a third thing of the same
+kind, and *undo* any combination. Rotate a square 90° twice, and you can get
+back to where you started by rotating 180° more. Add 5, and you can undo it
+by adding $-5$. That's the pattern worth naming: a set with an operation
+that combines and — crucially — can always be undone.
+
+## The definition
+
+A **group** is a set $G$ with a binary operation $\ast$ satisfying four
+axioms:
+
+1. **Closure** — for all $a, b \in G$, $a \ast b \in G$.
+2. **Associativity** — $(a \ast b) \ast c = a \ast (b \ast c)$ for all
+   $a, b, c \in G$.
+3. **Identity** — there exists $e \in G$ such that $e \ast a = a \ast e = a$
+   for all $a \in G$.
+4. **Inverses** — for every $a \in G$, there exists $a^{-1} \in G$ such that
+   $a \ast a^{-1} = a^{-1} \ast a = e$.
+
+That's the entire definition. Nothing here requires $a \ast b = b \ast a$
+— when it *does* hold for every pair, the group is called **abelian** (after
+Niels Abel), and it's worth noticing that's a bonus property, not one of the
+four axioms; the rotations-of-a-square example above is abelian, but the
+permutations-of-three-objects example is not (rotate-then-reflect a triangle
+differs from reflect-then-rotate).
+
+## Why these four, and not fewer
+
+Each axiom is load-bearing, and it's worth seeing what specifically fails
+without it:
+
+- **Without closure**, "$G$ with operation $\ast$" isn't describing a
+  self-contained system at all — you could combine two elements and land
+  outside the set you started with, and nothing downstream would even be
+  well-defined.
+- **Without associativity**, $a \ast b \ast c$ is ambiguous — you'd need to
+  track parentheses forever, and the notion of "just apply the operations in
+  order" would stop making sense. (Notice associativity says nothing about
+  *order* — that's commutativity, a separate and optional property.)
+- **Without an identity**, there's no reference point meaning "do nothing" —
+  no way to even state what it means to "undo" an operation, since undoing
+  means returning to *something*, and that something needs a name.
+- **Without inverses**, closure/associativity/identity together describe a
+  weaker structure called a **monoid** (the natural numbers under addition
+  are a monoid, not a group — $3$ has no additive inverse in $\mathbb{N}$).
+  Inverses are exactly what upgrades "combine" into "combine and undo."
+
+## What follows from the definition
+
+A short, genuinely useful list, none of it requiring more than the four
+axioms: the identity element is unique (if $e$ and $e'$ both worked, $e = e
+\ast e' = e'$); each element's inverse is unique by the same style of
+argument; and **cancellation** holds — $a \ast b = a \ast c$ forces $b = c$
+(combine both sides with $a^{-1}$ on the left). None of this needed to know
+anything about *what* $G$'s elements are. That's not an accident — it's the
+entire reason the abstraction is useful: any fact derivable from the four
+axioms alone is automatically true of every group, from integers to
+rotations to permutations to structures nobody has thought of yet.
+
+## What a group is NOT
+
+Not necessarily commutative (see above). Not necessarily made of numbers —
+most groups that matter in later mathematics (symmetry groups, permutation
+groups, matrix groups) aren't. And a group is not the same thing as "the set
+it's built on" — $\mathbb{Z}$ is a group under addition but *not* a group
+under multiplication (no element but $\pm 1$ has a multiplicative inverse in
+$\mathbb{Z}$), which is a useful reminder that "group" names a set *plus* a
+chosen operation, never a set alone.
+
+## Symmetry and invariance
+
+Groups are, historically, inseparable from the idea of symmetry: the
+rotations of a square example above generalizes to the full **symmetry
+group** of any object — every transformation that leaves it looking
+unchanged, under composition — and this connection is not incidental
+decoration, it's most of why group theory matters in physics and geometry.
+A conserved quantity in physics (momentum, energy) corresponds, via
+Noether's theorem, to a symmetry group of the underlying equations — one of
+the deepest instances of the *invariance* thread from [the
+map](00-the-map.qmd): what stays the same under a transformation is exactly
+what a group is built to describe.
+
+The historical route to the formal definition above ran through exactly
+this kind of example, not the other way around. Évariste Galois used what we
+would now call permutation groups in the 1830s to settle a centuries-old
+question — which polynomial equations are solvable by a formula using roots,
+like the quadratic formula — by studying the symmetries of an equation's
+roots, decades before "group" had the abstract four-axiom definition above.
+That definition was only isolated and generalized later, by Arthur Cayley
+(1854) and, in essentially its modern abstract form, Heinrich Weber (1893).
+The concrete examples came first, by decades; the abstraction came after,
+distilled from what the examples had in common — a clean instance of the
+historical graph and the formal graph running in different order from [the
+map](00-the-map.qmd).
+
+## Where this leads
+
+Groups have one operation. [Vector Spaces](09-vector-spaces.qmd), next, are
+built from *two* interacting operations — a group's worth of addition, plus
+scalar multiplication — and are the structure this entire site has been
+building toward.

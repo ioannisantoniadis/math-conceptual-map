@@ -1,0 +1,121 @@
+---
+title: "Number Systems"
+---
+
+$\mathbb{N} \to \mathbb{Z} \to \mathbb{Q} \to \mathbb{R} \to \mathbb{C}$ is
+usually presented as a list to memorize: naturals, then integers, then
+rationals, then reals, then complex numbers, each one "bigger." That framing
+hides the actual pattern, which is more interesting and more useful: at each
+step, some equation the previous system couldn't solve becomes solvable —
+and something else, some property the previous system had for free, is
+given up to make that happen. This chapter is that trade, made explicit five
+times.
+
+## Natural numbers: what you start with
+
+$\mathbb{N} = \{0, 1, 2, 3, \dots\}$ — counting numbers, with addition and
+multiplication. (Whether to include 0 is a genuine convention that varies by
+author; this site includes it.) Formally, $\mathbb{N}$ can be built from
+nothing but sets — $0 := \varnothing$, and each successor $n+1 :=
+n \cup \{n\}$ — but nothing downstream depends on knowing that construction;
+it's mentioned once here as evidence that "numbers are built from sets" is
+more than a slogan, not as machinery you need to carry forward.
+
+$\mathbb{N}$'s first limitation is subtraction: $3 - 5$ has no answer in
+$\mathbb{N}$.
+
+## Integers: solving $x + a = b$
+
+$\mathbb{Z} = \{\dots, -2, -1, 0, 1, 2, \dots\}$ closes that gap by adjoining
+additive inverses. One clean formal construction (rarely spelled out
+computationally, worth seeing once): define $\mathbb{Z}$ as equivalence
+classes of pairs $(a, b) \in \mathbb{N} \times \mathbb{N}$ under
+$(a,b) \sim (c,d) \iff a + d = b + c$ — the class of $(a,b)$ represents
+"$a - b$," and the equivalence relation is exactly what makes $(5,3)$ and
+$(8,6)$ (both "meaning" $2$) the same integer. This is the equivalence-class
+machinery from [Relations and Functions](04-relations-and-functions.qmd),
+now doing real work.
+
+**Gained**: every equation $x + a = b$ now has a solution. **Lost**:
+nothing structural yet — $\mathbb{Z}$ keeps everything $\mathbb{N}$ had.
+Historically, negative numbers were the slow step, not the fast one: they
+appear in Chinese and Indian mathematics over a thousand years before
+European mathematicians fully accepted them as legitimate numbers (well
+into the 17th–18th centuries, negative solutions to equations were routinely
+dismissed as "false"). Formal ease and historical ease are not the same
+thing.
+
+## Rationals: solving $ax = b$
+
+$\mathbb{Q}$ adjoins multiplicative inverses for everything but 0 — the same
+equivalence-class trick, now on pairs $(a, b) \in \mathbb{Z} \times
+(\mathbb{Z} \setminus \{0\})$ representing "$a/b$." **Gained**: $ax = b$
+solvable whenever $a \neq 0$. $\mathbb{Q}$ is also **dense**: between any two
+distinct rationals sits another one, so in a real sense there's "no next
+rational" — a genuinely different flavor of infinite than $\mathbb{N}$'s.
+
+**Lost**, in a sense that took the Pythagoreans by surprise: $\mathbb{Q}$
+still has *gaps*. $x^2 = 2$ has no rational solution — $\sqrt{2}$ is
+irrational, a fact with a short, classic proof by contradiction (assume
+$\sqrt{2} = p/q$ in lowest terms, square both sides, derive that $p$ and $q$
+are both even, contradicting "lowest terms"). Density is not the same as
+completeness; $\mathbb{Q}$ is packed infinitely tight and still full of
+holes.
+
+## Reals: filling the gaps
+
+$\mathbb{R}$ fills them. There are two standard rigorous constructions —
+**Dedekind cuts** (a real number *is* a partition of $\mathbb{Q}$ into
+"everything below it" and "everything at or above it") and **Cauchy
+sequences** (a real number is an equivalence class of rational sequences
+that bunch arbitrarily close together) — both due, independently, to Cantor
+and Dedekind around 1872. Neither construction is needed to use $\mathbb{R}$
+computationally, and this site doesn't develop either in detail; what
+matters is the property they're built to guarantee: **completeness** —
+every bounded set of reals has a *least upper bound* in $\mathbb{R}$ itself,
+which $\mathbb{Q}$ conspicuously lacks (the set $\{q \in \mathbb{Q} : q^2 <
+2\}$ is bounded above but has no rational least upper bound). Completeness
+is the property that makes calculus work at all: limits, continuity, and the
+intermediate value theorem all lean on it directly, which is why real
+analysis — not calculus over $\mathbb{Q}$ — is the theory that makes
+calculus rigorous. **Gained**: no more gaps. **Lost**: countability —
+$\mathbb{R}$ is provably "bigger than" $\mathbb{N}$, $\mathbb{Z}$, or
+$\mathbb{Q}$ (all countably infinite; $\mathbb{R}$ is not), a fact Cantor
+proved with his diagonal argument in the same period.
+
+## Complex numbers: solving $x^2 = -1$
+
+$\mathbb{C} = \{a + bi : a, b \in \mathbb{R}\}$, where $i^2 = -1$, closes the
+last major gap in $\mathbb{R}$: not every polynomial with real coefficients
+has a real root. **Gained**, and this is a genuinely striking payoff for
+adjoining a single new element: the **fundamental theorem of algebra**
+guarantees *every* nonconstant polynomial has a root in $\mathbb{C}$ — no
+further extension is ever needed to solve a polynomial equation.
+**Lost**: order. $\mathbb{R}$ has a total order compatible with its
+arithmetic ($a < b \Rightarrow a + c < b + c$); no such order exists on
+$\mathbb{C}$ that plays nicely with multiplication (if it did, $i^2 = -1$
+would force a contradiction between $i > 0$ and $i < 0$ cases). You can
+compare real numbers by size; you can only compare complex numbers by
+distance from the origin, which is a different, weaker kind of structure.
+
+Complex numbers were trusted least, longest: "imaginary" was originally a
+term of mild derision, and full acceptance — largely through Gauss's and
+Hamilton's work giving $\mathbb{C}$ a solid geometric and algebraic footing
+— didn't arrive until the late 18th and 19th centuries, roughly 250 years
+after they first appeared (Cardano, 1545) as an uncomfortable but useful
+bookkeeping device inside the formula for solving cubic equations.
+
+## The pattern, named
+
+Five extensions, one shape: a specific unsolved equation motivates a new
+construction, built from equivalence classes over the previous system, that
+gains solvability and loses some structural property the old system had for
+free (order, discreteness, countability, order again). This is the
+generalization theme from [the map](00-the-map.qmd) in its purest form —
+and it's about to reappear one level of abstraction up. Each of
+$\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$, $\mathbb{C}$ is, at
+bottom, a set equipped with operations satisfying certain properties. Naming
+what "a set with operations satisfying certain properties" means *in
+general* — independent of which numbers, or non-numbers, fill in the set —
+is exactly the subject of [What Is a Mathematical
+Structure?](07-mathematical-structures.qmd), next.

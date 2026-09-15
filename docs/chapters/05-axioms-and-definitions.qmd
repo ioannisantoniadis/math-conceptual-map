@@ -1,0 +1,100 @@
+---
+title: "Axioms and Definitions"
+---
+
+The last three chapters used the words "definition" and "well-defined"
+freely without ever pinning down what they mean. That was deliberate — it's
+much easier to explain what a definition *is* after you've seen several, the
+way it's easier to explain what a sentence is after you've read some. Now
+that sets, relations, and functions are on the table, it's worth stepping
+back and being precise about the scaffolding they were built with.
+
+## Definitions don't assert, they abbreviate
+
+A **definition** introduces a new term as shorthand for something already
+expressible in terms you have. "A number is *even* if it equals $2k$ for
+some integer $k$" doesn't discover a new fact about the world — it's a
+naming convention, and the only thing that can go wrong with it is
+ill-formedness (does "even" pick out a well-defined set of numbers, with no
+ambiguity about which numbers are in it?), not falsehood. This is worth
+being explicit about because it's easy to treat a new definition as though
+it were a claim requiring justification the way a theorem does. A definition
+requires only that it be *coherent* — self-consistent and unambiguous — not
+that it be *true*.
+
+That said, definitions are not arbitrary. Mathematicians choose which
+concepts to name based on which combinations of properties turn out to
+recur, connect to other ideas, or make an important theorem statable
+cleanly. "A number divisible by 2" got a name; "a number whose digits sum to
+a multiple of 7" didn't, despite being an equally legitimate definition —
+because the second property essentially never reappears anywhere useful.
+Naming is a judgment call about which patterns are worth having a handle
+for, made after the fact by an entire mathematical community, not before.
+
+## Axioms don't get proven — they get assumed
+
+An **axiom** is a starting statement, accepted without proof, from which
+other statements are derived. Unlike a definition, an axiom *does* assert
+something — but the assertion isn't backed by a proof from more primitive
+facts, because there's nowhere more primitive left to appeal to. Every
+formal system needs at least a few: [Logic and Proof](02-logic-and-proof.qmd)
+already leaned on this without naming it — a proof is a chain of inference
+starting *somewhere*, and axioms are that somewhere.
+
+This is exactly where the word "true" gets subtle for the rest of this site.
+Whether the parallel postulate holds isn't a fact about the physical
+universe waiting to be discovered — Euclidean geometry (assuming it) and
+hyperbolic geometry (assuming its negation) are both fully consistent formal
+systems, and asking which one is "really true" outside the context of a
+specific application (which geometry describes spacetime, say) is a
+category error. Modern mathematics generally treats axioms as *chosen*: you
+pick a set of axioms, and every downstream theorem is true *relative to that
+choice* — "$P$" in mathematics almost always means "$P$, given these
+axioms," with the given part left implicit because it rarely changes within
+a single piece of work.
+
+A **theorem** is then any statement derivable from the axioms via valid
+inference (the rules from [Logic and Proof](02-logic-and-proof.qmd)). The
+whole edifice — axioms plus everything derivable from them — is what
+"a mathematical theory" formally means, distinct from the looser, more
+common sense of "theory" this site uses elsewhere to mean a field of study
+like linear algebra.
+
+## Why these particular axioms?
+
+This is the question this site returns to more than any other, starting
+with [Groups](08-groups.qmd) and [Vector Spaces](09-vector-spaces.qmd): given
+a structure, why *these* axioms and not some other list? Two forces usually
+decide it. First, **necessity** — drop an axiom and some construction you
+actually need stops working (drop the existence of inverses from a group and
+you can no longer "undo" a combination). Second, **fruitfulness** — a
+minimal, well-chosen axiom list turns out to have surprisingly rich and
+useful consequences, which is discovered gradually as a community works with
+a structure, not decided in advance. Axioms that seem natural in hindsight
+were often arrived at only after decades of specific examples were already
+in circulation — the historical graph, again, running behind the conceptual
+one.
+
+## A formalist century, and its limit
+
+The push to make "derivable from stated axioms" the *entire* standard for
+mathematical truth — rather than an ideal mathematicians approximated
+informally — is largely a late-19th/early-20th-century project, closely
+tied to the response to Russell's paradox in [Sets](03-sets.qmd). David
+Hilbert's program (from around 1920) aimed higher still: not just
+axiomatizing each theory, but proving, using only elementary methods, that
+mathematics as a whole was consistent and that every true statement was
+provable. Kurt Gödel's incompleteness theorems (1931) showed this second,
+larger goal is unreachable in principle — any consistent formal system
+powerful enough to describe basic arithmetic contains true statements it
+cannot prove. This is a genuinely deep result and this paragraph does not do
+it justice; it's mentioned here mainly so "just add more axioms until
+everything is settled" doesn't seem like an available option later in this
+site, and flagged, like the rest of this chapter's history, as simplified.
+
+## Where this leads
+
+With logic, sets, functions, and now the axiomatic method itself named,
+[Number Systems](06-number-systems.qmd) puts all of it to work: constructing
+$\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$, and $\mathbb{C}$ from nothing but
+$\mathbb{N}$, and showing what each construction buys you.

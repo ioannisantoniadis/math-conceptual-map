@@ -1,0 +1,126 @@
+---
+title: "Vector Spaces"
+---
+
+Ask most people who've taken linear algebra what a vector is, and the answer
+is "an arrow" or "a list of numbers." Both are correct — and both are
+instances of something more general, in exactly the sense [What Is a
+Mathematical Structure?](07-mathematical-structures.qmd) described:
+mathematicians care less about what an object *is* than about what
+structure it carries. This chapter is that idea made fully concrete, on the
+structure this whole site has been building toward.
+
+## The problem, before the definition
+
+Displacements in the plane add: walk 3 meters east then 4 meters north, and
+the result is the same as one diagonal walk — vector addition. You can also
+scale a displacement: walk twice as far in the same direction. That's the
+entire motivating problem — describe quantities that add and scale — and
+it's worth seeing it satisfied by objects that don't look anything like
+arrows before writing down the axioms:
+
+- **$\mathbb{R}^n$** — ordered tuples, added componentwise, scaled
+  componentwise. The example everyone starts with.
+- **Polynomials** of degree $\leq n$ — $(x^2 + 3x) + (2x^2 - x) = 3x^2 + 2x$
+  is addition; $5(x^2 + 3x) = 5x^2 + 15x$ is scaling. No arrows in sight.
+- **$m \times n$ matrices** — added entrywise, scaled entrywise.
+- **Functions** on some domain — $(f+g)(x) := f(x) + g(x)$,
+  $(cf)(x) := c \cdot f(x)$. The set of all real-valued functions on
+  $[0,1]$ adds and scales exactly as validly as $\mathbb{R}^n$ does.
+
+These four look nothing alike — tuples, polynomials, grids of numbers,
+functions — and yet, as the definition below will make precise, they satisfy
+*exactly the same axioms*. From the perspective of vector-space theory, they
+are the same kind of object.
+
+## The abstraction
+
+A **vector space** over a field $F$ (think $\mathbb{R}$ or $\mathbb{C}$ —
+[Number Systems](06-number-systems.qmd) built both) is a set $V$ with two
+operations, vector addition $V \times V \to V$ and scalar multiplication
+$F \times V \to V$, satisfying:
+
+1. $(V, +)$ is an abelian group — closure, associativity, an additive
+   identity $\vec{0}$, additive inverses, and commutativity (see
+   [Groups](08-groups.qmd); a vector space's addition is required to be
+   commutative, unlike a general group's operation).
+2. **Scalar associativity**: $a(bv) = (ab)v$.
+3. **Distributivity over vector addition**: $a(u+v) = au + av$.
+4. **Distributivity over scalar addition**: $(a+b)v = av + bv$.
+5. **Scalar identity**: $1 \cdot v = v$.
+
+## Why these axioms
+
+Each one is earning its keep:
+
+- **The abelian-group axioms on $+$** guarantee vectors combine and undo
+  cleanly, and specifically *commutatively* — without commutativity,
+  "walk east then north" and "walk north then east" could land you in
+  different places, which would make the displacement picture this chapter
+  opened with simply false.
+- **Scalar associativity** ($a(bv) = (ab)v$) is what makes "scale by 6" and
+  "scale by 2, then by 3" interchangeable — without it, scaling wouldn't be
+  a coherent single operation, just a family of unrelated ones indexed by
+  which scalar you happened to pick first.
+- **The two distributivity laws** are what make addition and scaling
+  interact sensibly rather than being two unrelated operations that happen
+  to share a set. Drop $a(u+v) = au+av$ and doubling a *sum* of
+  displacements could differ from summing the doubled displacements — the
+  geometric picture of "scaling stretches the whole plane uniformly" would
+  fail.
+- **The scalar identity** ($1 \cdot v = v$) rules out a degenerate
+  "solution" where scalar multiplication collapses everything to zero
+  regardless of the scalar — without it, "scale by 1" wouldn't have to mean
+  "leave unchanged," which would make "scalar multiplication" a
+  contradiction in terms.
+
+## What follows from the definition
+
+A **linear combination** of vectors $v_1, \dots, v_k$ is any
+$c_1 v_1 + \cdots + c_k v_k$. The set of all linear combinations of a given
+collection of vectors is their **span**. A collection of vectors is
+**linearly independent** if no one of them is a linear combination of the
+others — equivalently, the only way to combine them to get $\vec{0}$ is with
+every coefficient zero. A **basis** is a linearly independent set that spans
+all of $V$; every vector in $V$ is then a *unique* linear combination of
+basis vectors. That uniqueness is what lets you represent an abstract vector
+concretely as a list of coordinates once you fix a basis — and every basis
+of a given (finite-dimensional) vector space has the same number of
+elements, a fact that lets **dimension** be defined as a property of $V$
+itself, not of any particular basis you happened to choose.
+[Linear Algebra](10-linear-algebra.qmd) is where this machinery gets used in
+earnest.
+
+## What a vector space is NOT
+
+Not $\mathbb{R}^n$ — $\mathbb{R}^n$ is one example among many, not the
+definition, as the four motivating examples above were built to show. Not
+inherently equipped with a length or an angle — nothing in the five axioms
+above mentions how "long" a vector is or what it means for two vectors to be
+"perpendicular." Those require *additional* structure layered on top (an
+inner product or a norm), which is exactly what an inner-product space or a
+normed space adds — structures a later phase of this site develops, and
+[What Is a Mathematical Structure?](07-mathematical-structures.qmd) already
+previewed in its comparison table. A bare vector space has addition and
+scaling and nothing else; it's easy to unconsciously import geometric
+intuition (angles, lengths) that the axioms haven't actually earned yet.
+
+## If you've done linear algebra
+
+You already know $A\vec{x} = \vec{b}$. What the axioms above make precise is
+what $\vec{x}$ *is*: an element of a vector space, nothing more specific
+required. When $\vec{x}$ happens to be a tuple in $\mathbb{R}^n$, that's a
+choice of *representation*, not a fact forced by the definition — the same
+underlying idea works with $\vec{x}$ ranging over polynomials or functions,
+which is exactly the setting differential equations and functional analysis
+live in. [Linear Algebra](10-linear-algebra.qmd) makes precise what $A$ is
+doing to $\vec{x}$ — spoiler: not "a grid of numbers," but a *transformation*
+that a grid of numbers happens to represent once a basis is fixed.
+
+## Where this leads
+
+A structure is only half the story without the maps between its instances.
+[Linear Algebra](10-linear-algebra.qmd) is the theory of vector spaces
+*and* the linear maps connecting them — including the fact, central to
+everything from computer graphics to machine learning, that a matrix is
+just what a linear map looks like once you've chosen coordinates.

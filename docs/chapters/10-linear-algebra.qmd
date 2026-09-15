@@ -1,0 +1,107 @@
+---
+title: "Linear Algebra"
+---
+
+[Vector Spaces](09-vector-spaces.qmd) named the structure. Linear algebra is
+the *theory* — the body of results about vector spaces and, just as
+importantly, about the maps that connect them. A vector space sitting alone
+doesn't do much; the interesting mathematics starts with how vector spaces
+relate to each other, and that's what this chapter is about.
+
+## Linear maps
+
+A **linear map** $T: V \to W$ between two vector spaces (over the same
+field) is a function that respects both operations:
+
+$$T(u + v) = T(u) + T(v), \qquad T(cv) = c \, T(v)$$
+
+That's the entire definition — a linear map is exactly a homomorphism of
+vector spaces, in the sense [What Is a Mathematical
+Structure?](07-mathematical-structures.qmd) used the word. It sounds
+narrow, and it is deliberately narrow: rotations, reflections, projections,
+and scalings are linear; almost anything involving a squared term, an
+absolute value, or an added constant is not ($f(x) = x^2$ fails
+$T(cv)=cT(v)$; $f(x) = x + 1$ fails $T(0) = 0$, which every linear map must
+satisfy — set $v=0$ in either defining equation). That narrowness is the
+point: restricting to maps that respect a vector space's structure is
+exactly what makes it possible to say something *general*, true of every
+linear map at once, the same move [Groups](08-groups.qmd) made for a single
+operation.
+
+## Matrices are what linear maps look like in coordinates
+
+This is the fact you already use and the one this chapter exists to make
+precise: once you fix a basis for $V$ and a basis for $W$, *every* linear
+map $T: V \to W$ (between finite-dimensional spaces) corresponds to exactly
+one matrix $A$, and $T(v)$ corresponds to $A\vec{x}$, where $\vec{x}$ is
+$v$'s coordinate vector in the chosen basis. The correspondence runs both
+ways — every matrix defines a linear map, every linear map (given bases)
+defines a matrix — and it's a genuine instance of the isomorphism idea from
+[What Is a Mathematical Structure?](07-mathematical-structures.qmd): the set
+of linear maps $V \to W$ and the set of $m \times n$ matrices are, once
+bases are fixed, the same structure wearing different notation.
+
+**Matrix multiplication is composition of maps**, not an independently
+invented rule that happens to be useful: $(AB)\vec{x} = A(B\vec{x})$ is
+exactly "$T_A$ applied to whatever $T_B$ produced," and the famously
+unintuitive row-times-column recipe for matrix multiplication is *derived
+from* requiring this composition property to hold — it's not an arbitrary
+convention, it's the unique rule that makes matrices compose the way the
+linear maps they represent do.
+
+## Coordinates depend on the basis, the map doesn't
+
+A linear map $T$ is a single, basis-independent object; the matrix
+*representing* it changes if you change basis, even though $T$ itself
+hasn't. This is worth sitting with, because it resolves a genuine source of
+confusion: "is a rotation the matrix $\begin{pmatrix} 0 & -1 \\ 1 & 0
+\end{pmatrix}$?" Only relative to the standard basis — the same rotation, in
+a different basis, is represented by a different-looking matrix, and part
+of what makes eigenvectors useful (next) is that they identify a basis in
+which a given map's matrix takes an especially simple form.
+
+## Eigenvalues: directions a map leaves invariant
+
+A vector $v \neq 0$ is an **eigenvector** of $T$ (with **eigenvalue**
+$\lambda$) if $T(v) = \lambda v$ — $T$ doesn't rotate or redirect $v$ at
+all, only stretches or shrinks it. This is the *invariance* thread from [the
+map](00-the-map.qmd) showing up concretely: an eigenvector marks a direction
+the transformation leaves structurally alone, even while it does something
+nontrivial to every other direction. Finding a basis made entirely of
+eigenvectors (when one exists) is exactly what puts a map's matrix into its
+simplest possible form — diagonal, with the eigenvalues down the diagonal —
+which is why eigenvalues turn out to organize an enormous amount of applied
+linear algebra, well beyond what this chapter develops in detail.
+
+## If you've done linear algebra
+
+You already know $A\vec{x} = \vec{b}$. What this chapter adds to [Vector
+Spaces](09-vector-spaces.qmd)'s answer for $\vec{x}$:
+
+- $\vec{x}$ is (the coordinate representation of) an element of a vector
+  space.
+- $A$ represents a *linear map* — the grid of numbers is a coordinate
+  description of a transformation, not the transformation itself.
+- Matrix multiplication is function composition, specialized to linear
+  maps.
+- Choosing a basis is what lets an abstract, coordinate-free linear map be
+  written down as a concrete array of numbers you can compute with — and
+  changing that choice changes the array without changing the map.
+
+## Where this connects
+
+Linear algebra is the theory this site's MVP has been building toward, and
+it's a genuine hub rather than an endpoint. $\mathbb{R}^n$ as a vector space
+is also, with a bit more structure added, a geometric object — later phases
+of this site develop inner-product spaces, metric spaces, and the geometry
+built on top of them, all sitting one layer above what's here. And the
+reason a machine learning practitioner encounters linear algebra
+constantly isn't incidental: a learned embedding is a vector in exactly the
+sense of [Vector Spaces](09-vector-spaces.qmd), a neural network layer's
+weight matrix is a linear map (composed with a nonlinearity) in exactly the
+sense of this chapter, and techniques like PCA are, mechanically, nothing
+more than finding a data set's dominant eigenvectors. That bridge —
+[the mathematics of ML](00-the-map.qmd), full treatment planned for a later
+phase — is where this site's MVP arc ends and the next one picks up; see
+[`ROADMAP.md`](https://github.com/ioannisantoniadis/math-conceptual-map/blob/main/ROADMAP.md)
+for what's next.

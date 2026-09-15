@@ -1,0 +1,50 @@
+---
+title: "References"
+---
+
+This site is not yet accumulating a full bibliography — `references.bib`
+holds a single placeholder entry, removed once real inline citations
+(`@key`) are added chapter by chapter as claims that need them arise. This
+page instead states the sourcing policy those future citations will follow,
+and lists a handful of general books worth having nearby regardless of what
+this site covers.
+
+## Sourcing policy
+
+Claims about mathematical history, the origin of a term, or a formal
+definition are sourced, in order of preference:
+
+1. **MacTutor History of Mathematics** (University of St Andrews) for
+   biographical and historical claims — dates, priority, who formalized
+   what and when.
+2. **The Stanford Encyclopedia of Philosophy** for foundational and
+   philosophical topics — the axiomatic method, the philosophy of
+   mathematics, logic.
+3. **Primary sources** (the original paper or book introducing a concept)
+   where genuinely load-bearing and accessible.
+4. **Established textbooks** — Wikipedia is used, if at all, as a pointer
+   toward better sources, never as the citation itself.
+
+Where a historical claim is simplified or genuinely contested among
+historians, the text says so explicitly rather than presenting a tidy
+narrative as settled fact — see, for instance, the repeated flags throughout
+[Number Systems](chapters/06-number-systems.qmd) and [Axioms and
+Definitions](chapters/05-axioms-and-definitions.qmd).
+
+## General reading
+
+A short list of books this site's early chapters draw conceptual framing
+from, useful for anyone who wants to go past what's here:
+
+- Paul Halmos, *Naive Set Theory* — still the clearest short introduction to
+  set theory at the level [Sets](chapters/03-sets.qmd) assumes.
+- Michael Artin, *Algebra* — the standard reference for groups, rings, and
+  fields, well past [Groups](chapters/08-groups.qmd)'s scope.
+- Sheldon Axler, *Linear Algebra Done Right* — builds linear algebra with
+  almost no reliance on determinants, closer in spirit to [Vector
+  Spaces](chapters/09-vector-spaces.qmd) and [Linear
+  Algebra](chapters/10-linear-algebra.qmd) than a typical computational
+  course.
+- Timothy Gowers (ed.), *The Princeton Companion to Mathematics* — the
+  single best one-volume map of mathematics as a whole, in the sense [the
+  map](chapters/00-the-map.qmd) is reaching for at much smaller scale.

@@ -1,0 +1,88 @@
+---
+title: "Relations and Functions"
+---
+
+You've been computing with functions since long before you'd have called
+them "sets of ordered pairs." That computational fluency is real and worth
+keeping — the point of this chapter isn't to replace it, it's to show that
+the object underneath $f(x) = x^2$ is more primitive, and more general, than
+"a formula you plug numbers into."
+
+## Relations
+
+A **relation** on sets $A$ and $B$ is simply a subset $R \subseteq A \times
+B$: a collection of ordered pairs. Nothing more. "$a$ is related to $b$"
+just means $(a,b) \in R$. This is deliberately austere — it makes *every*
+notion of "connection" between objects, however different they look, an
+instance of the same structure:
+
+- **Equality**, $\{(x,x) : x \in A\}$ — the "trivial" relation, everything
+  related only to itself.
+- **Order**, e.g. $\{(x,y) \in \mathbb{R} \times \mathbb{R} : x \leq y\}$.
+- **Divisibility** on integers, $\{(a,b) : a \text{ divides } b\}$.
+- A **graph**'s edges, if you let $A = B$ be a set of vertices.
+
+One family matters enough to name on its own: an **equivalence relation** is
+a relation that is *reflexive* ($x \sim x$), *symmetric* ($x \sim y
+\Rightarrow y \sim x$), and *transitive* ($x \sim y, y \sim z \Rightarrow x
+\sim z$). Equivalence relations partition a set into disjoint
+**equivalence classes** — everything mutually related gets grouped together
+— and that partitioning move turns out to be exactly how new number systems
+get *constructed* from old ones: [Number
+Systems](06-number-systems.qmd) builds the integers as equivalence classes
+of pairs of natural numbers, and the rationals the same way from pairs of
+integers. It's worth flagging now, before it's needed, because the
+construction otherwise looks like a trick pulled out of nowhere.
+
+## Functions
+
+A **function** $f: A \to B$ is a relation $f \subseteq A \times B$ with one
+extra requirement: every $a \in A$ appears as the first element of *exactly
+one* pair in $f$. That's the entire formal content of "well-defined" — for
+every input there is one, and only one, output. $A$ is the **domain**, $B$
+the **codomain**; the actual outputs achieved, $\{f(a) : a \in A\} \subseteq
+B$, form the **range** (or image), which need not be all of $B$.
+
+Three properties, easy to confuse and worth keeping straight because they
+recur under the same names in every structure this site covers:
+
+- **Injective** (one-to-one) — distinct inputs give distinct outputs:
+  $a_1 \neq a_2 \Rightarrow f(a_1) \neq f(a_2)$.
+- **Surjective** (onto) — every element of the codomain is hit: the range
+  equals $B$.
+- **Bijective** — both at once. A bijection pairs up $A$ and $B$ perfectly,
+  element for element, and is exactly the notion needed to say two sets
+  "have the same size" even when both are infinite.
+
+## If you've done calculus
+
+You already know:
+
+$$f(x) = x^2$$
+
+as a rule you evaluate. Formally, $f$ *is* the set of ordered pairs
+$\{(x, x^2) : x \in \mathbb{R}\}$ — the graph you'd draw is, quite literally,
+the function, not a picture of it. "Plug in $x$, get out $x^2$" and "the set
+of all pairs $(x, x^2)$" are the same object described two ways: one as a
+process, one as its complete record. The process framing is what you've
+used computationally; the set framing is what lets "function" generalize
+past formulas at all — a lookup table, a random assignment, an infinite
+sequence of coin flips indexed by time are all functions in the formal sense
+with nothing resembling a closed-form rule.
+
+This distinction matters the moment you ask what it means for two functions
+to be "the same." $f(x) = (x+1)^2 - 2x - 1$ and $g(x) = x^2$ are the same
+function — same set of ordered pairs — despite looking like different
+formulas; a formula is one particular *description* of a function, not the
+function itself.
+
+## Where this leads
+
+Sets, relations, and functions are now on the table with reasonably precise
+meanings, but "reasonably precise" has been doing informal work this whole
+chapter — words like "well-defined" have been used without saying what makes
+a definition well-formed in the first place. [Axioms and
+Definitions](05-axioms-and-definitions.qmd) steps back and names that,
+before [Number Systems](06-number-systems.qmd) puts sets, relations, and
+functions to their first real use: building $\mathbb{Z}$, $\mathbb{Q}$,
+$\mathbb{R}$, and $\mathbb{C}$ out of nothing but $\mathbb{N}$.

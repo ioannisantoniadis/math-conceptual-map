@@ -1,0 +1,103 @@
+---
+title: "Glossary"
+---
+
+Short, precise definitions for terms used across chapters. Each chapter
+explains its own core concepts in depth — this page is for the term you half
+remember from two chapters ago, not a substitute for reading the chapter.
+
+**Abelian group** — a group whose operation is commutative
+($a \ast b = b \ast a$ for all elements). Not required by the group axioms
+themselves. See [Groups](chapters/08-groups.qmd).
+
+**Axiom** — a starting statement accepted without proof, from which theorems
+are derived. Not "true" in isolation — true relative to the choice of
+axioms. See [Axioms and Definitions](chapters/05-axioms-and-definitions.qmd).
+
+**Basis** — a linearly independent set of vectors that spans a vector space;
+every vector is then a unique linear combination of basis vectors. See
+[Vector Spaces](chapters/09-vector-spaces.qmd).
+
+**Bijective** — both injective and surjective; pairs two sets up perfectly,
+element for element. See [Relations and
+Functions](chapters/04-relations-and-functions.qmd).
+
+**Dimension** — the number of vectors in a basis of a vector space; the same
+for every basis of a given space. See [Vector
+Spaces](chapters/09-vector-spaces.qmd).
+
+**Eigenvalue / eigenvector** — a nonzero vector $v$ that a linear map $T$
+only stretches or shrinks ($T(v) = \lambda v$), never redirects, and the
+scalar $\lambda$ by which it does so. See [Linear
+Algebra](chapters/10-linear-algebra.qmd).
+
+**Equivalence relation** — a relation that is reflexive, symmetric, and
+transitive; partitions a set into equivalence classes. Used to construct
+$\mathbb{Z}$ and $\mathbb{Q}$ from more primitive number systems. See
+[Relations and Functions](chapters/04-relations-and-functions.qmd) and
+[Number Systems](chapters/06-number-systems.qmd).
+
+**Field** — informally, a set with addition and multiplication (and their
+inverses) behaving the way they do in $\mathbb{Q}$, $\mathbb{R}$, or
+$\mathbb{C}$; the scalars a vector space is defined "over." See [Number
+Systems](chapters/06-number-systems.qmd) and [Vector
+Spaces](chapters/09-vector-spaces.qmd).
+
+**Function** — a relation $f \subseteq A \times B$ in which every element of
+$A$ appears as the first coordinate of exactly one pair. See [Relations and
+Functions](chapters/04-relations-and-functions.qmd).
+
+**Group** — a set with one operation satisfying closure, associativity,
+identity, and inverses. See [Groups](chapters/08-groups.qmd).
+
+**Homomorphism** — a map between two structures of the same kind that
+respects their operations; need not be invertible. See [What Is a
+Mathematical Structure?](chapters/07-mathematical-structures.qmd).
+
+**Injective** — a function under which distinct inputs always give distinct
+outputs ("one-to-one"). See [Relations and
+Functions](chapters/04-relations-and-functions.qmd).
+
+**Isomorphism** — an invertible homomorphism; identifies two structures as
+"the same" up to relabeling their elements. See [What Is a Mathematical
+Structure?](chapters/07-mathematical-structures.qmd).
+
+**Linear combination** — $c_1 v_1 + \cdots + c_k v_k$, for scalars $c_i$ and
+vectors $v_i$. See [Vector Spaces](chapters/09-vector-spaces.qmd).
+
+**Linear map** — a function $T: V \to W$ between vector spaces satisfying
+$T(u+v) = T(u)+T(v)$ and $T(cv) = cT(v)$. A matrix is what a linear map
+looks like once bases are fixed. See [Linear
+Algebra](chapters/10-linear-algebra.qmd).
+
+**Mathematical structure** — a set equipped with operations and/or relations
+satisfying a fixed list of axioms — e.g. group, vector space, metric space.
+See [What Is a Mathematical
+Structure?](chapters/07-mathematical-structures.qmd).
+
+**Proof** — a finite chain of statements, each an axiom or a valid
+consequence of earlier statements, ending at the claim being established.
+See [Logic and Proof](chapters/02-logic-and-proof.qmd).
+
+**Proposition** — a statement that is unambiguously true or false. See
+[Logic and Proof](chapters/02-logic-and-proof.qmd).
+
+**Relation** — a subset of a Cartesian product $A \times B$; the general
+notion underlying equality, order, divisibility, and functions alike. See
+[Relations and Functions](chapters/04-relations-and-functions.qmd).
+
+**Set** — a collection of distinct objects, unordered, without repetition.
+See [Sets](chapters/03-sets.qmd).
+
+**Span** — the set of all linear combinations of a given collection of
+vectors. See [Vector Spaces](chapters/09-vector-spaces.qmd).
+
+**Surjective** — a function whose range is its entire codomain ("onto").
+See [Relations and Functions](chapters/04-relations-and-functions.qmd).
+
+**Theorem** — a statement derivable from a theory's axioms by valid
+inference. See [Axioms and Definitions](chapters/05-axioms-and-definitions.qmd).
+
+**Vector space** — a set with addition and scalar multiplication satisfying
+eight axioms; instances include $\mathbb{R}^n$, polynomials, matrices, and
+function spaces. See [Vector Spaces](chapters/09-vector-spaces.qmd).

@@ -1,0 +1,66 @@
+project:
+  type: book
+  output-dir: _site
+
+book:
+  title: "Mathematics: From Computational Tools to Mathematical Structure"
+  subtitle: "A conceptual map of mathematics for people who already know how to use it"
+  description: >-
+    Not a course and not a taxonomy — a graph of why mathematical objects,
+    structures, and theories were invented, what they generalize, and how a
+    matrix, a group, and a random variable end up obeying the same theorems.
+  site-url: "https://ioannisantoniadis.github.io/math-conceptual-map/"
+  repo-url: "https://github.com/ioannisantoniadis/math-conceptual-map"
+  repo-actions: [edit, issue]
+  page-footer:
+    left: >-
+      Source on [GitHub](https://github.com/ioannisantoniadis/math-conceptual-map).
+    right: "Rendered with [Quarto](https://quarto.org)."
+  chapters:
+    - index.qmd
+    - part: "The Map"
+      chapters:
+        - chapters/00-the-map.qmd
+    - part: "Foundations"
+      chapters:
+        - chapters/01-what-is-mathematics.qmd
+        - chapters/02-logic-and-proof.qmd
+        - chapters/03-sets.qmd
+        - chapters/04-relations-and-functions.qmd
+        - chapters/05-axioms-and-definitions.qmd
+    - part: "Objects"
+      chapters:
+        - chapters/06-number-systems.qmd
+    - part: "Structures"
+      chapters:
+        - chapters/07-mathematical-structures.qmd
+        - chapters/08-groups.qmd
+        - chapters/09-vector-spaces.qmd
+    - part: "Theories"
+      chapters:
+        - chapters/10-linear-algebra.qmd
+    - part: "Appendices"
+      chapters:
+        - appendix-glossary.qmd
+        - appendix-references.qmd
+  navbar:
+    background: light
+  page-navigation: true
+
+format:
+  html:
+    theme:
+      - cosmo
+      - theme.scss
+    toc: true
+    number-sections: true
+    number-depth: 2
+    fig-align: center
+    smooth-scroll: true
+    grid:
+      sidebar-width: 260px
+      body-width: 850px
+      margin-width: 250px
+    link-external-newwindow: true
+
+bibliography: references.bib

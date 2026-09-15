@@ -1,0 +1,61 @@
+# Welcome {.unnumbered}
+
+You probably know calculus. You probably know linear algebra. You may know
+optimization, probability, differential equations, and machine learning.
+
+But do you know how these subjects fit together? Why a matrix represents a
+linear transformation, not just a grid of numbers? Why calculus needs the
+concept of a limit at all? Why mathematicians keep inventing new kinds of
+"spaces"? What an axiom actually is, and why the axioms defining a vector
+space are those particular ones and not some other list?
+
+This site is an attempt to answer those questions — **a conceptual map of
+mathematics for people who already know how to use it and want to understand
+what it is.**
+
+## Who this is for
+
+The target reader has taken the standard undergraduate STEM sequence —
+single- and multivariable calculus, linear algebra, differential equations,
+discrete math, probability, optimization, maybe a machine learning course —
+and can *compute*: differentiate, integrate, invert a matrix, run gradient
+descent. What's often missing isn't technique, it's the map: what kind of
+object a vector actually is, why "vector space" was defined the way it was,
+which ideas generalize which, and where a concept sits relative to
+everything else. This site does not re-teach the computations. It exists for
+the gap on the other side of them.
+
+## Three commitments
+
+1. **Explain why, not how to compute.** Every chapter follows a
+   problem → abstraction → consequence arc: what problem forced this
+   definition into existence, what the definition actually says, and what
+   follows from it — not a worked-example drill.
+2. **Never merge four different maps into one.** History (when an idea
+   appeared), formal foundations (how it's built from more primitive
+   pieces today), conceptual dependency (what you need to *understand* it),
+   and pedagogical order (the sequence that motivates it best) are four
+   genuinely different orderings over the same ideas. Conflating them
+   produces the single most common lie in "history of math" writing —
+   [the map](chapters/00-the-map.qmd) makes the distinction explicit and
+   every later chapter respects it.
+3. **A graph, not a tree.** Probability isn't simply a branch of analysis;
+   geometry isn't simply a branch of topology. Ideas here connect to more
+   than one parent, and the site is built — and cross-linked — accordingly.
+
+## How this site is organized
+
+Start with [**the map**](chapters/00-the-map.qmd) for the whole landscape in
+one page. From there, two ways to read:
+
+- **Top-down**, from bedrock: Foundations → Objects → Structures → Theories,
+  the order in this book's table of contents.
+- **Bottom-up**, from something you already use: pick a familiar tool (a
+  matrix, a random variable, a gradient) and follow its prerequisites
+  backward until the picture is solid.
+
+This is a young, deliberately small site — see
+[`ROADMAP.md`](https://github.com/ioannisantoniadis/math-conceptual-map/blob/main/ROADMAP.md)
+for what exists now (the core spine: logic through linear algebra) and what's
+planned. A chapter is never published as a stub; what's here is meant to be
+complete on its own terms, even if the map around it keeps growing.

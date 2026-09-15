@@ -1,0 +1,113 @@
+# math-conceptual-map — context for AI assistants
+
+## What this is
+
+A Quarto-book documentation site (no code package — this is a pure-content
+repo, unlike its siblings `optimization-lab` and
+`modern-ai-systems-and-methods`) reconstructing the conceptual architecture
+of mathematics for readers who are computationally fluent (calculus, linear
+algebra, probability, ML) but lack a structural mental model of what
+mathematical objects, structures, and theories actually are and how they
+relate. Full brief: `SPEC.md`. Full agreed architecture and rationale:
+whatever conversation produced this repo — `ROADMAP.md`'s phase entries are
+the durable record of decisions made, going forward.
+
+- **Docs site**: https://ioannisantoniadis.github.io/math-conceptual-map/
+  (auto-deployed to GitHub Pages on push to `main` via
+  `.github/workflows/docs.yml`, only when `docs/**` changed)
+
+## The non-negotiable discipline
+
+Two rules from `SPEC.md` shape every chapter and are easy to violate by
+accident:
+
+1. **Four graphs, never merged.** Historical development (when an idea
+   appeared), formal/logical foundations (how it's built from ZFC-level
+   primitives today), conceptual dependency (what you need to *understand*
+   it), and pedagogical ordering (the sequence that motivates it best) are
+   four different orderings over the same ideas, and they disagree often
+   (calculus predates the real-analysis foundations it now formally rests
+   on by ~200 years; sets are historically recent but conceptually almost
+   free). [`docs/chapters/00-the-map.qmd`](docs/chapters/00-the-map.qmd) is
+   the canonical statement of this; every chapter that makes a historical
+   claim should be checked against it before being taken as an implicit
+   dependency claim, and vice versa.
+2. **Object / structure / theory / application, kept explicit.** A specific
+   thing (a matrix) vs. a pattern it carries (vector space) vs. the body of
+   results about that pattern (linear algebra) vs. a domain borrowing the
+   theory (ML). Defined in
+   [`docs/chapters/07-mathematical-structures.qmd`](docs/chapters/07-mathematical-structures.qmd).
+   The most common way a chapter goes wrong is blurring two of these levels
+   without noticing.
+
+## Content conventions
+
+- **Voice**: flowing narrative prose with descriptive `##`/`###` headers —
+  explicitly *not* the numbered template (`## 1. The intuition`, `## 2.
+  Before this`, ...) that `SPEC.md` §6 suggests. This was a deliberate
+  choice to match the voice of `../optimization-lab` and
+  `../modern-ai-systems-and-methods`, made when this repo was scaffolded —
+  don't revert to the numbered template without that being a fresh,
+  deliberate decision.
+- Every chapter still has to *cover* `SPEC.md`'s ten questions (what is it,
+  why does it exist, what problem does it solve, what came before it, what
+  does it generalize, what axioms define it, what follows from them, what
+  familiar things instantiate it, what does it connect to, where does it
+  appear later) — just woven into prose, not as a checklist with headers.
+- **Problem before abstraction, always.** Motivating examples appear before
+  a formal definition, never after. When an axiom is stated, the chapter
+  says what breaks without it, not just that it holds.
+- **Not proof-heavy.** Formal definitions appear because they clarify what's
+  being claimed; full proofs are included only when the proof itself is the
+  insight (e.g. $\sqrt{2}$'s irrationality in
+  `06-number-systems.qmd`), never for completeness's sake.
+- **Terminology discipline.** "Space," "structure," "transformation," and
+  similar overloaded words get their specific meaning stated at first use in
+  a chapter, not assumed.
+- Historical claims carry approximate dates and, where genuinely contested
+  or simplified, an explicit flag saying so — see `appendix-references.qmd`
+  for the sourcing hierarchy (MacTutor → SEP → primary sources → textbooks,
+  never Wikipedia as the final citation).
+- Every chapter ends with an explicit "where this leads" pointer (what's
+  next, and often what it generalizes into) — this is the site's substitute
+  for a mechanical "Connections" footer, done inline instead.
+- New citations: add the BibTeX entry to `docs/references.bib` and cite with
+  `@key` in prose; remove the `placeholder` entry once a real one exists.
+
+## Structure
+
+Quarto book, chapters flat under `docs/chapters/NN-slug.qmd`, grouped into
+parts (Map / Foundations / Objects / Structures / Theories / Appendices) via
+`docs/_quarto.yml` — **not** the nested per-discipline folder tree
+`SPEC.md` §4 originally suggested; that got superseded when this repo was
+deliberately restructured to match `../optimization-lab` and
+`../modern-ai-systems-and-methods`'s Quarto-book conventions. Mermaid
+diagrams (native to Quarto, `` ```{mermaid} `` fenced blocks — not plain
+` ```mermaid `, which Quarto won't render as a diagram) are used for the
+labeled dependency/map diagrams; unlike the sibling repos, there is
+currently no `scripts/figures/` computed-diagram pipeline — deferred until
+the map has enough nodes (~20+) for a force-directed layout to be worth
+generating, see `ROADMAP.md`.
+
+## Dev workflow
+
+Needs the [Quarto CLI](https://quarto.org/docs/get-started/) (not a Python
+package, install separately):
+
+```bash
+quarto preview docs   # live-reloading local preview
+quarto render docs    # one-shot build to docs/_site/
+```
+
+No test suite, no linter — this is prose and Mermaid, not code. The
+closest thing to CI is the docs-build workflow itself
+(`.github/workflows/docs.yml`); a broken Mermaid fence or bad cross-link is
+caught by `quarto render` failing or producing a visibly broken page, not by
+an automated check.
+
+## Current status
+
+Phase 1 (MVP) is built: the foundational spine from logic through linear
+algebra, 11 chapters plus map/glossary/references. See `ROADMAP.md` for what
+phase comes next before assuming more chapters are expected in any
+particular area.

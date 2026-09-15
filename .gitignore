@@ -1,0 +1,11 @@
+.DS_Store
+
+# Quarto build artifacts
+docs/_site/
+docs/.quarto/
+/.quarto/
+
+# Python (figure scripts, if/when scripts/figures/ is added)
+__pycache__/
+*.pyc
+.venv/

@@ -1,0 +1,107 @@
+---
+title: "What Is a Mathematical Structure?"
+---
+
+$\mathbb{Z}$ under addition. $2 \times 2$ invertible matrices under
+multiplication. The symmetries of a square under composition. Three objects
+that look nothing alike — one is numbers, one is grids of numbers, one is
+rigid motions of a shape — and yet a huge amount of what's true about one of
+them is true, word for word, about the other two, because underneath the
+surface they're the same *kind* of thing. Naming what "kind of thing" means
+is the entire point of this chapter, and it's the hinge the rest of this
+site turns on.
+
+## The definition
+
+A **mathematical structure** is a set $S$, together with one or more
+operations and/or relations on $S$, that satisfies a fixed list of axioms.
+That's the whole definition — deliberately general enough to cover
+everything from "group" to "topological space" to "probability space." Three
+things are doing the real work:
+
+- **The underlying set** — what the elements literally are (numbers,
+  matrices, functions — anything).
+- **The operations/relations** — what you're allowed to *do* with those
+  elements (add them, compare them, measure the distance between them).
+- **The axioms** — the rules those operations/relations are required to
+  obey.
+
+Two structures with completely different underlying sets can satisfy
+*exactly* the same axioms — and when they do, mathematicians say they're
+**isomorphic**: there's a correspondence between their elements that
+translates every operation faithfully. This is a technical term for an
+intuition you already have from [Relations and
+Functions](04-relations-and-functions.qmd): an isomorphism is a bijection
+that also respects structure. A **homomorphism** is the weaker, more common
+cousin — a map between two structures of the same kind that respects the
+operations, without necessarily being invertible. Both terms will recur
+constantly from [Groups](08-groups.qmd) onward.
+
+## Structure over identity
+
+This is the conceptual core, and it's worth stating plainly: modern
+mathematics has, over roughly the last century and a half, shifted from
+asking "what *is* this object?" to asking "what structure does this object
+carry, and what else carries the same structure?" A vector, in this view,
+isn't fundamentally "an arrow" or "a list of numbers" — it's *anything* that
+lives in a set satisfying the vector-space axioms, which turns out to
+include arrows, lists of numbers, polynomials, matrices, and even certain
+kinds of functions, all at once. [Vector Spaces](09-vector-spaces.qmd) makes
+this concrete with all four examples side by side. The payoff of caring
+about structure over identity isn't philosophical — it's that a theorem
+proven once, for the *structure*, is automatically true for every object
+that happens to carry it, no matter how unlike each other those objects look
+on the surface.
+
+## What changed, structure by structure
+
+A short preview of structures this site builds toward, and the single thing
+each one adds on top of "bare set":
+
+| Structure | What it adds |
+|---|---|
+| Set | objects, with no relationships between them yet |
+| Group | one operation you can combine and undo — see [Groups](08-groups.qmd) |
+| Vector space | addition and scaling — see [Vector Spaces](09-vector-spaces.qmd) |
+| Metric space *(later)* | a numeric notion of distance |
+| Inner-product space *(later)* | angles and orthogonality, on top of a vector space |
+| Normed space *(later)* | a notion of magnitude, without necessarily an angle |
+| Topological space *(later)* | neighborhoods and continuity, without necessarily a distance |
+
+Reading down this table is reading the generalization thread from [the
+map](00-the-map.qmd) laid out structure by structure: each row keeps some of
+what the row above had and either adds a genuinely new capability or
+deliberately drops a requirement to make a broader family of objects
+eligible. Nothing here is a strict hierarchy — an inner-product space
+happens to also be a normed space and a metric space, but a topological
+space is not automatically a metric space, and plenty of important spaces
+in later mathematics have topology without distance at all.
+
+## Object, structure, theory, application — one more time
+
+[What Is Mathematics?](01-what-is-mathematics.qmd) introduced this
+distinction in the abstract; here it is with names attached, since it's the
+lens the rest of the site is read through:
+
+- **Object**: the specific matrix $\begin{pmatrix} 1 & 2 \\ 0 & 1
+  \end{pmatrix}$.
+- **Structure**: *vector space* (the set of all $2\times 2$ matrices, under
+  matrix addition and scalar multiplication, satisfies the vector-space
+  axioms).
+- **Theory**: *linear algebra* — the body of results about vector spaces
+  and the maps between them.
+- **Application**: using that matrix to represent a rotation in a computer
+  graphics pipeline.
+
+Every chapter from here forward names which of these four levels it's
+operating at, and the single most common way to misunderstand a piece of
+mathematics is to blur two of these levels without noticing — treating a
+theorem about the *structure* "vector space" as though it were a fact about
+one particular *object*, or vice versa.
+
+## Where this leads
+
+Two structures, worked through in full: [Groups](08-groups.qmd) first,
+because it has the fewest moving parts of any structure worth naming, then
+[Vector Spaces](09-vector-spaces.qmd), which is the one this entire site has
+been building toward as its first genuinely rich example.

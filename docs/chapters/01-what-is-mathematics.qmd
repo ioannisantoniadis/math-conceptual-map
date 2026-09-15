@@ -1,0 +1,104 @@
+---
+title: "What Is Mathematics?"
+---
+
+You can differentiate a function, invert a matrix, and run gradient descent,
+and still not be able to answer a question a first-year graduate student
+would consider basic: what *is* the thing you just did that to? Is a vector
+an arrow, a list of numbers, or neither? Is a matrix a grid of numbers or a
+transformation wearing a grid as a costume? When you write $Ax = b$, what
+kind of object is $x$, really?
+
+This isn't a trick question, and the gap it exposes isn't a gap in your
+computational skill. Most STEM curricula teach mathematics as a sequence of
+toolkits — differentiate this, integrate that, solve this system — because
+that's what's useful fast. What they often skip is the layer underneath: why
+these particular tools were invented, what problem forced each one into
+existence, and how apparently unrelated tools turn out to be the same idea
+wearing different clothes. That layer is what this site is for.
+
+## Objects, structures, theories, applications
+
+One habit does more than any other to organize the rest of this site: keep
+four different kinds of thing separate, even when they get called by similar
+names.
+
+- A **mathematical object** is a specific thing: the number 7, the vector
+  $(1, 2, 3)$, the function $\sin(x)$.
+- A **mathematical structure** is a pattern an object can carry: *group*,
+  *vector space*, *metric space*. A structure is a set equipped with
+  operations or relations that satisfy some fixed list of axioms. Objects
+  *instantiate* structures.
+- A **theory** is the body of results about a structure or a family of
+  problems: *linear algebra* studies vector spaces and the maps between
+  them; *probability theory* studies probability spaces.
+- An **application** is a domain that borrows a theory to solve a problem
+  that isn't, itself, mathematics: physics, engineering, machine learning,
+  economics.
+
+$\sin(x)$ is an object. It lives inside a vector space of functions (a
+structure). Functional analysis is the theory that studies that structure in
+generality. A physicist using $\sin(x)$ to model a pendulum is an
+application. Four different levels, one sentence — and conflating any two of
+them is exactly the kind of confusion that leaves a computationally fluent
+reader unable to say what a vector *is*. [What Is a Mathematical
+Structure?](07-mathematical-structures.qmd) develops this distinction in
+full; it's named here first because every later chapter leans on it.
+
+## The pattern behind every chapter
+
+Nearly every idea on this site follows the same arc, and it's worth seeing
+once, explicitly, before it starts appearing everywhere:
+
+```text
+Problem:       we want to describe quantities that can be combined and undone
+                    ↓
+Need:          a set, plus an operation on it
+                    ↓
+Problem:       different operations have wildly different useful properties
+                    ↓
+Abstraction:   Group — the minimal list of properties worth naming
+                    ↓
+Generalization: study every structure satisfying those properties at once,
+                regardless of what its elements "really are"
+```
+
+or:
+
+```text
+Problem:       we want to talk about "close" without a fixed idea of distance
+                    ↓
+Abstraction:   Metric space
+                    ↓
+Generalization: drop the requirement that "close" be measured by a number at all
+                    ↓
+Further abstraction: Topological space
+```
+
+Problem, then abstraction, then generalization. Mathematics doesn't
+accumulate definitions arbitrarily; each one exists because a specific
+question couldn't be answered without it, and each generalization exists
+because someone noticed the same answer working in a setting nobody had
+originally built it for. This site tries to always show the problem before
+the definition, and the definition before its consequences — never a
+definition presented as if it fell from the sky.
+
+## What this site is not trying to do
+
+It is not going to re-teach you how to compute a derivative or row-reduce a
+matrix — you already can. It is not going to be proof-heavy: formal
+definitions appear because they clarify what's actually being claimed, but
+full proofs are mostly omitted unless the proof itself is the insight. And it
+is not going to pretend mathematics is a strict hierarchy with pure logic at
+the bottom and machine learning at the top — [the map](00-the-map.qmd)
+already made the case that history, formal foundations, conceptual
+dependency, and pedagogical order are four different graphs, and this site
+is built to keep them that way.
+
+What it will do is start at the most primitive layer that's actually worth
+starting at — not "where mathematics historically began," but where the
+*conceptual* dependency graph has its root — and build upward: logic, then
+sets, then the functions and numbers built from them, then the general idea
+of a mathematical structure, with two structures (groups and vector spaces)
+worked through in enough depth to show what "understanding a structure"
+actually looks like. [Logic and proof](02-logic-and-proof.qmd) is next.

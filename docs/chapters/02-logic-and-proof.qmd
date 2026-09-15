@@ -1,0 +1,94 @@
+---
+title: "Logic and Proof"
+---
+
+Every other chapter on this site eventually says "therefore." Before any of
+them are worth trusting, it's worth being explicit about what that word is
+allowed to mean in mathematics — because it means something much narrower
+than it does in ordinary argument.
+
+## What a proof actually is
+
+A **proof** is a finite chain of statements, each of which is either an
+accepted starting point (an axiom, or something already proven) or follows
+from earlier statements by a small, fixed set of valid inference rules — most
+basically, *modus ponens*: from "if $P$ then $Q$" and "$P$," conclude $Q$.
+That's it. No appeal to authority, no accumulation of supporting examples, no
+"it's obviously true." A statement supported by a thousand confirming
+examples is not proven — it's conjectured, however strongly. This is
+mathematics's actual epistemic advantage over the empirical sciences: a
+correct proof produces certainty *conditional on the axioms*, not
+probability updated by evidence. The condition matters and is easy to drop
+silently; it's picked back up in [Axioms and
+Definitions](05-axioms-and-definitions.qmd).
+
+Two proof strategies are worth naming because they'll appear constantly and
+look superficially different:
+
+- **Direct proof** — assume the hypotheses, chain forward via valid
+  inferences, arrive at the conclusion.
+- **Proof by contradiction** — assume the hypotheses *and* the negation of
+  the conclusion, derive a logical contradiction (some statement and its
+  negation both provably true), and conclude the negated conclusion must be
+  false. This works because classical logic accepts the *law of excluded
+  middle*: every well-formed statement is true or false, no third option —
+  a choice that turns out not to be forced (some logics reject it), but is
+  the default this site uses throughout.
+
+Neither strategy gets exercised in depth here — this site states results and
+explains what they mean far more often than it derives them from scratch.
+When a proof *is* included later, it's because walking through it is the
+fastest way to understand *why* something is true, not because completeness
+demands it.
+
+## Where the rules themselves come from
+
+The inference rules above didn't arrive with mathematics already attached —
+they were extracted and formalized as their own object of study. Aristotle
+codified syllogistic reasoning in antiquity; mathematicians used informal
+deductive argument (most famously Euclid's, built from explicit postulates)
+for roughly two thousand years without a symbolic notation for logic itself.
+Formal, symbolic mathematical logic — logic written as a calculus you can
+manipulate the way you manipulate algebra — is comparatively recent: George
+Boole's algebraic treatment of logic (1854) and Gottlob Frege's and Bertrand
+Russell's work formalizing logical inference (roughly 1879–1910) are the
+usual reference points, and this is one of the clearest instances on this
+whole site of the historical graph and the formal graph pointing in opposite
+directions — correct proofs long preceded any formal theory of what made
+them correct.
+
+## Propositions and connectives
+
+A **proposition** is a statement that is unambiguously true or false — "7 is
+prime" is one; "7 is a nice number" is not, absent a definition of "nice."
+Propositions combine via a small vocabulary: **and** ($\land$), **or**
+($\lor$), **not** ($\neg$), **implies** ($\Rightarrow$), and **if and only
+if** ($\Leftrightarrow$). Two of these are worth flagging because they
+diverge from everyday usage in ways that cause real confusion downstream:
+
+- $P \Rightarrow Q$ is only false when $P$ is true and $Q$ is false. If $P$
+  is false, $P \Rightarrow Q$ is automatically true, regardless of $Q$ —
+  "vacuously true." "If $n$ is a unicorn, then $n$ is purple" is, in this
+  sense, a true statement, because no $n$ is a unicorn. This isn't a quirk;
+  it's the definition that makes proof by contradiction and universally
+  quantified statements ("for all $x$ in the empty set, ...") behave
+  sensibly.
+- **or** ($\lor$) is *inclusive* by default: "$P$ or $Q$" is true if either
+  or both hold, unlike the "pick one" sense the word often carries in
+  ordinary speech.
+
+Quantifiers extend this to statements about many objects at once: $\forall$
+("for all") and $\exists$ ("there exists"). "For every real number $x$,
+there exists a real number $y$ with $y > x$" is a single, precise claim
+built from two quantifiers and one inequality — and it's a useful habit,
+whenever a sentence in later chapters feels slippery, to try restating it
+with explicit $\forall$/$\exists$ until the ambiguity resolves.
+
+## Where this leads
+
+Logic supplies the rules of inference; it doesn't yet supply anything to
+reason *about*. The next chapter, [Sets](03-sets.qmd), introduces the first
+genuine mathematical object this site builds — and, in one of the sharper
+examples of the historical/formal gap from [the map](00-the-map.qmd), a
+naive version of it that turns out to need the axiomatic method this chapter
+just described to survive its own paradoxes.

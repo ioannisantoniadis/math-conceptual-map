@@ -1,0 +1,83 @@
+---
+title: "Sets"
+---
+
+Ask a mathematician what a number is, and eventually the answer bottoms out
+in sets. Ask what a function is, a relation, a vector space, a probability —
+same answer. Sets aren't mathematically interesting on their own; almost
+everything else on this site is, formally, built out of them. That makes
+them a strange kind of foundation: nearly universal in the formal graph,
+almost invisible in the conceptual one — you don't need to think about sets
+to use a vector space, even though a vector space is, formally, a
+particular kind of set.
+
+## The intuition
+
+A **set** is a collection of distinct objects, with no notion of order or
+repetition — $\{1, 2, 3\}$ and $\{3, 1, 2\}$ are the same set, and
+$\{1, 1, 2\}$ is just $\{1, 2\}$. The objects in a set are its **elements**;
+$x \in S$ means "$x$ is an element of $S$." That's essentially the whole
+intuition, and it's deliberately thin — the power of the definition is how
+little it commits to, which is exactly what lets nearly anything (numbers,
+functions, other sets) become an element of one.
+
+Standard notation is worth having fluent, since it recurs everywhere from
+here on: $\{x : P(x)\}$ ("the set of all $x$ such that $P(x)$ holds") builds
+a set from a defining property, e.g. $\{n \in \mathbb{Z} : n > 0\}$ is the
+positive integers. $\varnothing$ is the empty set, the unique set with no
+elements. $A \subseteq B$ means every element of $A$ is an element of $B$.
+
+## A collection that broke its own definition
+
+"A collection of objects satisfying any property you like" sounds harmless.
+It isn't. In 1901, Bertrand Russell noticed that the property "$S \notin S$"
+(a set that does not contain itself) defines a set —
+$R = \{S : S \notin S\}$ — and then asked the natural question: is
+$R \in R$? If yes, then by $R$'s own definition $R \notin R$. If no, then $R$
+satisfies the defining property, so $R \in R$. Either answer contradicts
+itself. This is **Russell's paradox**, and it's not a curiosity — it showed
+that "any property defines a set" is an inconsistent foundation, full stop,
+and it's exactly the kind of failure that forces the move from an informal
+definition to an axiomatic one described in [Axioms and
+Definitions](05-axioms-and-definitions.qmd).
+
+The fix mathematicians settled on — the **Zermelo–Fraenkel axioms** (ZF, or
+ZFC with the axiom of choice added), developed roughly 1908–1922 — doesn't
+patch the definition of "set" so much as restrict *which* collections are
+allowed to count as sets in the first place, blocking Russell-style
+self-reference by construction. This is real machinery, and this site does
+not develop it: for everything below linear algebra, treating "set" at the
+intuitive level above is safe, and the axioms only start to matter if you
+push into genuine foundations of mathematics. That gap — full formal rigor
+exists, and almost nobody needs it day to day — is itself a recurring
+pattern worth noticing early.
+
+## Operations
+
+A handful of operations on sets recur constantly enough to be worth having
+by name and symbol:
+
+| Operation | Notation | Meaning |
+|---|---|---|
+| Union | $A \cup B$ | elements in $A$, or $B$, or both |
+| Intersection | $A \cap B$ | elements in both $A$ and $B$ |
+| Difference | $A \setminus B$ | elements in $A$ but not $B$ |
+| Complement | $A^c$ | elements not in $A$ (relative to some understood universe) |
+| Power set | $\mathcal{P}(A)$ | the set of *all* subsets of $A$, including $\varnothing$ and $A$ itself |
+| Cartesian product | $A \times B$ | the set of ordered pairs $(a, b)$ with $a \in A$, $b \in B$ |
+
+The Cartesian product deserves a second look, because it's the one that
+stops being "obviously about sets" and starts being load-bearing for
+everything that follows: an ordered pair $(a, b)$ is not itself a primitive
+notion, it's *defined* purely in terms of sets (one common construction is
+$(a,b) = \{\{a\}, \{a,b\}\}$), which is precisely how a *relation* — and
+from it, a *function* — gets built out of nothing but sets in the next
+chapter.
+
+## Where this leads
+
+Sets alone don't do much; they need structure imposed on them before
+anything interesting happens. [Relations and
+Functions](04-relations-and-functions.qmd) is the first layer of that
+structure — the Cartesian product from this chapter turns out to be exactly
+the raw material a relation is built from.
