@@ -116,7 +116,7 @@ map](00-the-map.qmd).
 
 ## Where this leads
 
-Groups have one operation. [Vector Spaces](09-vector-spaces.qmd), next, are
-built from *two* interacting operations — a group's worth of addition, plus
-scalar multiplication — and are the structure this entire site has been
-building toward.
+Groups have one operation. [Rings and Fields](11-rings-and-fields.qmd),
+next, are built from *two* interacting operations — exactly what
+$\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$, and $\mathbb{C}$ all have, and what
+[Vector Spaces](09-vector-spaces.qmd) needs its scalars to supply.

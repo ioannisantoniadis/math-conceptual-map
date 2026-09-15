@@ -22,7 +22,7 @@ book hangs off of.
 whatever form. Approximate, contested in places, and simplified below; treat
 every date as "roughly."
 
-![Roughly when each idea first appeared, wrapped into two rows so eight entries stay readable at page width. Dates are approximate throughout — see the caveats above and in `appendix-references.qmd`.](../images/historical-timeline.png){#fig-historical-timeline}
+![Roughly when each idea first appeared, wrapped into two rows so eight entries stay readable at page width. Dates are approximate throughout — see the caveats above and the sourcing policy in [References](../appendix-references.qmd).](../images/historical-timeline.png){#fig-historical-timeline}
 
 The gap between C and D is the one worth sitting with: calculus is roughly
 two centuries *older* than the rigorous theory of limits it's now formally

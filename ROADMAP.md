@@ -69,20 +69,37 @@ Each phase should leave the site in a complete, cross-linked, non-stub state
       uses a computed longest-path DAG layering instead — see
       `fig_landscape_network.py`'s docstring.
 
-## Phase 2 — Algebra, geometry, metric spaces, topology — planned
+## Phase 2 — Algebra, geometry, metric spaces, topology — in progress
 
-- [ ] Abstract algebra beyond groups: rings, fields (formal treatment —
-      Phase 1's `06-number-systems` used "field" informally), homomorphisms
-      developed in depth.
+- [x] Abstract algebra beyond groups: `11-rings-and-fields.qmd` — rings and
+      fields with real axioms (formalizing "field," used informally by
+      Phase 1's `06-number-systems` and `09-vector-spaces`), distributivity
+      motivated by what breaks without it, zero divisors as the
+      non-$\mathbb{Z}$ way a ring can fail to be a field. Ring/field
+      homomorphisms named but not developed in depth — full treatment (and
+      any dedicated abstract-algebra theory chapter beyond this structure
+      one) still open.
 - [ ] Geometry: Euclidean geometry's axiomatic history, coordinates,
-      affine spaces, a first pass at manifolds.
-- [ ] Metric spaces and topological spaces — both previewed in Phase 1's
-      `07-mathematical-structures` comparison table and referenced from
-      `09-vector-spaces`'s "what a vector space is NOT" section; this is
-      where those forward references get paid off.
-- [ ] Update `fig_landscape_network.py`'s `NODES`/`EDGES` and regenerate:
-      move the Phase 2 nodes from hollow/"planned" to solid, add their real
-      edges, per `CLAUDE.md`'s note on the figure pipeline.
+      affine spaces, a first pass at manifolds. Not started.
+- [x] Metric spaces and topological spaces — `12-metric-spaces.qmd` and
+      `13-topological-spaces.qmd`, paying off the forward references from
+      Phase 1's `07-mathematical-structures` comparison table and
+      `09-vector-spaces`'s "what a vector space is NOT" section (both
+      chapters' tables/links updated to point at real chapters instead of
+      "later"). Inner-product spaces and a fully axiomatized normed space
+      are still open — `12-metric-spaces.qmd` only defines "norm" informally
+      as a bridge concept, deliberately, to keep its own scope to metrics.
+- [x] `_quarto.yml` reordered: `11-rings-and-fields.qmd` between Groups and
+      Vector Spaces, `12-metric-spaces.qmd`/`13-topological-spaces.qmd`
+      between Vector Spaces and Linear Algebra — filenames stayed
+      sequential-by-creation-order rather than being renumbered to match, to
+      avoid renaming already-published/cross-linked files; see `CLAUDE.md`.
+- [x] `fig_landscape_network.py`'s `NODES`/`EDGES` updated and regenerated:
+      Rings & Fields added (solid, fed by both Groups and What Is a
+      Structure?), Metric Spaces and Topological Spaces moved from
+      hollow/"planned" to solid. Abstract Algebra's old placeholder node was
+      removed rather than kept alongside Rings & Fields, since this chapter
+      *is* that node. Analysis, Machine Learning, and Physics remain hollow.
 
 ## Phase 3 — Analysis, calculus, differential equations — planned
 

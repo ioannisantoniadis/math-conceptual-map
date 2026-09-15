@@ -83,6 +83,18 @@ parts (Map / Foundations / Objects / Structures / Theories / Appendices) via
 deliberately restructured to match `../optimization-lab` and
 `../modern-ai-systems-and-methods`'s Quarto-book conventions.
 
+**`docs/_quarto.yml`'s `chapters:` list is the authoritative reading order —
+filename numbers are not.** `11-rings-and-fields.qmd`, `12-metric-spaces.qmd`,
+and `13-topological-spaces.qmd` read, in the actual book, *before*
+`09-vector-spaces.qmd`/`10-linear-algebra.qmd`'s numbers would suggest
+(Rings and Fields sits between Groups and Vector Spaces; Metric and
+Topological Spaces sit between Vector Spaces and Linear Algebra) — they were
+numbered to continue the existing sequence rather than to force a rename of
+already-published, already-cross-linked files. Quarto numbers sections by
+TOC position, not filename, so this is invisible to readers; it only matters
+if you're scanning `ls docs/chapters` expecting numeric order to be reading
+order.
+
 **Diagrams are computed static figures, not Mermaid.** Mermaid was tried
 first for `00-the-map.qmd` and dropped after its `flowchart TD` with
 subgraphs rendered with a near-black subgraph fill that clashed against the
@@ -128,6 +140,8 @@ an automated check.
 ## Current status
 
 Phase 1 (MVP) is built: the foundational spine from logic through linear
-algebra, 11 chapters plus map/glossary/references. See `ROADMAP.md` for what
-phase comes next before assuming more chapters are expected in any
-particular area.
+algebra. Phase 2 is in progress: rings/fields, metric spaces, and
+topological spaces are written; geometry (Euclidean geometry, coordinates,
+affine spaces, manifolds) is not started. See `ROADMAP.md` for the full
+decision log before assuming more chapters are expected in any particular
+area.

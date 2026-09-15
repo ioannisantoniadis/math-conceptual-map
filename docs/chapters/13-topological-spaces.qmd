@@ -1,0 +1,115 @@
+---
+title: "Topological Spaces"
+---
+
+[Metric Spaces](12-metric-spaces.qmd) ended by noticing something strange:
+convergence and continuity, once restated in terms of *open sets*, never
+actually mentioned the numeric distance $d$ again. If open sets are all
+those ideas really need, distance itself might be more machinery than
+necessary. This chapter drops it.
+
+## The problem, before the definition
+
+Take the open sets a metric produces — unions of open balls — and just
+*keep the list*, throwing away the distance function $d$ that generated it.
+What's left is a set $X$ together with a collection of "open" subsets, and
+it turns out that collection alone is enough to define continuity and
+convergence. This is a genuine generalization, not a restatement: plenty of
+useful notions of "open" arise with no metric behind them at all, and it's
+worth seeing one before the definition. On any set $X$, declare *every*
+subset open — the **discrete topology**. Or declare only $\varnothing$ and
+$X$ itself open — the **indiscrete topology**. Neither needs a distance
+function, and the second one, in particular, has too few open sets to come
+from any metric: it can't separate any two points the way a metric's open
+balls always can.
+
+## The abstraction
+
+A **topological space** is a set $X$ together with a collection $\tau$ of
+subsets of $X$ (called **open sets**), satisfying:
+
+1. $\varnothing \in \tau$ and $X \in \tau$.
+2. **Arbitrary unions** of sets in $\tau$ are in $\tau$.
+3. **Finite intersections** of sets in $\tau$ are in $\tau$.
+
+## Why these axioms — including the one asymmetry that looks like a typo
+
+The first is a boundary condition: the whole space and the empty set are
+open by convention, so the theory doesn't have to special-case them
+constantly. Closure under arbitrary unions matches the intuition that
+"open" means "a neighborhood of each of its points" — if $U$ and $V$ are
+both neighborhoods, so is $U \cup V$, no matter how many sets you're
+combining. The finite-vs-arbitrary asymmetry between (2) and (3) is not a
+typo, and it's worth seeing why arbitrary intersections would break things.
+On $\mathbb{R}$ with its usual open sets, consider the intervals $\left(
+-\frac{1}{n}, \frac{1}{n} \right)$ for every positive integer $n$ — each one
+is open. Their intersection over *all* $n$ is $\{0\}$, a single point — and
+a single point is not an open set in $\mathbb{R}$'s usual topology (no open
+ball around $0$, however small, is contained in $\{0\}$). Allowing
+arbitrary intersections would force every single-point set to be open,
+collapsing the whole theory into the discrete topology and making "open"
+useless as a distinct notion. Restricting to *finite* intersections is
+exactly what blocks this collapse while still letting you intersect any
+specific, finite handful of open sets.
+
+## What follows: continuity, without a distance in sight
+
+A function $f: X \to Y$ between topological spaces is **continuous** if the
+preimage of every open set is open: $f^{-1}(U) \in \tau_X$ whenever $U \in
+\tau_Y$. This is not a new idea bolted onto the familiar
+$\varepsilon$–$\delta$ definition of continuity — it's *provably the same
+statement*, once a metric space's open sets are the ones built from open
+balls. What's new is that this version no longer mentions distance, or
+numbers, or subtraction at all, which is exactly why it generalizes to
+settings — function spaces, spaces of probability measures, spaces that
+show up deep in algebraic geometry — where no natural notion of numeric
+distance exists but a sensible notion of "open set" still does. This is the
+payoff [Axioms and Definitions](05-axioms-and-definitions.qmd) promised in
+the abstract: a well-chosen minimal axiom list turns out to say more, in
+more settings, than the richer structure it was distilled from.
+
+## What changed, one more time
+
+[What Is a Mathematical Structure?](07-mathematical-structures.qmd)
+previewed this exact row: a topological space adds *neighborhoods and
+continuity, without necessarily a distance* — on top of a bare set, that's
+the entire addition. Compared to [Metric Spaces](12-metric-spaces.qmd), a
+topology is a genuine generalization in the sense [the map](00-the-map.qmd)
+keeps returning to: every metric space is a topological space (take the
+open sets its balls generate), but not every topological space comes from a
+metric — the indiscrete topology on a set with more than one point is the
+standing counterexample, since it can't separate points the way any metric
+space can.
+
+## What a topological space is NOT
+
+Not automatically equipped with any of metric spaces' extra structure —
+"far apart" stops having any meaning at all once distance is gone, only
+"contained in the same open set" remains. And, in the other direction, not
+every collection of subsets is a valid topology: arbitrary unions must
+still work and only finite intersections are guaranteed, which is easy to
+misapply when a specific example is chosen by hand rather than generated
+mechanically from a metric or an explicit closure argument.
+
+## Local versus global, made precise
+
+This chapter is the cleanest home yet for one of [the
+map](00-the-map.qmd)'s five recurring threads. "Open set" is fundamentally a
+*local* notion — it talks about a neighborhood of a point. Whether a
+function is continuous *at a point* is decided entirely by what happens in
+arbitrarily small neighborhoods of that one point; whether it's continuous
+*everywhere* is a global fact built by demanding the local fact at every
+point simultaneously. Later branches of mathematics that study global shape
+— how many "holes" a space has, whether it's all one connected piece —
+build directly on the vocabulary this chapter just introduced, by asking
+questions no single open set can answer alone.
+
+## Where this leads
+
+Structures now run from bare sets through groups, rings and fields, vector
+spaces, metric spaces, to topological spaces — the arc [What Is a
+Mathematical Structure?](07-mathematical-structures.qmd) opened. [Linear
+Algebra](10-linear-algebra.qmd), already written, is this site's first full
+*theory*; a later phase of this site returns to topology's own theory
+(connectedness, compactness, and the rest) and to analysis, which is built
+directly on exactly the continuity definition above.

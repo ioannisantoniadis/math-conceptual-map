@@ -42,11 +42,11 @@ NODES = {
     "N":   ("Number\nSystems", 1, False),
     "MS":  ("What Is a\nStructure?", 2, False),
     "G":   ("Groups", 2, False),
+    "RNG": ("Rings &\nFields", 2, False),
     "VS":  ("Vector\nSpaces", 2, False),
-    "MET": ("Metric\nSpaces", 2, True),
-    "TOP": ("Topological\nSpaces", 2, True),
+    "MET": ("Metric\nSpaces", 2, False),
+    "TOP": ("Topological\nSpaces", 2, False),
     "LA":  ("Linear\nAlgebra", 3, False),
-    "AA":  ("Abstract\nAlgebra", 3, True),
     "AN":  ("Analysis", 3, True),
     "ML":  ("Machine\nLearning", 4, True),
     "PHY": ("Physics", 4, True),
@@ -54,7 +54,7 @@ NODES = {
 
 EDGES = [
     ("L", "S"), ("S", "RF"), ("RF", "AD"), ("RF", "N"), ("N", "MS"),
-    ("MS", "G"), ("MS", "VS"), ("G", "AA"),
+    ("MS", "G"), ("MS", "RNG"), ("MS", "VS"), ("G", "RNG"),
     ("VS", "LA"), ("VS", "MET"), ("MET", "TOP"),
     ("LA", "ML"), ("LA", "PHY"), ("AN", "RF"),
 ]

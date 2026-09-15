@@ -1,0 +1,114 @@
+---
+title: "Rings and Fields"
+---
+
+[Groups](08-groups.qmd) have one operation. But $\mathbb{Z}$, $\mathbb{Q}$,
+$\mathbb{R}$, and $\mathbb{C}$ — the number systems [Number
+Systems](06-number-systems.qmd) built — all carry *two*, addition and
+multiplication, and the two don't sit side by side unrelated: $3 \times (4 +
+5) = 3\times4 + 3\times5$ is doing real work every time you expand an
+expression. Naming what it takes for two operations to interact usefully is
+this chapter's whole job, and it finally makes precise a word [Vector
+Spaces](09-vector-spaces.qmd) already leaned on without defining: *field*.
+
+## The problem, before the definition
+
+$\mathbb{Z}$ under addition alone is a group — [Groups](08-groups.qmd)
+already covered that. But $\mathbb{Z}$ also has multiplication, and the two
+operations are clearly not independent: distributing multiplication over
+addition is something you do without thinking, in arithmetic and in algebra
+alike. A structure with one operation can't express that interaction at
+all — describing it needs a set with *two* operations and a rule connecting
+them.
+
+Two more examples, chosen because they look nothing like numbers, make the
+same point [Vector Spaces](09-vector-spaces.qmd) made with arrows and
+polynomials: the set of $n \times n$ matrices has both addition and
+multiplication, distributing over each other exactly the way numbers do —
+even though matrix multiplication isn't commutative ($AB \neq BA$, in
+general). And polynomials, already met as vectors under addition and
+scaling, also multiply: $(x+1)(x-1) = x^2 - 1$, with the same distributive
+behavior.
+
+## The abstraction
+
+A **ring** is a set $R$ with two operations, $+$ and $\times$, such that:
+
+1. $(R, +)$ is an abelian group (see [Groups](08-groups.qmd)) — this alone
+   is everything addition needs to behave like addition.
+2. $\times$ is associative.
+3. **Distributivity**: $a(b+c) = ab+ac$ and $(a+b)c = ac+bc$ for all $a,b,c
+   \in R$.
+
+That's the core of it — conventions vary on whether a ring is required to
+have a multiplicative identity $1$ (this site assumes it does, since every
+ring below has one) or whether $\times$ must be commutative (it need not be:
+matrices are the standing counterexample). A **field** is a ring with two
+extra requirements: $\times$ is commutative, and every nonzero element has a
+multiplicative inverse — equivalently, $(R \setminus \{0\}, \times)$ is
+itself an abelian group. $\mathbb{Q}$, $\mathbb{R}$, and $\mathbb{C}$ are
+fields; $\mathbb{Z}$ is a ring but not a field, since only $1$ and $-1$ have
+multiplicative inverses in $\mathbb{Z}$.
+
+This is the word [Vector Spaces](09-vector-spaces.qmd) used before defining:
+a vector space is built "over a field" precisely because scalar
+multiplication needs to be *undoable* — solving $c\vec{v} = \vec{w}$ for a
+scalar $c$ requires dividing, which requires the scalars to have
+multiplicative inverses. A ring without them isn't rich enough to serve as a
+vector space's scalars in the usual sense.
+
+## Why distributivity, specifically
+
+Closure, associativity, identity, and inverses on $+$ are just the group
+axioms again, already justified in [Groups](08-groups.qmd). Distributivity
+is the one genuinely new axiom here, and it's worth seeing what fails
+without it: with two operations that satisfy their own axioms but don't
+distribute over each other, $a(b+c)$ and $ab+ac$ would be two unrelated
+quantities with no guaranteed relationship — every algebraic manipulation
+that expands or factors an expression would become invalid, since expanding
+*is* an appeal to distributivity. A ring without distributivity isn't a
+weaker ring; it's just two unconnected groups sharing a set, which is a much
+less useful thing to have a name for.
+
+## What follows, and what a ring is NOT
+
+Every field is a ring, but the reverse is false — $\mathbb{Z}$ is the
+standing example, and it's worth being specific about *what* it lacks: not
+associativity or distributivity (it has both), but multiplicative inverses.
+A ring can also fail to be a field in a second, more surprising way that
+$\mathbb{Z}$ doesn't illustrate: it can have **zero divisors** — nonzero
+elements $a, b$ with $ab = 0$. This can't happen in a field (if $ab=0$ and
+$a \neq 0$, multiplying by $a^{-1}$ forces $b=0$), but it happens routinely
+in the ring of $n \times n$ matrices, where two nonzero matrices can
+multiply to the zero matrix. Zero divisors are exactly what block a ring
+from being a field even when every element is "nonzero" in the usual sense —
+another instance of this site's recurring lesson that dropping one axiom
+can break a consequence you might not have expected it to.
+
+A **ring homomorphism** is, unsurprisingly by now, a map respecting both
+operations — the same idea [What Is a Mathematical
+Structure?](07-mathematical-structures.qmd) introduced for groups, applied
+to a richer structure.
+
+## A word with a history
+
+"Ring" (German *Ring*, or the fuller *Zahlring*, "number ring") is usually
+credited to David Hilbert's 1897 report on algebraic number theory, though
+the underlying idea — sets of algebraic numbers closed under addition and
+multiplication — traces back further, to Richard Dedekind's work on ideals
+in the 1870s–80s. "Field" (German *Körper*, literally "body") is Dedekind's
+own term, from around 1871, for exactly the structure defined above:
+a set where all four arithmetic operations (except division by zero) stay
+inside the set. Both terms predate the fully abstract axiomatic treatment
+above by decades, in the same historical/formal split [the map](00-the-map.qmd)
+keeps returning to — mathematicians were studying specific rings and fields
+of numbers long before "ring" and "field" were given axioms independent of
+any particular numbers.
+
+## Where this leads
+
+Rings and fields finish the algebraic side of what [Groups](08-groups.qmd)
+started, and they settle a debt [Vector Spaces](09-vector-spaces.qmd) left
+open — "a field" now means something specific. What vector spaces still
+lack, formally, is any notion of distance or closeness at all, and that's
+exactly the gap [Metric Spaces](12-metric-spaces.qmd) fills next.

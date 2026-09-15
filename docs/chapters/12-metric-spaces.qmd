@@ -1,0 +1,115 @@
+---
+title: "Metric Spaces"
+---
+
+[Vector Spaces](09-vector-spaces.qmd) was explicit about what it left out:
+addition and scaling, with nothing in the axioms about how "long" a vector
+is or how "close" two vectors are. That's not an oversight — it's a
+different structure's job. This chapter names it.
+
+## The problem, before the definition
+
+Distance feels primitive, but it's worth noticing how many different things
+"distance" ends up meaning even before leaving $\mathbb{R}^n$. The ordinary
+(Euclidean) distance between two points is $\sqrt{\sum_i (x_i-y_i)^2}$. A
+taxi driver on a city grid cares about a different quantity: $\sum_i
+|x_i-y_i|$, the **taxicab distance** — you can't cut diagonally through
+buildings. Both are legitimate, both apply to the *same* set $\mathbb{R}^n$,
+and they disagree about which pairs of points count as "close." Distance,
+it turns out, isn't a fact about a set — it's an extra structure you choose
+to put on one.
+
+And it doesn't require numbers to be involved at all. On *any* set $X$,
+define $d(x,y) = 0$ if $x=y$ and $d(x,y)=1$ otherwise — the **discrete
+metric**. It's a perfectly valid notion of distance on a set of colors, a
+set of people, a set of anything, with no arithmetic in sight. Whatever
+"distance" turns out to mean formally, it has to be general enough to cover
+all three of these at once.
+
+## The abstraction
+
+A **metric space** is a set $X$ with a function $d: X \times X \to
+\mathbb{R}_{\geq 0}$ (the metric) satisfying:
+
+1. $d(x,y) = 0$ if and only if $x = y$.
+2. **Symmetry**: $d(x,y) = d(y,x)$.
+3. **Triangle inequality**: $d(x,z) \leq d(x,y) + d(y,z)$.
+
+## Why these axioms
+
+The first says distinct points are genuinely distinguishable by distance —
+without it, "distance zero" could hold between two different points,
+undermining the entire idea that $d$ measures separation. Symmetry says the
+distance from $A$ to $B$ is the distance from $B$ to $A$ — drop it and
+"distance" would depend on direction of travel, which contradicts
+everything the word suggests (it's also the axiom the taxicab metric
+respects but a one-way road network wouldn't, which is exactly why a
+one-way street network isn't a metric space in this sense). The triangle
+inequality is the substantive one: it says a detour through a third point
+$y$ is never shorter than going directly — $d(x,z) \leq d(x,y)+d(y,z)$.
+Without it, "distance" would stop supporting the single most basic
+geometric intuition attached to the word: that a straight line (or its
+generalization) is the short way.
+
+## What follows: open balls, and a first bridge to what's next
+
+The **open ball** of radius $r$ around a point $x$, $B(x,r) = \{y \in X :
+d(x,y) < r\}$, is what lets a metric space define "nearby" precisely: $y$ is
+near $x$ if it's inside a small enough ball around $x$. A set $U \subseteq
+X$ is called **open** if every point of $U$ has *some* open ball around it
+still entirely contained in $U$ — no matter how close to $U$'s edge a point
+sits, there's room to wiggle. This sounds like a technicality, but it's the
+single most important consequence in this chapter: once "open set" is
+defined, a **sequence** $x_n$ converges to $x$ exactly when, for every open
+ball around $x$, all but finitely many $x_n$ eventually land inside it —
+convergence, stated without a single inequality, purely in terms of which
+sets are open. That restatement is not decorative: it's *exactly* what
+[Topological Spaces](13-topological-spaces.qmd) generalizes next, by asking
+whether "open set" can be taken as the primitive notion instead of distance
+at all.
+
+## If you've done real analysis
+
+You already know convergence as $d(x_n, x) \to 0$ — precisely the
+$\varepsilon$–$\delta$-flavored definition above, just phrased with a
+general $d$ instead of $|x-y|$ on $\mathbb{R}$. Every fact you know about
+limits in $\mathbb{R}$ that only used the distance $|x-y|$, not anything
+special about real numbers, is secretly a fact about metric spaces in
+general.
+
+## Connecting back to vector spaces, and what's still missing
+
+A vector space with a **norm** — informally, a length function $\|v\|$
+measuring a single vector's magnitude, which this site does not yet
+axiomatize in full — automatically becomes a metric space via $d(u,v) =
+\|u-v\|$; both the Euclidean and taxicab distances above arise exactly this
+way from two different norms on $\mathbb{R}^n$. But the discrete metric
+does not come from any norm on a vector space: it isn't compatible with
+scaling ($d(2x, 2y)$ should shrink or grow predictably under a norm-induced
+metric; the discrete metric ignores scaling entirely). That's the
+generalization thread from [the map](00-the-map.qmd) again — metric spaces
+gain enormous generality (no arithmetic required at all) and lose the
+ability to talk about "scaling a distance," which a vector space with a
+norm has for free.
+
+## What a metric space is NOT, and a callback
+
+Not necessarily numeric or geometric-looking — the discrete metric is proof
+of that. And not automatically **complete**: a metric space is complete if
+every sequence that "ought to" converge (a Cauchy sequence — one whose terms
+get arbitrarily close to each other) actually does converge to a point in
+the space. This is exactly the gap [Number Systems](06-number-systems.qmd)
+described between $\mathbb{Q}$ and $\mathbb{R}$: viewed as metric spaces
+under $d(x,y)=|x-y|$, $\mathbb{R}$ is complete and $\mathbb{Q}$ is not — the
+sequence of rational truncations of $\sqrt{2}$ is Cauchy in $\mathbb{Q}$ but
+has no rational limit. Completeness, informally described back in chapter
+6 as "no gaps," now has a precise, general definition that applies to any
+metric space, not just $\mathbb{R}$.
+
+## Where this leads
+
+[Topological Spaces](13-topological-spaces.qmd) takes the "open set" idea
+this chapter derived from distance and makes it primitive — dropping the
+requirement that closeness be measured by a number at all, which turns out
+to be exactly enough structure to keep talking about continuity and
+convergence in settings with no metric in sight.

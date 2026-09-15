@@ -22,6 +22,16 @@ every vector is then a unique linear combination of basis vectors. See
 element for element. See [Relations and
 Functions](chapters/04-relations-and-functions.qmd).
 
+**Completeness** — a metric space's property that every Cauchy sequence
+(one whose terms bunch arbitrarily close together) actually converges to a
+point in the space. $\mathbb{R}$ has it; $\mathbb{Q}$ doesn't. See [Metric
+Spaces](chapters/12-metric-spaces.qmd).
+
+**Continuous** — classically, the $\varepsilon$–$\delta$ definition;
+topologically, a function whose preimage of every open set is open — the
+same idea, restated without needing a distance. See [Topological
+Spaces](chapters/13-topological-spaces.qmd).
+
 **Dimension** — the number of vectors in a basis of a vector space; the same
 for every basis of a given space. See [Vector
 Spaces](chapters/09-vector-spaces.qmd).
@@ -37,11 +47,10 @@ $\mathbb{Z}$ and $\mathbb{Q}$ from more primitive number systems. See
 [Relations and Functions](chapters/04-relations-and-functions.qmd) and
 [Number Systems](chapters/06-number-systems.qmd).
 
-**Field** — informally, a set with addition and multiplication (and their
-inverses) behaving the way they do in $\mathbb{Q}$, $\mathbb{R}$, or
-$\mathbb{C}$; the scalars a vector space is defined "over." See [Number
-Systems](chapters/06-number-systems.qmd) and [Vector
-Spaces](chapters/09-vector-spaces.qmd).
+**Field** — a ring in which multiplication is commutative and every nonzero
+element has a multiplicative inverse; the scalars a vector space is defined
+"over." $\mathbb{Q}$, $\mathbb{R}$, $\mathbb{C}$ are fields, $\mathbb{Z}$ is
+not. See [Rings and Fields](chapters/11-rings-and-fields.qmd).
 
 **Function** — a relation $f \subseteq A \times B$ in which every element of
 $A$ appears as the first coordinate of exactly one pair. See [Relations and
@@ -75,6 +84,17 @@ satisfying a fixed list of axioms — e.g. group, vector space, metric space.
 See [What Is a Mathematical
 Structure?](chapters/07-mathematical-structures.qmd).
 
+**Metric / metric space** — a function $d(x,y)$ measuring distance between
+points of a set, satisfying identity of indiscernibles, symmetry, and the
+triangle inequality; the set plus that function is a metric space. See
+[Metric Spaces](chapters/12-metric-spaces.qmd).
+
+**Open set** — in a metric space, a set where every point has some room
+around it (an open ball) still inside the set; in a topological space, a
+member of the designated collection $\tau$ that defines the topology. See
+[Metric Spaces](chapters/12-metric-spaces.qmd) and [Topological
+Spaces](chapters/13-topological-spaces.qmd).
+
 **Proof** — a finite chain of statements, each an axiom or a valid
 consequence of earlier statements, ending at the claim being established.
 See [Logic and Proof](chapters/02-logic-and-proof.qmd).
@@ -85,6 +105,11 @@ See [Logic and Proof](chapters/02-logic-and-proof.qmd).
 **Relation** — a subset of a Cartesian product $A \times B$; the general
 notion underlying equality, order, divisibility, and functions alike. See
 [Relations and Functions](chapters/04-relations-and-functions.qmd).
+
+**Ring** — a set with two operations, $+$ and $\times$, where $(R,+)$ is an
+abelian group, $\times$ is associative, and $\times$ distributes over $+$.
+$\mathbb{Z}$ and the $n \times n$ matrices are rings that aren't fields. See
+[Rings and Fields](chapters/11-rings-and-fields.qmd).
 
 **Set** — a collection of distinct objects, unordered, without repetition.
 See [Sets](chapters/03-sets.qmd).
@@ -98,6 +123,16 @@ See [Relations and Functions](chapters/04-relations-and-functions.qmd).
 **Theorem** — a statement derivable from a theory's axioms by valid
 inference. See [Axioms and Definitions](chapters/05-axioms-and-definitions.qmd).
 
+**Topological space** — a set with a designated collection of subsets
+("open sets") closed under arbitrary unions and finite intersections,
+including the whole set and the empty set. Every metric space is one; not
+every topological space comes from a metric. See [Topological
+Spaces](chapters/13-topological-spaces.qmd).
+
 **Vector space** — a set with addition and scalar multiplication satisfying
 eight axioms; instances include $\mathbb{R}^n$, polynomials, matrices, and
 function spaces. See [Vector Spaces](chapters/09-vector-spaces.qmd).
+
+**Zero divisor** — a nonzero element $a$ of a ring for which some other
+nonzero $b$ satisfies $ab=0$. Can't happen in a field; happens routinely
+among matrices. See [Rings and Fields](chapters/11-rings-and-fields.qmd).

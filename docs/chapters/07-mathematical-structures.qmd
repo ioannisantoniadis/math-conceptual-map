@@ -62,11 +62,12 @@ each one adds on top of "bare set":
 |---|---|
 | Set | objects, with no relationships between them yet |
 | Group | one operation you can combine and undo — see [Groups](08-groups.qmd) |
+| Ring / field | a second operation, interacting with the first via distributivity — see [Rings and Fields](11-rings-and-fields.qmd) |
 | Vector space | addition and scaling — see [Vector Spaces](09-vector-spaces.qmd) |
-| Metric space *(later)* | a numeric notion of distance |
+| Metric space | a numeric notion of distance — see [Metric Spaces](12-metric-spaces.qmd) |
 | Inner-product space *(later)* | angles and orthogonality, on top of a vector space |
 | Normed space *(later)* | a notion of magnitude, without necessarily an angle |
-| Topological space *(later)* | neighborhoods and continuity, without necessarily a distance |
+| Topological space | neighborhoods and continuity, without necessarily a distance — see [Topological Spaces](13-topological-spaces.qmd) |
 
 Reading down this table is reading the generalization thread from [the
 map](00-the-map.qmd) laid out structure by structure: each row keeps some of

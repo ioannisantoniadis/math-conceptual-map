@@ -35,7 +35,10 @@ book:
       chapters:
         - chapters/07-mathematical-structures.qmd
         - chapters/08-groups.qmd
+        - chapters/11-rings-and-fields.qmd
         - chapters/09-vector-spaces.qmd
+        - chapters/12-metric-spaces.qmd
+        - chapters/13-topological-spaces.qmd
     - part: "Theories"
       chapters:
         - chapters/10-linear-algebra.qmd
