@@ -103,6 +103,10 @@ Algebra](chapters/10-linear-algebra.qmd).
 an item) — an element of a vector space, not a metaphor. See [Machine
 Learning](chapters/24-machine-learning.qmd).
 
+**Entropy** — $H(X) = -\mathbb{E}[\log P(X)]$; the average "surprise" a
+distribution's outcomes carry, an ordinary expectation applied to $-\log
+P(X)$. See [Machine Learning](chapters/24-machine-learning.qmd).
+
 **Equivalence relation** — a relation that is reflexive, symmetric, and
 transitive; partitions a set into equivalence classes. Used to construct
 $\mathbb{Z}$ and $\mathbb{Q}$ from more primitive number systems. See
@@ -167,6 +171,12 @@ Product Spaces](chapters/14-inner-product-spaces.qmd).
 "the same" up to relabeling their elements. See [What Is a Mathematical
 Structure?](chapters/07-mathematical-structures.qmd).
 
+**KL divergence** — $D_{KL}(P\|Q) = \mathbb{E}_P[\log\frac{P}{Q}]$; how
+different two distributions are. Cross-entropy loss decomposes into an
+entropy term plus this, which is why minimizing it fits a model's predicted
+distribution to the true one. See [Machine
+Learning](chapters/24-machine-learning.qmd).
+
 **Limit** — $\lim_{x\to a} f(x) = L$: for every $\varepsilon>0$ there is a
 $\delta>0$ such that $0<|x-a|<\delta$ implies $|f(x)-L|<\varepsilon$ — the
 metric-space definition of convergence, specialized to $\mathbb{R}$. See
@@ -206,6 +216,10 @@ Structure?](chapters/07-mathematical-structures.qmd).
 points of a set, satisfying identity of indiscernibles, symmetry, and the
 triangle inequality; the set plus that function is a metric space. See
 [Metric Spaces](chapters/12-metric-spaces.qmd).
+
+**Mutual information** — $I(X;Y) = D_{KL}(P(X,Y)\,\|\,P(X)P(Y))$; how far
+two random variables are from independence, zero exactly when they're
+independent. See [Machine Learning](chapters/24-machine-learning.qmd).
 
 **Norm** — a length function $\|v\|$ on a vector space; every inner product
 induces one, but not every norm comes from an inner product (test: the

@@ -106,7 +106,7 @@ direction is more correct; they're the same graph traversed in opposite
 order, which is the whole point of building this as a graph rather than a
 syllabus.
 
-## Five threads that keep coming back
+## Six threads that keep coming back
 
 A handful of ideas recur across nearly every chapter under different names.
 Naming them once here means later chapters can just point back:
@@ -129,6 +129,17 @@ Naming them once here means later chapters can just point back:
   maps](18-differentiation.qmd), then [continuous
   maps](17-limits-and-continuity.qmd): successively looser notions of
   "structure preserving."
+- **Approximation** — a [limit](17-limits-and-continuity.qmd) is already an
+  infinite sequence of approximations agreed to converge; [Taylor
+  approximation](18-differentiation.qmd) builds successively better
+  polynomial stand-ins for a function; Euler's method approximates a
+  [differential equation](20-differential-equations.qmd)'s solution one
+  small step at a time; [gradient descent](23-optimization.qmd) approximates
+  a function's minimum the same way, and [training a
+  model](24-machine-learning.qmd) is that same process at scale. Underneath
+  most of this site's later, more computational chapters is some version of
+  "replace an exact but intractable answer with a sequence of tractable ones
+  that provably get close enough."
 - **Local vs. global** — a [derivative](18-differentiation.qmd) is a local
   fact about a function; a [basis](09-vector-spaces.qmd) is a global fact
   about a vector space. The distinction resurfaces in every branch this

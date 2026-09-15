@@ -87,17 +87,19 @@ what "successor-generated" means in the first place.
 
 ## Discrete versus continuous, named explicitly
 
-The thread running under this entire chapter, collected in one place:
-$\mathbb{N}$ and $\mathbb{Z}$ (discrete) against $\mathbb{Q}$ and
-$\mathbb{R}$ (dense) from [Number Systems](06-number-systems.qmd); the
-discrete topology against the standard one from [Topological
-Spaces](13-topological-spaces.qmd); a sum against an
-[integral](19-integration.qmd); a recurrence relation against a
-[differential equation](20-differential-equations.qmd). Each pair is the
-same underlying question — build up from isolated steps, or from a
-continuum — answered twice, in different settings, and it's worth
-recognizing the pattern on sight rather than meeting each instance as
-unrelated.
+The thread running under this entire chapter, collected in one place — each
+row is the same underlying question, "build up from isolated steps, or from
+a continuum," answered twice in different settings:
+
+| Discrete | Continuous |
+|---|---|
+| $\mathbb{N}$, $\mathbb{Z}$ | $\mathbb{Q}$, $\mathbb{R}$ (dense) — [Number Systems](06-number-systems.qmd) |
+| discrete topology | standard topology — [Topological Spaces](13-topological-spaces.qmd) |
+| a sum | an [integral](19-integration.qmd) |
+| a recurrence relation | a [differential equation](20-differential-equations.qmd) |
+
+It's worth recognizing this pattern on sight rather than meeting each
+instance as unrelated.
 
 ## Where this leads
 

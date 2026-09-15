@@ -74,6 +74,15 @@ which functions are integrable at all — **Lebesgue integration**, built on
 measure theory — is previewed in [Advanced Topics](25-advanced-topics.qmd)
 rather than developed here.
 
+## If you've computed integrals
+
+You already know $\int_a^b f(x)\,dx$ as "area under the curve" and as
+$F(b)-F(a)$. What you may not have had explicit: the first is the actual
+*definition*, built from Riemann sums exactly the way [Limits and
+Continuity](17-limits-and-continuity.qmd) builds any limit; the second is a
+*theorem* about that definition, not a restatement of it — the fundamental
+theorem of calculus is the genuinely non-obvious claim connecting the two.
+
 ## Where this leads
 
 [Differential Equations](20-differential-equations.qmd), next, is where

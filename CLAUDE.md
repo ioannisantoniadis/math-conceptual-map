@@ -69,6 +69,18 @@ accident:
 - **Terminology discipline.** "Space," "structure," "transformation," and
   similar overloaded words get their specific meaning stated at first use in
   a chapter, not assumed.
+- **Every chapter with a direct computational analogue needs an explicit
+  "If you've done X" section** (`SPEC.md` §15) — not just inline asides.
+  This regressed once already: six chapters (differentiation, integration,
+  differential equations, probability, optimization, machine learning)
+  shipped without one and had to be retrofitted in a later audit. Add it
+  when the chapter is written, not after.
+- **Reuse a compact comparison table (`SPEC.md` §18) at a few of the
+  highest-value abstraction transitions** — not everywhere (that spirals),
+  but somewhere beyond the one in `07-mathematical-structures.qmd`. Good
+  signal for "this spot deserves one": the chapter's prose is already
+  narrating a gained/lost or discrete/continuous pairing that a table would
+  just make scannable, not new content.
 - Historical claims carry approximate dates and, where genuinely contested
   or simplified, an explicit flag saying so — see `appendix-references.qmd`
   for the sourcing hierarchy (MacTutor → SEP → primary sources → textbooks,

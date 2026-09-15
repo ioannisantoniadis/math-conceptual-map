@@ -272,6 +272,47 @@ Each phase should leave the site in a complete, cross-linked, non-stub state
       `fig_social_preview.py` regenerated automatically from the same data
       (no code changes needed — it imports `NODES`/`EDGES` directly).
 
+## Post-Phase-5 spec audit — **done**
+
+A full walkthrough of `SPEC.md` §1–26 against the finished site, requested
+after Phase 5, found four real gaps (not documented deviations — actual
+misses) and fixed all four:
+
+- [x] §10's ML bridge tree names Information Theory as a peer to Linear
+      Algebra/Analysis/Optimization/Probability/Geometry; `24-machine-learning.qmd`
+      had none of it. Added a section deriving entropy, KL divergence, and
+      mutual information as [Probability](docs/chapters/22-probability.qmd)
+      expectations, and showing cross-entropy loss (already in the chapter)
+      *is* a KL divergence in different notation, not a third idea.
+- [x] §9.5's "Approximation" theme was never named as one of `00-the-map.qmd`'s
+      recurring threads, despite every piece of it (Taylor approximation,
+      Euler's method, gradient descent) already existing scattered across
+      later chapters. Added as a sixth thread, collecting them.
+- [x] §15's "If you've done X" sections were missing from exactly the areas
+      `SPEC.md` names explicitly: differentiation, integration, differential
+      equations, probability, and optimization each got one; machine
+      learning got a closing "If you've trained a model" section
+      consolidating the whole chapter's translations in the format `SPEC.md`'s
+      own $A\vec{x}=\vec{b}$ example uses. `CLAUDE.md` gained a standing rule
+      so this can't quietly regress again the way it just did.
+- [x] §18's "What Changed" comparison tables existed in exactly one place
+      (`07-mathematical-structures.qmd`); `SPEC.md` asks for the pattern
+      reused, not literally everywhere. Added two more at spots where the
+      prose was already narrating a gained/lost or discrete/continuous
+      pairing a table just makes scannable: a Gained/Lost table in
+      `06-number-systems.qmd`, a Discrete/Continuous table in
+      `21-discrete-mathematics.qmd`. Deliberately not added everywhere —
+      `CLAUDE.md` records the "does this spot deserve one" heuristic instead
+      of a rule to apply it universally.
+
+Two items remain genuinely, permanently unsatisfied relative to `SPEC.md`'s
+literal text, both already logged as deliberate — see `CLAUDE.md`'s
+"Structure" and "Content conventions" sections: §19's glossary uses a
+compact one-line-plus-link format rather than the spec's 5-part
+(intuition/definition/examples/related/map-location) structure per term,
+matching sibling-repo convention; §4's `CONTRIBUTING.md` was never created,
+also matching that neither sibling repo has one.
+
 ## Non-goals
 
 Not a textbook substitute, not proof-heavy, not attempting exhaustive

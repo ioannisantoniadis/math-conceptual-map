@@ -65,6 +65,25 @@ by minimizing **cross-entropy loss** is, mechanically, maximizing the
 the same "fit by maximizing probability of the data" idea [Probability](22-probability.qmd)
 closed with, wearing a different name.
 
+## Information theory measures distributions, not just samples from them
+
+**Entropy**, $H(X) = -\mathbb{E}[\log P(X)]$, is [Probability](22-probability.qmd)'s
+expectation applied to $-\log P(X)$ — the average "surprise" a
+distribution's own outcomes carry. **KL divergence**, $D_{KL}(P\|Q) =
+\mathbb{E}_P[\log \frac{P}{Q}]$, is the same construction measuring how
+different two distributions are, and it's not a separate tool from the
+cross-entropy loss just introduced: cross-entropy decomposes as $H(P,Q) =
+H(P) + D_{KL}(P\|Q)$, and since $H(P)$ (the true label distribution's own
+entropy) doesn't depend on the model at all, minimizing cross-entropy loss
+*is* minimizing $D_{KL}$ between the true and predicted distributions —
+the same likelihood-maximizing fit from the previous section, in different
+notation, not a third idea. **Mutual information**, $I(X;Y) =
+D_{KL}\big(P(X,Y) \,\|\, P(X)P(Y)\big)$, measures how far two random
+variables are from [Probability](22-probability.qmd)'s independence —
+zero exactly when they're independent, and a natural generalization of
+correlation to relationships correlation can't see (nonlinear ones,
+in particular).
+
 ## Why high dimensions feel unintuitive
 
 Data in ML typically lives in spaces with hundreds or thousands of
@@ -90,6 +109,26 @@ depends on its neighbors. This isn't a special case bolted onto the rest of
 ML; it's the same map-composition idea from earlier in this chapter, with
 the graph's edge structure deciding which vertices' values get combined at
 each step instead of a fixed grid or sequence.
+
+## If you've trained a model
+
+You already know the loop: forward pass, compute the loss, backward pass,
+step the optimizer. What this chapter adds, all in one place:
+
+- the forward pass is a composition of affine maps
+  ([Affine Spaces](15-affine-spaces.qmd)) and fixed nonlinearities;
+- the loss is, in an enormous share of practical cases, a cross-entropy —
+  which is a KL divergence between the true and predicted distributions in
+  different notation, not a separate quantity
+  ([Probability](22-probability.qmd));
+- the backward pass is the chain rule, computed back-to-front
+  ([Differentiation](18-differentiation.qmd));
+- the optimizer step is one discretized step of a gradient flow
+  ([Differential Equations](20-differential-equations.qmd),
+  [Optimization](23-optimization.qmd)).
+
+None of this changes how the code is written. It changes what the code is
+*doing*.
 
 ## Where this leads
 

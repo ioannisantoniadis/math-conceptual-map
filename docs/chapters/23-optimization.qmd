@@ -73,6 +73,18 @@ already named: a dynamical system whose continuous version always moves
 toward decreasing $f$, approximated step by step the same way Euler's
 method approximates any other differential equation's solution.
 
+## If you've run gradient descent or used Lagrange multipliers
+
+You already know the recipe: pick a learning rate, compute the gradient,
+step against it, repeat — or, for a constrained problem, set $\nabla f =
+\lambda \nabla g$ and solve. What you may not have had explicit: the
+learning rate is a step size discretizing a continuous gradient-flow ODE,
+not an arbitrary dial; a different inner product genuinely changes what
+"steepest" means (the machinery some optimizers exploit on purpose, not
+just a Riemannian curiosity); and Lagrange's condition is pure geometry —
+two gradients forced to point the same way — not an algebraic trick that
+happens to work.
+
 ## Where this connects, and where this site's core arc ends
 
 Fitting a model by minimizing a loss function and fitting one by maximizing

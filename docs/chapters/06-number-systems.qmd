@@ -111,8 +111,17 @@ bookkeeping device inside the formula for solving cubic equations.
 Five extensions, one shape: a specific unsolved equation motivates a new
 construction, built from equivalence classes over the previous system, that
 gains solvability and loses some structural property the old system had for
-free (order, discreteness, countability, order again). This is the
-generalization theme from [the map](00-the-map.qmd) in its purest form —
+free:
+
+| Extension | Solves | Gains | Loses |
+|---|---|---|---|
+| $\mathbb{N} \to \mathbb{Z}$ | $x + a = b$ | additive inverses | — |
+| $\mathbb{Z} \to \mathbb{Q}$ | $ax = b$ | multiplicative inverses | — |
+| $\mathbb{Q} \to \mathbb{R}$ | least upper bounds | completeness | countability |
+| $\mathbb{R} \to \mathbb{C}$ | $x^2 = -1$ | every polynomial has a root | a compatible order |
+
+This is the generalization theme from [the map](00-the-map.qmd) in its
+purest form —
 and it's about to reappear one level of abstraction up. Each of
 $\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$, $\mathbb{C}$ is, at
 bottom, a set equipped with operations satisfying certain properties. Naming

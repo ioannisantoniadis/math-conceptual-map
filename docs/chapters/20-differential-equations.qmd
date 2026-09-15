@@ -74,6 +74,17 @@ forms: the question shifts from "what is the formula" to "what is the
 shape of the set of all possible solutions," which is frequently both more
 tractable and more useful.
 
+## If you've solved differential equations
+
+You already know separation of variables, integrating factors, and
+characteristic equations for constant-coefficient linear ODEs. What you may
+not have had explicit: each of those is a shortcut built for a narrow,
+deliberately solvable family of equations, not evidence that differential
+equations are generally solvable in closed form — most aren't. Euler's
+method works on almost any ODE for the opposite reason: it doesn't need a
+clever trick, only the ability to repeatedly take a small step in the
+direction the equation already tells you to go.
+
 ## Where this connects
 
 Newton's laws are, literally, ODEs — physics is this chapter's oldest and

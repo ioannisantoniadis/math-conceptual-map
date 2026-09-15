@@ -87,6 +87,18 @@ measure space was never built to answer. Borrowing structure from a theory
 and then asking that theory's questions with it are two different things,
 and probability is a clean example of the second without the first.
 
+## If you've computed probabilities and expectations
+
+You already know $P(A\mid B) = \frac{P(A\cap B)}{P(B)}$ and
+$\mathbb{E}[X] = \sum_i x_i P(X=x_i)$. What you may not have had explicit:
+$P$ is a measure in the same technical sense [Metric
+Spaces](12-metric-spaces.qmd)'s distance and [Topological
+Spaces](13-topological-spaces.qmd)'s open sets are structures assigning
+consistent values to sets; a random variable is a function on $\Omega$, not
+a number with an adjective attached; and the sum formula for expectation is
+the discrete special case of the general integral $\int_\Omega X\,dP$, not
+a separate definition that happens to resemble one.
+
 ## Where this leads
 
 [Optimization](23-optimization.qmd), next, is where probability most often

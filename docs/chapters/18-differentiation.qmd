@@ -67,6 +67,18 @@ applied ML; this site develops that connection later, but it's the same
 "best local approximation" idea this chapter is built around, carried one
 order further.
 
+## If you've computed derivatives
+
+You already know the power rule, the product rule, the chain rule, and that
+a local max or min happens where $f'(x) = 0$. What you may not have had
+explicit: the product rule is exactly what happens when you linearly
+approximate a product and keep only the first-order term; the chain rule
+*is* composing two linear approximations, which is why it composes so
+cleanly; and $f'(x) = 0$ finds a point where the best linear approximation
+is flat — necessary for a local extremum, not sufficient, which is exactly
+why a second-derivative test is needed to tell a maximum from a minimum
+from neither.
+
 ## Where this leads
 
 [Integration](19-integration.qmd) looks, at first, like an entirely
