@@ -72,16 +72,19 @@ affine space has no origin to fix in the first place.
 
 Not a vector space — it has no distinguished zero point, and points cannot
 be added to each other, only translated by displacements. $\mathbb{R}^n$
-can be viewed as an affine space over itself once an origin is chosen, and
-that choice is exactly what makes the point/vector distinction invisible in
-ordinary computation: picking an origin silently identifies "the point
-$(3,4)$" with "the displacement $(3,4)$ from that origin," and it's easy to
-stop noticing they were ever conceptually different roles.
+can be viewed as an affine space over itself, and it already comes with a
+canonical origin — its own zero vector — which is exactly what makes the
+point/vector distinction invisible in ordinary computation: that built-in
+origin silently identifies "the point $(3,4)$" with "the displacement
+$(3,4)$ from that origin," and it's easy to stop noticing they were ever
+conceptually different roles.
 
 ## Where this leads
 
-[Euclidean Geometry](16-euclidean-geometry.qmd), next, combines this
-chapter's points-and-displacements structure with [Inner Product
+[Linear Algebra](10-linear-algebra.qmd) comes next, assembling the theory of
+vector spaces and the maps between them. [Euclidean
+Geometry](16-euclidean-geometry.qmd), after that, combines this chapter's
+points-and-displacements structure with [Inner Product
 Spaces](14-inner-product-spaces.qmd)'s length-and-angle structure — an
 affine space whose displacement vector space carries an inner product is,
 formally, what "Euclidean space" now means.

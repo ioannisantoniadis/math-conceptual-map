@@ -60,8 +60,8 @@ $\langle v,v\rangle$ could vanish for some nonzero $v$, which would make
 
 ## What follows
 
-The **norm** $\|v\| := \sqrt{\langle v,v\rangle}$ is now the formal version
-of the length function [Metric Spaces](12-metric-spaces.qmd) used
+The **norm** $\|v\| := \sqrt{\langle v,v\rangle}$ is the formal version
+of the length function [Metric Spaces](12-metric-spaces.qmd), next, uses
 informally. The **Cauchy–Schwarz inequality**, $|\langle u,v\rangle| \leq
 \|u\|\|v\|$ (stated here, not proved), is what guarantees $\frac{\langle
 u,v\rangle}{\|u\|\|v\|}$ always lands in $[-1,1]$ — without it, "the angle
@@ -70,16 +70,17 @@ whose cosine is this ratio" wouldn't always exist. Two vectors are
 behind "perpendicular," and the property [Linear
 Algebra](10-linear-algebra.qmd)'s rotation matrices and reflections are
 built to preserve. And every inner product induces a metric via $d(u,v) =
-\|u-v\|$ — exactly the bridge [Metric Spaces](12-metric-spaces.qmd) already
-leaned on.
+\|u-v\|$ — exactly the bridge [Metric Spaces](12-metric-spaces.qmd), next,
+leans on.
 
 ## What's gained and lost, one step further out
 
 Not every norm comes from an inner product. The test is the
 **parallelogram law**, $\|u+v\|^2 + \|u-v\|^2 = 2\|u\|^2 + 2\|v\|^2$, which
 holds for every inner-product-induced norm but fails for, say, the taxicab
-norm from [Metric Spaces](12-metric-spaces.qmd). That gives a clean three-
-step generalization ladder, in the sense [the map](00-the-map.qmd) keeps
+norm that [Metric Spaces](12-metric-spaces.qmd), next, introduces. That
+gives a clean three-step generalization ladder, in the sense [the
+map](00-the-map.qmd) keeps
 returning to: inner-product space $\to$ normed space (magnitude, no
 guaranteed angle) $\to$ metric space (distance, no guaranteed magnitude or
 linear structure at all). Each step drops a guarantee and gains a larger
@@ -97,9 +98,9 @@ warning; they're exactly the extra structure this chapter adds on top.
 
 ## Where this leads
 
-[Metric Spaces](12-metric-spaces.qmd), already written, picks up precisely
+[Metric Spaces](12-metric-spaces.qmd), next, picks up precisely
 the induced distance this chapter derives. [Affine
 Spaces](15-affine-spaces.qmd) and [Euclidean
-Geometry](16-euclidean-geometry.qmd), next, combine this structure with a
-notion of *point* — something a vector space doesn't have either — to
-recover the geometry you already use computationally.
+Geometry](16-euclidean-geometry.qmd), further ahead, combine this structure
+with a notion of *point* — something a vector space doesn't have either —
+to recover the geometry you already use computationally.

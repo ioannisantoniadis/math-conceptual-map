@@ -3,9 +3,9 @@ title: "Probability"
 ---
 
 You already compute probabilities, expectations, and conditional
-probabilities. What probability structurally *is* — and why it is best
-understood as measure theory wearing a specific interpretation, not as its
-own free-standing set of rules — is this chapter's subject.
+probabilities. What probability structurally *is* — built on measure
+theory, but asking questions measure theory alone was never built to pose
+— is this chapter's subject.
 
 ## A three-century gap, in the shape [the map](00-the-map.qmd) keeps finding
 

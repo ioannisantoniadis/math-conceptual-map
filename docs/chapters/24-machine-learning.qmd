@@ -59,7 +59,7 @@ applying it in the right order, not new mathematics.
 A classifier's output is standardly interpreted as a probability
 distribution over classes, making its prediction a [random
 variable](22-probability.qmd) in the technical sense — a function from
-possible model states to outcomes, not a single guaranteed answer. Training
+outcomes to a predicted class, not a single guaranteed answer. Training
 by minimizing **cross-entropy loss** is, mechanically, maximizing the
 [likelihood](22-probability.qmd) of the observed labels under the model —
 the same "fit by maximizing probability of the data" idea [Probability](22-probability.qmd)

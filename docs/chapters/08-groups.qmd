@@ -42,8 +42,9 @@ That's the entire definition. Nothing here requires $a \ast b = b \ast a$
 — when it *does* hold for every pair, the group is called **abelian** (after
 Niels Abel), and it's worth noticing that's a bonus property, not one of the
 four axioms; the rotations-of-a-square example above is abelian, but the
-permutations-of-three-objects example is not (rotate-then-reflect a triangle
-differs from reflect-then-rotate).
+permutations-of-three-objects example is not (swap 1 and 2, then swap 2 and
+3, and you land somewhere different than doing those two swaps in the
+opposite order).
 
 ## Why these four, and not fewer
 

@@ -8,8 +8,9 @@ Systems](06-number-systems.qmd) built — all carry *two*, addition and
 multiplication, and the two don't sit side by side unrelated: $3 \times (4 +
 5) = 3\times4 + 3\times5$ is doing real work every time you expand an
 expression. Naming what it takes for two operations to interact usefully is
-this chapter's whole job, and it finally makes precise a word [Vector
-Spaces](09-vector-spaces.qmd) already leaned on without defining: *field*.
+this chapter's whole job, and it makes precise, ahead of time, a word
+[Vector Spaces](09-vector-spaces.qmd) will lean on, next, without defining:
+*field*.
 
 ## The problem, before the definition
 
@@ -22,13 +23,14 @@ all — describing it needs a set with *two* operations and a rule connecting
 them.
 
 Two more examples, chosen because they look nothing like numbers, make the
-same point [Vector Spaces](09-vector-spaces.qmd) made with arrows and
-polynomials: the set of $n \times n$ matrices has both addition and
+same point [Vector Spaces](09-vector-spaces.qmd), next, will make with
+arrows and polynomials: the set of $n \times n$ matrices has both addition
+and
 multiplication, distributing over each other exactly the way numbers do —
 even though matrix multiplication isn't commutative ($AB \neq BA$, in
-general). And polynomials, already met as vectors under addition and
-scaling, also multiply: $(x+1)(x-1) = x^2 - 1$, with the same distributive
-behavior.
+general). And polynomials — which [Vector Spaces](09-vector-spaces.qmd),
+next, meets as vectors under addition and scaling — also multiply:
+$(x+1)(x-1) = x^2 - 1$, with the same distributive behavior.
 
 ## The abstraction
 
@@ -50,8 +52,9 @@ itself an abelian group. $\mathbb{Q}$, $\mathbb{R}$, and $\mathbb{C}$ are
 fields; $\mathbb{Z}$ is a ring but not a field, since only $1$ and $-1$ have
 multiplicative inverses in $\mathbb{Z}$.
 
-This is the word [Vector Spaces](09-vector-spaces.qmd) used before defining:
-a vector space is built "over a field" precisely because scalar
+This is the word [Vector Spaces](09-vector-spaces.qmd), next, will use
+before defining it: a vector space is built "over a field" precisely
+because scalar
 multiplication needs to be *undoable* — solving $c\vec{v} = \vec{w}$ for a
 scalar $c$ requires dividing, which requires the scalars to have
 multiplicative inverses. A ring without them isn't rich enough to serve as a
@@ -108,7 +111,8 @@ any particular numbers.
 ## Where this leads
 
 Rings and fields finish the algebraic side of what [Groups](08-groups.qmd)
-started, and they settle a debt [Vector Spaces](09-vector-spaces.qmd) left
-open — "a field" now means something specific. What vector spaces still
-lack, formally, is any notion of distance or closeness at all, and that's
-exactly the gap [Metric Spaces](12-metric-spaces.qmd) fills next.
+started, and they settle, in advance, a debt [Vector Spaces](09-vector-spaces.qmd)
+— next — would otherwise leave open: "a field" now means something specific.
+What vector spaces still lack, formally, is any notion of distance or
+closeness at all — a gap [Metric Spaces](12-metric-spaces.qmd), several
+chapters further on, fills.

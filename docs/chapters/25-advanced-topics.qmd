@@ -38,8 +38,10 @@ differential equations, whose solutions are naturally elements of a
 function space.
 
 **Where to go next**: a standard first course is built around Hilbert and
-Banach spaces and bounded operators — see `appendix-references.qmd`'s
-general reading for where this site would point next.
+Banach spaces and bounded operators — Erwin Kreyszig's *Introductory
+Functional Analysis with Applications* is the usual starting point, and
+stays close to this chapter's level rather than jumping straight to full
+generality.
 
 ## Measure theory
 

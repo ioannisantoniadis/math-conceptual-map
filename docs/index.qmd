@@ -54,8 +54,11 @@ one page. From there, two ways to read:
   matrix, a random variable, a gradient) and follow its prerequisites
   backward until the picture is solid.
 
-This is a young, deliberately small site — see
+All five planned phases are built — twenty-five chapters, logic through the
+machine-learning bridge and a conceptual-coverage preview of functional
+analysis, measure theory, differential geometry, and category theory; see
 [`ROADMAP.md`](https://github.com/ioannisantoniadis/math-conceptual-map/blob/main/ROADMAP.md)
-for what exists now (the core spine: logic through linear algebra) and what's
-planned. A chapter is never published as a stub; what's here is meant to be
-complete on its own terms, even if the map around it keeps growing.
+for the build history. A chapter is never published as a stub; what's here
+is meant to be complete on its own terms, and the one deliberately unwritten
+page — Physics — stays drawn hollow on [the map](chapters/00-the-map.qmd)
+rather than published half-finished.

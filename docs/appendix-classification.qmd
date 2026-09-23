@@ -92,7 +92,7 @@ category of their own.
 | Ring | two operations, related by distributivity | [Rings and Fields](chapters/11-rings-and-fields.qmd) |
 | Topological space | a set with a designated collection of open sets | [Topological Spaces](chapters/13-topological-spaces.qmd) |
 | Vector space | addition and scaling | [Vector Spaces](chapters/09-vector-spaces.qmd) |
-| *Properties a structure can have:* completeness, orthogonal, discrete/dense, convex, continuous | not structures themselves — see each one's own chapter | — |
+| *Properties a structure can have:* completeness, orthogonal | not structures themselves — see each one's own chapter (convex, continuous, and discrete/dense get their own rows below, under Theories) | — |
 
 ## Theories
 
@@ -103,7 +103,7 @@ named theorems and techniques that body of results actually produces.
 |---|---|---|
 | Bayes' rule | a theorem, not a structure | [Probability](chapters/22-probability.qmd) |
 | Combinatorics | counting subsets/functions of finite sets | [Discrete Mathematics](chapters/21-discrete-mathematics.qmd) |
-| Continuous | classically $\varepsilon$–$\delta$; topologically, preimages of opens | [Limits and Continuity](chapters/17-limits-and-continuity.qmd) |
+| Continuous | classically $\varepsilon$–$\delta$; topologically, preimages of opens | [Limits and Continuity](chapters/17-limits-and-continuity.qmd) / [Topological Spaces](chapters/13-topological-spaces.qmd) |
 | Convex / critical point | properties/objects [Optimization](chapters/23-optimization.qmd) is built around | [Optimization](chapters/23-optimization.qmd) |
 | Differential Equations (ODE / PDE, dynamical system) | equations relating a function to its own derivatives | [Differential Equations](chapters/20-differential-equations.qmd) |
 | Differentiation | the theory built on the derivative | [Differentiation](chapters/18-differentiation.qmd) |

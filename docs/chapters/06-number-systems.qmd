@@ -72,9 +72,10 @@ that bunch arbitrarily close together) — both due, independently, to Cantor
 and Dedekind around 1872. Neither construction is needed to use $\mathbb{R}$
 computationally, and this site doesn't develop either in detail; what
 matters is the property they're built to guarantee: **completeness** —
-every bounded set of reals has a *least upper bound* in $\mathbb{R}$ itself,
-which $\mathbb{Q}$ conspicuously lacks (the set $\{q \in \mathbb{Q} : q^2 <
-2\}$ is bounded above but has no rational least upper bound). Completeness
+every nonempty set of reals that is bounded above has a *least upper bound*
+in $\mathbb{R}$ itself, a property $\mathbb{Q}$ conspicuously lacks (the set
+$\{q \in \mathbb{Q} : q^2 < 2\}$ is bounded above but has no rational least
+upper bound). Completeness
 is the property that makes calculus work at all: [limits, continuity, and
 the intermediate value
 theorem](17-limits-and-continuity.qmd) all lean on it directly, which is
@@ -102,9 +103,9 @@ distance from the origin, which is a different, weaker kind of structure.
 Complex numbers were trusted least, longest: "imaginary" was originally a
 term of mild derision, and full acceptance — largely through Gauss's and
 Hamilton's work giving $\mathbb{C}$ a solid geometric and algebraic footing
-— didn't arrive until the late 18th and 19th centuries, roughly 250 years
-after they first appeared (Cardano, 1545) as an uncomfortable but useful
-bookkeeping device inside the formula for solving cubic equations.
+— didn't arrive until the 19th century, roughly 250-300 years after they
+first appeared (Cardano, 1545) as an uncomfortable but useful bookkeeping
+device inside the formula for solving cubic equations.
 
 ## The pattern, named
 

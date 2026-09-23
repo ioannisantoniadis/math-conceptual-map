@@ -64,8 +64,10 @@ Spaces](chapters/12-metric-spaces.qmd).
 
 **Continuous** — classically, the $\varepsilon$–$\delta$ definition;
 topologically, a function whose preimage of every open set is open — the
-same idea, restated without needing a distance. See [Topological
-Spaces](chapters/13-topological-spaces.qmd).
+same idea, restated without needing a distance. See [Limits and
+Continuity](chapters/17-limits-and-continuity.qmd) for the classical
+definition and [Topological Spaces](chapters/13-topological-spaces.qmd)
+for the general, distance-free one.
 
 **Convex** — a set containing the line segment between any two of its
 points; a function is convex when the region above its graph is. Every

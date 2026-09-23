@@ -126,7 +126,9 @@ A structure is only half the story without the maps between its instances.
 *and* the linear maps connecting them — including the fact, central to
 everything from computer graphics to machine learning, that a matrix is
 just what a linear map looks like once you've chosen coordinates. This
-site's table of contents takes a short detour first, through [Inner Product
-Spaces](14-inner-product-spaces.qmd) and [Metric
-Spaces](12-metric-spaces.qmd), to pick up the notions of angle and distance
-a bare vector space deliberately doesn't have.
+site's table of contents takes a longer detour first, through [Inner
+Product Spaces](14-inner-product-spaces.qmd), [Metric
+Spaces](12-metric-spaces.qmd), [Topological
+Spaces](13-topological-spaces.qmd), and [Affine
+Spaces](15-affine-spaces.qmd), to pick up the notions of angle, distance,
+openness, and position a bare vector space deliberately doesn't have.
