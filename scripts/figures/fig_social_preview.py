@@ -8,9 +8,10 @@ sparse enough that spring_layout collapsed it into overlapping clusters
 even for the main map (see fig_landscape_network.py's docstring), so
 reusing that same failed layout here would reproduce the same bug at a
 smaller, harder-to-notice size. The layered-DAG layout is comfortably wider
-than tall (15 columns), which turns out to suit a widescreen banner well —
-matplotlib's aspect="equal" letterboxes it top/bottom inside the 2:1 box,
-and the title text sits in exactly that top band.
+than tall (15 columns), which suits a widescreen banner: the axes are
+stretched to fill the banner (no aspect="equal" letterboxing, which shrank
+the graph to a thin strip with unreadable labels), and nodes are drawn as
+point-sized markers so they stay circular at any aspect ratio.
 """
 
 import sys
@@ -43,18 +44,19 @@ def main() -> None:
 
     xs = [p[0] for p in pos.values()]
     ys = [p[1] for p in pos.values()]
-    x_lo, x_hi = min(xs) - 1.0, max(xs) + 1.0
-    y_lo, y_hi = min(ys) - 0.9, max(ys) + 0.9
+    x_lo, x_hi = min(xs) - 1.05, max(xs) + 1.05
+    y_lo, y_hi = min(ys) - 0.75, max(ys) + 0.75
 
     # 12.8 x 6.4in @ 200dpi = 2560x1280px, exactly 2x GitHub's recommended
     # 1280x640 social preview size (retina-sharp, GitHub downsamples).
     fig, ax = plt.subplots(figsize=(12.8, 6.4))
-    fig.subplots_adjust(left=0.02, right=0.98, top=0.80, bottom=0.05)
+    fig.subplots_adjust(left=0.01, right=0.99, top=0.80, bottom=0.1)
 
     ax.set_xlim(x_lo, x_hi)
     ax.set_ylim(y_lo, y_hi)
 
-    radius = 0.62
+    node_pt = 46          # node diameter in points (stays circular at any aspect)
+    shrink = node_pt / 2 + 1
 
     for u, v in EDGES:
         pu, pv = pos[u], pos[v]
@@ -63,9 +65,9 @@ def main() -> None:
             pu, pv, connectionstyle="arc3,rad=0.08",
             arrowstyle="-", mutation_scale=10,
             linewidth=0.9, color=MUTED,
-            alpha=0.75 if not later_edge else 0.45,
+            alpha=0.6 if not later_edge else 0.4,
             linestyle="solid" if not later_edge else (0, (4, 3)),
-            shrinkA=15, shrinkB=15,
+            shrinkA=shrink, shrinkB=shrink,
             zorder=1,
         )
         ax.add_patch(arrow)
@@ -78,27 +80,16 @@ def main() -> None:
                 continue
             x, y = pos[n]
             if later:
-                circ = plt.Circle(
-                    (x, y), radius, facecolor=SURFACE, edgecolor=color,
-                    linewidth=1.5, linestyle=(0, (3, 2)), zorder=2,
-                )
+                ax.scatter([x], [y], s=node_pt**2, facecolor=SURFACE, edgecolor=color,
+                           linewidth=1.6, linestyle=(0, (3, 2)), zorder=2)
                 text_color = color
             else:
-                circ = plt.Circle(
-                    (x, y), radius, facecolor=color, edgecolor=SURFACE,
-                    linewidth=1.3, zorder=2,
-                )
+                ax.scatter([x], [y], s=node_pt**2, facecolor=color, edgecolor=SURFACE,
+                           linewidth=1.3, zorder=2)
                 text_color = "white"
-            ax.add_patch(circ)
             ax.text(
                 x, y, label, ha="center", va="center",
-                # Small: the fixed 12.8x6.4in canvas (needed for GitHub's
-                # exact 1280x640 social-preview size) gives a smaller
-                # inches-per-data-unit than fig_landscape_network.py's
-                # data-derived figsize, so its font size overflows these
-                # same-radius circles — scaled down to match (see module
-                # docstring reasoning: ~0.39 vs ~0.62 in/unit).
-                fontsize=4.8, color=text_color,
+                fontsize=6.0, color=text_color,
                 fontweight="bold" if not later else "normal",
                 zorder=3, linespacing=1.1,
             )
@@ -125,7 +116,6 @@ def main() -> None:
         columnspacing=1.2, handletextpad=0.5,
     )
     ax.set_axis_off()
-    ax.set_aspect("equal")
 
     out = Path(__file__).resolve().parents[2] / "docs" / "images" / "social-preview.png"
     fig.savefig(str(out), dpi=200, facecolor=SURFACE, bbox_inches=None)
