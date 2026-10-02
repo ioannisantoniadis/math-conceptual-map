@@ -104,12 +104,12 @@ what a group is built to describe.
 
 The historical route to the formal definition above ran through exactly
 this kind of example, not the other way around. Évariste Galois used what we
-would now call permutation groups in the 1830s to settle a centuries-old
+would now call permutation groups around 1830 [@mactutor_galois] to settle a centuries-old
 question — which polynomial equations are solvable by a formula using roots,
 like the quadratic formula — by studying the symmetries of an equation's
 roots, decades before "group" had the abstract four-axiom definition above.
 That definition was only isolated and generalized later, by Arthur Cayley
-(1854) and, in essentially its modern abstract form, Heinrich Weber (1893).
+(1854) and, in essentially its modern abstract form, Heinrich Weber (1893). [@mactutor_group_theory; @mactutor_weber; @mactutor_galois_commentators]
 The concrete examples came first, by decades; the abstraction came after,
 distilled from what the examples had in common — a clean instance of the
 historical graph and the formal graph running in different order from [the

@@ -35,7 +35,8 @@ the whole stack from collapsing into a single linear map (a composition of
 purely linear maps is always just another linear map — the nonlinearities
 are what let depth add expressive power at all). **PCA**, mentioned but not
 derived in [Linear Algebra](10-linear-algebra.qmd), is mechanically nothing
-more than finding a data set's dominant eigenvectors — a direct application
+more than finding the dominant eigenvectors of a data set's (centered)
+covariance matrix — a direct application
 of that chapter's eigenvalue machinery, not a separate technique.
 
 ## Training is optimization, and backpropagation is the chain rule

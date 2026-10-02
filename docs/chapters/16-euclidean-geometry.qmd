@@ -21,7 +21,7 @@ fifth is noticeably more complicated to even state, and for roughly two
 thousand years mathematicians tried to *prove* it from the other four,
 convinced it had to be a consequence rather than an independent assumption.
 
-It doesn't. In the 1820s–30s, János Bolyai and Nikolai Lobachevsky
+It doesn't. In the 1820s–30s, János Bolyai and Nikolai Lobachevsky [@mactutor_bolyai; @mactutor_lobachevsky]
 (independently) showed that replacing the parallel postulate with its
 negation produces an entirely consistent geometry — **hyperbolic
 geometry** — where triangles' angles sum to *less* than 180°. (Elliptic
@@ -36,7 +36,7 @@ alternative you get by choosing differently.
 ## The coordinate version
 
 René Descartes (and, independently, Pierre de Fermat) introduced **analytic
-geometry** around 1637: represent points as tuples of numbers and geometric
+geometry** around 1637 [@mactutor_descartes]: represent points as tuples of numbers and geometric
 relationships as algebraic equations — a circle of radius $r$ becomes
 $x^2+y^2=r^2$, a line becomes a linear equation. This is the bridge between
 geometry and algebra you've used your entire computational life without

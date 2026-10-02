@@ -1,6 +1,4 @@
----
-title: "The Map"
----
+# The Map {.unnumbered}
 
 "Map of mathematics" videos are a genuinely useful genre — and they share a
 flaw. They draw one tree, with arithmetic at the root and category theory
@@ -51,10 +49,10 @@ A few concepts, placed on all four at once, make the gaps concrete:
 
 | Concept | Historical origin | Formal foundation | Conceptual prerequisite | Where this site teaches it |
 |---|---|---|---|---|
-| Sets | Cantor, 1870s–80s | Axioms of ZFC | Almost none — "a collection of things" | [Sets](03-sets.qmd) |
-| Groups | Implicit in Galois's work on equations, 1830s; axioms formalized by Cayley (1854)/Weber (1893) | A set with one operation satisfying four axioms | Set + binary operation | [Groups](08-groups.qmd) |
-| Vector spaces | Peano's axioms, 1888 — after $\mathbb{R}^n$, matrices, and polynomials were all already in wide use | A set over a field with two operations satisfying eight axioms | Group (for addition) + a notion of scaling | [Vector Spaces](09-vector-spaces.qmd) |
-| Limits / calculus | Newton & Leibniz, 1660s–80s, informally | Built from the topology of $\mathbb{R}$ | Function + a notion of "arbitrarily close" | [Limits and Continuity](17-limits-and-continuity.qmd) |
+| Sets | Cantor, 1870s–80s [@mactutor_cantor] | Axioms of ZFC | Almost none — "a collection of things" | [Sets](03-sets.qmd) |
+| Groups | Implicit in Galois's work on equations, c. 1830; axioms formalized by Cayley (1854)/Weber (1893) [@mactutor_group_theory; @mactutor_weber] | A set with one operation satisfying four axioms | Set + binary operation | [Groups](08-groups.qmd) |
+| Vector spaces | Peano's axioms, 1888 [@mactutor_peano] — after $\mathbb{R}^n$, matrices, and polynomials were all already in wide use | A set over a field with two operations satisfying eight axioms | Group (for addition) + a notion of scaling | [Vector Spaces](09-vector-spaces.qmd) |
+| Limits / calculus | Newton & Leibniz, 1660s–80s, informally [@mactutor_newton; @mactutor_leibniz] | Built from the topology of $\mathbb{R}$ | Function + a notion of "arbitrarily close" | [Limits and Continuity](17-limits-and-continuity.qmd) |
 
 Notice the direction of the gap is not always the same: sets are historically
 recent but conceptually nearly free; calculus is historically ancient (by

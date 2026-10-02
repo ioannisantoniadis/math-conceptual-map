@@ -12,6 +12,10 @@ book:
   site-url: "https://ioannisantoniadis.github.io/math-conceptual-map/"
   repo-url: "https://github.com/ioannisantoniadis/math-conceptual-map"
   repo-actions: [edit, issue]
+  image: images/social-preview.png
+  open-graph: true
+  twitter-card:
+    card-style: summary_large_image
   page-footer:
     left: >-
       Source on [GitHub](https://github.com/ioannisantoniadis/math-conceptual-map).

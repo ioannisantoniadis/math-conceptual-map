@@ -50,8 +50,8 @@ deductive argument (most famously Euclid's, built from explicit postulates)
 for roughly two thousand years without a symbolic notation for logic itself.
 Formal, symbolic mathematical logic — logic written as a calculus you can
 manipulate the way you manipulate algebra — is comparatively recent: George
-Boole's algebraic treatment of logic (1854) and Gottlob Frege's and Bertrand
-Russell's work formalizing logical inference (roughly 1879–1910) are the
+Boole's algebraic treatment of logic (1854) [@mactutor_boole] and Gottlob Frege's and Bertrand
+Russell's work formalizing logical inference (roughly 1879–1910) [@mactutor_frege; @mactutor_russell] are the
 usual reference points, and this is one of the clearest instances on this
 whole site of the historical graph and the formal graph pointing in opposite
 directions — correct proofs long preceded any formal theory of what made

@@ -81,10 +81,10 @@ The push to make "derivable from stated axioms" the *entire* standard for
 mathematical truth — rather than an ideal mathematicians approximated
 informally — is largely a late-19th/early-20th-century project, closely
 tied to the response to Russell's paradox in [Sets](03-sets.qmd). David
-Hilbert's program (from around 1920) aimed higher still: not just
+Hilbert's program (from around 1920) [@sep_hilbert_program] aimed higher still: not just
 axiomatizing each theory, but proving, using only elementary methods, that
 mathematics as a whole was consistent and that every true statement was
-provable. Kurt Gödel's incompleteness theorems (1931) showed this second,
+provable. Kurt Gödel's incompleteness theorems (1931) [@mactutor_godel] showed this second,
 larger goal is unreachable in principle — any consistent formal system
 powerful enough to describe basic arithmetic contains true statements it
 cannot prove. This is a genuinely deep result and this paragraph does not do

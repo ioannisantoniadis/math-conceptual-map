@@ -11,16 +11,17 @@ rigorous.
 
 ## The problem that took 150 years to fix
 
-Newton and Leibniz built calculus (1660s–80s) on **infinitesimals** —
+Newton and Leibniz built calculus (1660s–80s) [@mactutor_newton; @mactutor_leibniz] on **infinitesimals** —
 quantities smaller than every positive number, yet not zero. The intuition
 worked; the foundation didn't hold up to scrutiny. Bishop George Berkeley's
-1734 critique, calling these quantities "ghosts of departed quantities,"
+1734 critique, calling these quantities "ghosts of departed quantities," [@mactutor_berkeley]
 was a fair objection: nobody could say precisely what an infinitesimal
 *was*, only that calculus kept producing correct answers when you used
 them. For roughly 150 years, calculus was a spectacularly successful
 computational practice standing on a foundation nobody could fully defend.
 
-Augustin-Louis Cauchy (1820s) and Karl Weierstrass (1870s) replaced
+Augustin-Louis Cauchy (1820s) [@mactutor_cauchy] and Karl Weierstrass (from his Berlin lectures
+of 1859/60 onward [@mactutor_weierstrass]) replaced
 infinitesimals with something that needed no mysterious infinitely-small
 numbers at all: the $\varepsilon$–$\delta$ definition. $\lim_{x \to a}
 f(x) = L$ means: for every $\varepsilon > 0$, there exists a $\delta > 0$
@@ -45,7 +46,7 @@ now doing the specific job it was generalized from in the first place.
 
 ## The infinitesimals weren't wrong, just early
 
-One more twist worth knowing, briefly: in the 1960s, Abraham Robinson
+One more twist worth knowing, briefly: in the 1960s, Abraham Robinson [@mactutor_robinson]
 showed that infinitesimals *can* be made fully rigorous after all, using a
 different foundation (nonstandard models of the real numbers) than Cauchy
 and Weierstrass's. Newton and Leibniz's original intuition wasn't

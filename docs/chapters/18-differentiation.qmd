@@ -47,7 +47,7 @@ near $a$ forces $f$ to not jump at $a$. The converse is false, and it's
 worth having the standard counterexamples on hand. $f(x) = |x|$ is
 continuous everywhere but has a corner at $0$: the difference quotient
 approaches $-1$ from the left and $+1$ from the right, so no single limit
-exists. More strikingly, Weierstrass exhibited (1872) a function that is
+exists. More strikingly, Weierstrass exhibited (1872) [@mactutor_weierstrass] a function that is
 continuous *everywhere* and differentiable *nowhere* — a genuine shock to
 mathematicians of the time, who had generally assumed continuous functions
 were differentiable except at isolated bad points. This is the same

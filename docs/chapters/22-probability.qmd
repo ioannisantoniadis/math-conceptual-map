@@ -9,13 +9,13 @@ theory, but asking questions measure theory alone was never built to pose
 
 ## A three-century gap, in the shape [the map](00-the-map.qmd) keeps finding
 
-Probability's origins are famously concrete: a 1654 correspondence between
+Probability's origins are famously concrete: a 1654 correspondence [@mactutor_pascal] between
 Blaise Pascal and Pierre de Fermat, triggered by a gambler's question about
 how to split the stakes of an interrupted dice game fairly. For roughly the
 next 280 years, probability developed as a collection of clever counting
 arguments about coins, dice, and cards — useful, and mathematically
 informal, in much the way pre-Cauchy calculus was. The rigorous foundation
-arrived only in 1933, when Andrey Kolmogorov built probability entirely on
+arrived only in 1933 [@mactutor_kolmogorov], when Andrey Kolmogorov built probability entirely on
 top of **measure theory** — the general theory of assigning consistent
 "sizes" to sets, of which [Integration](19-integration.qmd)'s later
 phase (Lebesgue's construction) is the other major instance. This is

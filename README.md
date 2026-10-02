@@ -29,7 +29,8 @@ graphs over the same ideas, and they don't always agree.
 All 5 originally planned phases are built — 25 chapters, logic through a
 machine-learning bridge and a conceptual-coverage preview of functional
 analysis, measure theory, differential geometry, and category theory.
-There's no in-flight "next phase" — see [`ROADMAP.md`](ROADMAP.md)'s
+The one planned extension is a Physics chapter (the hollow node on the
+map); there's no other in-flight phase — see [`ROADMAP.md`](ROADMAP.md)'s
 "Non-goals" section for what's deliberately still open (topology's
 connectedness and compactness, PDEs, statistics, full treatments of any of
 the four preview topics) and the full phase-by-phase decision log.

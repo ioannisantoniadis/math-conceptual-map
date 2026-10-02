@@ -30,7 +30,7 @@ elements. $A \subseteq B$ means every element of $A$ is an element of $B$.
 ## A collection that broke its own definition
 
 "A collection of objects satisfying any property you like" sounds harmless.
-It isn't. In 1901, Bertrand Russell noticed that the property "$S \notin S$"
+It isn't. In 1901, Bertrand Russell noticed [@mactutor_russell] that the property "$S \notin S$"
 (a set that does not contain itself) defines a set —
 $R = \{S : S \notin S\}$ — and then asked the natural question: is
 $R \in R$? If yes, then by $R$'s own definition $R \notin R$. If no, then $R$
@@ -42,7 +42,7 @@ definition to an axiomatic one described in [Axioms and
 Definitions](05-axioms-and-definitions.qmd).
 
 The fix mathematicians settled on — the **Zermelo–Fraenkel axioms** (ZF, or
-ZFC with the axiom of choice added), developed roughly 1908–1922 — doesn't
+ZFC with the axiom of choice added), developed roughly 1908–1922 [@mactutor_zermelo; @mactutor_fraenkel] — doesn't
 patch the definition of "set" so much as restrict *which* collections are
 allowed to count as sets in the first place, blocking Russell-style
 self-reference by construction. This is real machinery, and this site does

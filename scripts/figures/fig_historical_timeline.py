@@ -21,10 +21,10 @@ NODES = [
     "Arithmetic & geometry\n(antiquity)",
     "Algebra\nal-Khwārizmī, 9th c.;\nsymbolic algebra, 16th–17th c.",
     "Calculus\nNewton/Leibniz, 1660s–80s\n(informal infinitesimals)",
-    "Rigorous analysis\nCauchy 1820s, Weierstrass 1870s\n(ε–δ limits)",
+    "Rigorous analysis (ε–δ limits)\nCauchy 1820s,\nWeierstrass 1860s–70s",
+    "Abstract algebra\nformal group axioms:\nCayley 1854, Weber 1893",
     "Set theory\nCantor, 1870s–80s",
     "Formal axiomatic foundations\nFrege, Peano, Zermelo–Fraenkel\n~1889–1922",
-    "Abstract algebra\nformal group axioms:\nCayley 1854, Weber 1893",
     "Topology as a formal object\nHausdorff, 1914",
 ]
 

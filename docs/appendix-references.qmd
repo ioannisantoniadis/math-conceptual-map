@@ -2,11 +2,11 @@
 title: "References"
 ---
 
-This site is not yet accumulating a full bibliography — `references.bib`
-holds a single placeholder entry, removed once real inline citations
-(`@key`) are added chapter by chapter as claims that need them arise. This
-page instead states the sourcing policy those future citations will follow,
-and lists a handful of general books worth having nearby regardless of what
+Every dated historical claim on this site carries an inline citation,
+almost all to the MacTutor History of Mathematics archive, following the
+policy below; each source was checked against the claim it supports (as of
+October 2026). This page states that policy, lists every work cited, and
+suggests a handful of general books worth having nearby regardless of what
 this site covers.
 
 ## Sourcing policy
@@ -48,3 +48,8 @@ from, useful for anyone who wants to go past what's here:
 - Timothy Gowers (ed.), *The Princeton Companion to Mathematics* — the
   single best one-volume map of mathematics as a whole, in the sense [the
   map](chapters/00-the-map.qmd) is reaching for at much smaller scale.
+
+## Works cited
+
+::: {#refs}
+:::

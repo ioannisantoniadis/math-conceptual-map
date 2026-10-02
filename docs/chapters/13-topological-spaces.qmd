@@ -19,8 +19,8 @@ useful notions of "open" arise with no metric behind them at all, and it's
 worth seeing one before the definition. On any set $X$, declare *every*
 subset open — the **discrete topology**. Or declare only $\varnothing$ and
 $X$ itself open — the **indiscrete topology**. Neither needs a distance
-function, and the second one, in particular, has too few open sets to come
-from any metric: it can't separate any two points the way a metric's open
+function, and the second one, on any set with more than one point, has too
+few open sets to come from any metric: it can't separate any two points the way a metric's open
 balls always can.
 
 ## The abstraction

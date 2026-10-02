@@ -68,8 +68,10 @@ $\mathbb{R}$ fills them. There are two standard rigorous constructions —
 **Dedekind cuts** (a real number *is* a partition of $\mathbb{Q}$ into
 "everything below it" and "everything at or above it") and **Cauchy
 sequences** (a real number is an equivalence class of rational sequences
-that bunch arbitrarily close together) — both due, independently, to Cantor
-and Dedekind around 1872. Neither construction is needed to use $\mathbb{R}$
+that bunch arbitrarily close together).
+Both were published in 1872: cuts by Dedekind, and Cauchy-sequence
+constructions by Cantor and by Heine, anticipated by Méray in 1869
+[@mactutor_real_numbers_2]. Neither construction is needed to use $\mathbb{R}$
 computationally, and this site doesn't develop either in detail; what
 matters is the property they're built to guarantee: **completeness** —
 every nonempty set of reals that is bounded above has a *least upper bound*
@@ -104,7 +106,7 @@ Complex numbers were trusted least, longest: "imaginary" was originally a
 term of mild derision, and full acceptance — largely through Gauss's and
 Hamilton's work giving $\mathbb{C}$ a solid geometric and algebraic footing
 — didn't arrive until the 19th century, roughly 250-300 years after they
-first appeared (Cardano, 1545) as an uncomfortable but useful bookkeeping
+first appeared (Cardano, 1545) [@mactutor_cardan] as an uncomfortable but useful bookkeeping
 device inside the formula for solving cubic equations.
 
 ## The pattern, named

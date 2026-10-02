@@ -28,7 +28,7 @@ Not every bounded function has this limit exist — a function wild enough
 (discontinuous on a large enough set of points) can fail to be Riemann
 integrable at all. Fixing exactly which functions are integrable, by
 building the integral on measure theory instead of on Riemann sums, is
-Henri Lebesgue's contribution (1902) — previewed in [Advanced
+Henri Lebesgue's contribution (1902) [@mactutor_lebesgue] — previewed in [Advanced
 Topics](25-advanced-topics.qmd); the Riemann integral above is what this
 chapter develops, and it's sufficient for everything the rest of this
 site currently needs.
@@ -47,9 +47,9 @@ Nothing in either definition — Riemann sums on one side, difference
 quotients on the other — makes that obviously true. This theorem is what
 makes "calculus" one subject rather than two, and establishing it,
 independently, is the achievement usually credited jointly to Newton and
-Leibniz in the 1660s–70s (and the source of a famously bitter priority
+Leibniz in the 1660s–70s [@mactutor_newton; @mactutor_leibniz] (and the source of a famously bitter priority
 dispute between them and their respective camps) — another two centuries
-before Riemann's 1850s definition of the integral this chapter actually
+before Riemann's 1850s definition of the integral [@mactutor_riemann] this chapter actually
 used to state the theorem rigorously. The historical-versus-formal gap [the
 map](00-the-map.qmd) keeps returning to shows up here in an unusually
 direct form: the *result* is 17th-century; the *definition it's stated

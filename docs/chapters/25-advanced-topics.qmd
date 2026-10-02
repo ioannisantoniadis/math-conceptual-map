@@ -62,7 +62,7 @@ measurable sets instead of interval partitions.
 entire foundation), real analysis, and functional analysis's $L^p$ function
 spaces.
 
-**Where to go next**: Lebesgue's own 1902 construction is the standard
+**Where to go next**: Lebesgue's own 1902 construction [@mactutor_lebesgue] is the standard
 starting point conceptually, before a modern real-analysis text's formal
 treatment.
 

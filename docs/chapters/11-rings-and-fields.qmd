@@ -95,12 +95,13 @@ to a richer structure.
 
 ## A word with a history
 
-"Ring" (German *Ring*, or the fuller *Zahlring*, "number ring") is usually
-credited to David Hilbert's 1897 report on algebraic number theory, though
-the underlying idea — sets of algebraic numbers closed under addition and
+"Ring" (German *Ring*, or the fuller *Zahlring*, "number ring") is due to
+David Hilbert [@mactutor_ring_theory], whose 1897 report on algebraic number
+theory, the *Zahlbericht*, synthesized the work it grew out of
+[@mactutor_hilbert], though the underlying idea — sets of algebraic numbers closed under addition and
 multiplication — traces back further, to Richard Dedekind's work on ideals
 in the 1870s–80s. "Field" (German *Körper*, literally "body") is Dedekind's
-own term, from around 1871, for exactly the structure defined above:
+own term, from around 1871 [@mactutor_miller_f], for exactly the structure defined above:
 a set where all four arithmetic operations (except division by zero) stay
 inside the set. Both terms predate the fully abstract axiomatic treatment
 above by decades, in the same historical/formal split [the map](00-the-map.qmd)
